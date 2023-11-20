@@ -1,0 +1,213 @@
+{
+  "nodes": {
+    "srcIP": {
+      "maps": {
+        "ip": "server_ip",
+        "eventId": "event_id",
+        "node_label": "default=IP",
+        "dataSourceName": "default=msexchange"
+      },
+      "constraints": {
+        "unique": "ip"
+      }
+    },
+    "dstIP": {
+      "maps": {
+        "ip": "client_ip",
+        "eventId": "event_id",
+        "node_label": "default=IP",
+        "dataSourceName": "default=msexchange"
+      },
+      "constraints": {
+        "unique": "ip"
+      }
+    },
+    "srcUser": {
+      "maps": {
+        "userName": "sender_address",
+        "userId": "",
+        "node_label": "default=user",
+        "dataSourceName": "default=msexchange"
+      },
+      "constraints": {
+        "unique": "userName"
+      }
+    },
+    "dstUser": {
+      "maps": {
+        "userName": "analyze-destination-user",
+        "no_recipients": "recipientCount",
+        "userId": "",
+        "node_label": "default=user",
+        "dataSourceName": "default=msexchange"
+      },
+      "constraints": {
+        "unique": "userName"
+      }
+    },
+    "srcHost": {
+      "maps": {
+        "hostname": "server_hostname",
+        "node_label": "default=host",
+        "dataSourceName": "default=msexchange"
+      },
+      "constraints": {
+        "unique": "hostname"
+      }
+    },
+    "dstHost": {
+      "maps": {
+        "hostname": "client_hostname",
+        "node_label": "default=host",
+        "dataSourceName": "default=msexchange"
+      },
+      "constraints": {
+        "unique": "hostname"
+      }
+    },
+    "email": {
+      "maps": {
+        "messageID": "message_id",
+        "messageBytes": "total_bytes",
+        "recipientCount": "recipientCount",
+        "emailSubject": "message_subject",
+        "msgInfo": "messageInfo",
+        "node_label": "default=email",
+        "dataSourceName": "default=msexchange"
+      },
+      "constraints": {
+        "unique": "emailSubject"
+      }
+    }
+  },
+  "edges": {
+    "sentEmail": {
+      "maps": {
+        "emailTime": "datetime",
+        "severityValue": "",
+        "srcHost": "client_hostname",
+        "eventId": "",
+        "category": "event_id",
+        "isAlert": "",
+        "counter": "default=1",
+        "edge_label": "default=sentEmail",
+        "dataSourceName": "default=msexchange"
+      },
+      "constraints": {
+        "left": "user.userName(sender_address)",
+        "right": "email.emailSubject(message_subject)"
+      }
+    },
+    "receivedEmail": {
+      "maps": {
+        "emailTime": "datetime",
+        "severityValue": "",
+        "eventId": "",
+        "dstHost": "server_hostname",
+        "category": "event_id",
+        "isAlert": "",
+        "counter": "default=1",
+        "edge_label": "default=receivedEmail",
+        "dataSourceName": "default=msexchange"
+      },
+      "constraints": {
+        "left": "email.emailSubject(message_subject)",
+        "right": "user.userName(analyze-destination-user)"
+      }
+    },
+    "emailOriginatedFrom": {
+      "maps": {
+        "emailTime": "datetime",
+        "severityValue": "",
+        "srcHost": "client_hostname",
+        "eventId": "",
+        "category": "event_id",
+        "isAlert": "",
+        "counter": "default=1",
+        "edge_label": "default=emailOriginatedFrom",
+        "dataSourceName": "default=msexchange"
+      },
+      "constraints": {
+        "left": "email.emailSubject(message_subject)",
+        "right": "IP.ip(server_ip)"
+      }
+    },
+    "emailSentTo": {
+      "maps": {
+        "emailTime": "datetime",
+        "severityValue": "",
+        "eventId": "",
+        "category": "event_id",
+        "isAlert": "",
+        "counter": "default=1",
+        "edge_label": "default=emailSentTo",
+        "dataSourceName": "default=msexchange"
+      },
+      "constraints": {
+        "left": "email.emailSubject(message_subject)",
+        "right": "IP.ip(client_ip)"
+      }
+    },
+    "srcHasIP": {
+      "maps": {
+        "eventTime": "datetime",
+        "counter": "default=0",
+        "edge_label": "default=hasIP",
+        "dataSourceName": "default=msexchange"
+      },
+      "constraints": {
+        "left": "user.userName(sender_address)",
+        "right": "IP.ip(server_ip)"
+      }
+    },
+    "dstHasIP": {
+      "maps": {
+        "eventTime": "datetime",
+        "counter": "default=0",
+        "edge_label": "default=hasIP",
+        "dataSourceName": "default=msexchange"
+      },
+      "constraints": {
+        "left": "user.userName(recipient_address)",
+        "right": "IP.ip(client_ip)"
+      }
+    },
+    "srcWithIP": {
+      "maps": {
+        "eventTime": "datetime",
+        "counter": "default=0",
+        "edge_label": "default=withIP",
+        "dataSourceName": "default=msexchange"
+      },
+      "constraints": {
+        "left": "host.hostname(server_hostname)",
+        "right": "IP.ip(server_ip)"
+      }
+    },
+    "dstWithIP": {
+      "maps": {
+        "eventTime": "datetime",
+        "counter": "default=0",
+        "edge_label": "default=withIP",
+        "dataSourceName": "default=msexchange"
+      },
+      "constraints": {
+        "left": "host.hostname(client_hostname)",
+        "right": "IP.ip(client_ip)"
+      }
+    }
+  },
+  "analyze": {
+    "destination-user": {
+      "params": "recipient_address",
+      "package": "from=utils.DataExtractionUtilities&package=generate_destination_users_for_msexchange",
+      "repeat": -1
+    },
+    "hostname-for-msexchange": "from=utils.DataExtractionUtilities&package=get_src_dst_hostname_for_msexchange",
+    "username-for-msexchange": "from=utils.DataExtractionUtilities&package=get_src_dst_username_for_msexchange",
+    "ip-format-for-msexchange": "from=utils.DataExtractionUtilities&package=get_ip_format_for_msexchange",
+    "rcvr-username-for-msexchange": "from=utils.DataExtractionUtilities&package=get_receiver_users_for_msexchange",
+    "all-username-for-msexchange": "from=utils.DataExtractionUtilities&package=get_all_users_for_msexchange",
+    "all-ips-for-msgexchange": "from=utils.DataExtractionUtilities&package=get_all_ips_for_msexchange"
+  }
+}

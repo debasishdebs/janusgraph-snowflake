@@ -1,0 +1,10 @@
+grpcio==1.29.0
+grpcio-tools==1.29.0
+protobuf==3.12.2
+pybuilder==0.12.6
+multipledispatch==0.6.0
+abcplus==0.1.0
+azure-storage-blob==12.3.2
+azure-core==1.6.0
+requests==2.23.0
+python-dateutil==2.8.1

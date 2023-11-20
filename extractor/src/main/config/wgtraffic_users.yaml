@@ -1,0 +1,773 @@
+---
+USERS:
+  JohnWhiteLateralMove: {"email": "JohnWhiteLateralMove@sstech.us", "Fullname": "John White", "workstation": "W4", "TimeZone": "-0500" }
+  bruceclark: { login: "bruceclark", "email": "bruce.clark@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  brucecook: { login: "brucecook", "email": "bruce.cook@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  brucefisher: { login: "brucefisher", "email": "bruce.fisher@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  brucegold: { login: "brucegold", "email": "bruce.gold@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  brucegordon: { login: "brucegordon", "email": "bruce.gordon@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  brucehunt: { login: "brucehunt", "email": "bruce.hunt@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  brucekent: { login: "brucekent", "email": "bruce.kent@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  bruceknight: { login: "bruceknight", "email": "bruce.knight@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  bruceprince: { login: "bruceprince", "email": "bruce.prince@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  brucesmith: { login: "brucesmith", "email": "bruce.smith@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  brucewayne: { login: "brucewayne", "email": "bruce.wayne@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  camilleclark: { login: "camilleclark", "email": "camille.clark@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  camillecook: { login: "camillecook", "email": "camille.cook@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  camillefisher: { login: "camillefisher", "email": "camille.fisher@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  camillegold: { login: "camillegold", "email": "camille.gold@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  camillegordon: { login: "camillegordon", "email": "camille.gordon@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  camillehunt: { login: "camillehunt", "email": "camille.hunt@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  camillekent: { login: "camillekent", "email": "camille.kent@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  camilleknight: { login: "camilleknight", "email": "camille.knight@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  camilleprince: { login: "camilleprince", "email": "camille.prince@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  camillesmith: { login: "camillesmith", "email": "camille.smith@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  camillewayne: { login: "camillewayne", "email": "camille.wayne@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  clarkclark: { login: "clarkclark", "email": "clark.clark@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  clarkcook: { login: "clarkcook", "email": "clark.cook@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  clarkfisher: { login: "clarkfisher", "email": "clark.fisher@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  clarkgold: { login: "clarkgold", "email": "clark.gold@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  clarkgordon: { login: "clarkgordon", "email": "clark.gordon@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  clarkhunt: { login: "clarkhunt", "email": "clark.hunt@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  clarkkent: { login: "clarkkent", "email": "clark.kent@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  clarkknight: { login: "clarkknight", "email": "clark.knight@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  clarkprince: { login: "clarkprince", "email": "clark.prince@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  clarksmith: { login: "clarksmith", "email": "clark.smith@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  clarkwayne: { login: "clarkwayne", "email": "clark.wayne@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  danielclark: { login: "danielclark", "email": "daniel.clark@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  danielcook: { login: "danielcook", "email": "daniel.cook@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  danielfisher: { login: "danielfisher", "email": "daniel.fisher@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  danielgold: { login: "danielgold", "email": "daniel.gold@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  danielgordon: { login: "danielgordon", "email": "daniel.gordon@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  danielhunt: { login: "danielhunt", "email": "daniel.hunt@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  danielkent: { login: "danielkent", "email": "daniel.kent@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  danielknight: { login: "danielknight", "email": "daniel.knight@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  danielprince: { login: "danielprince", "email": "daniel.prince@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  danielsmith: { login: "danielsmith", "email": "daniel.smith@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  danielwayne: { login: "danielwayne", "email": "daniel.wayne@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  dianaclark: { login: "dianaclark", "email": "diana.clark@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  dianacook: { login: "dianacook", "email": "diana.cook@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  dianafisher: { login: "dianafisher", "email": "diana.fisher@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  dianagold: { login: "dianagold", "email": "diana.gold@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  dianagordon: { login: "dianagordon", "email": "diana.gordon@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  dianahunt: { login: "dianahunt", "email": "diana.hunt@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  dianakent: { login: "dianakent", "email": "diana.kent@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  dianaknight: { login: "dianaknight", "email": "diana.knight@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  dianaprince: { login: "dianaprince", "email": "diana.prince@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  dianasmith: { login: "dianasmith", "email": "diana.smith@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  dianawayne: { login: "dianawayne", "email": "diana.wayne@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  emmaclark: { login: "emmaclark", "email": "emma.clark@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  emmacook: { login: "emmacook", "email": "emma.cook@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  emmafisher: { login: "emmafisher", "email": "emma.fisher@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  emmagold: { login: "emmagold", "email": "emma.gold@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  emmagordon: { login: "emmagordon", "email": "emma.gordon@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  emmahunt: { login: "emmahunt", "email": "emma.hunt@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  emmakent: { login: "emmakent", "email": "emma.kent@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  emmaknight: { login: "emmaknight", "email": "emma.knight@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  emmaprince: { login: "emmaprince", "email": "emma.prince@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  emmasmith: { login: "emmasmith", "email": "emma.smith@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  emmawayne: { login: "emmawayne", "email": "emma.wayne@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  ethanclark: { login: "ethanclark", "email": "ethan.clark@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  ethancook: { login: "ethancook", "email": "ethan.cook@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  ethanfisher: { login: "ethanfisher", "email": "ethan.fisher@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  ethangold: { login: "ethangold", "email": "ethan.gold@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  ethangordon: { login: "ethangordon", "email": "ethan.gordon@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  ethanhunt: { login: "ethanhunt", "email": "ethan.hunt@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  ethankent: { login: "ethankent", "email": "ethan.kent@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  ethanknight: { login: "ethanknight", "email": "ethan.knight@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  ethanprince: { login: "ethanprince", "email": "ethan.prince@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  ethansmith: { login: "ethansmith", "email": "ethan.smith@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  ethanwayne: { login: "ethanwayne", "email": "ethan.wayne@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  flashclark: { login: "flashclark", "email": "flash.clark@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  flashcook: { login: "flashcook", "email": "flash.cook@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  flashfisher: { login: "flashfisher", "email": "flash.fisher@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  flashgold: { login: "flashgold", "email": "flash.gold@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  flashgordon: { login: "flashgordon", "email": "flash.gordon@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  flashhunt: { login: "flashhunt", "email": "flash.hunt@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  flashkent: { login: "flashkent", "email": "flash.kent@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  flashknight: { login: "flashknight", "email": "flash.knight@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  flashprince: { login: "flashprince", "email": "flash.prince@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  flashsmith: { login: "flashsmith", "email": "flash.smith@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  flashwayne: { login: "flashwayne", "email": "flash.wayne@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  jamesclark: { login: "jamesclark", "email": "james.clark@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  jamescook: { login: "jamescook", "email": "james.cook@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  jamesfisher: { login: "jamesfisher", "email": "james.fisher@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  jamesgold: { login: "jamesgold", "email": "james.gold@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  jamesgordon: { login: "jamesgordon", "email": "james.gordon@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  jameshunt: { login: "jameshunt", "email": "james.hunt@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  jameskent: { login: "jameskent", "email": "james.kent@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  jamesknight: { login: "jamesknight", "email": "james.knight@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  jamesprince: { login: "jamesprince", "email": "james.prince@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  jamessmith: { login: "jamessmith", "email": "james.smith@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  jameswayne: { login: "jameswayne", "email": "james.wayne@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  madisonclark: { login: "madisonclark", "email": "madison.clark@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  madisoncook: { login: "madisoncook", "email": "madison.cook@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  madisonfisher: { login: "madisonfisher", "email": "madison.fisher@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  madisongold: { login: "madisongold", "email": "madison.gold@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  madisongordon: { login: "madisongordon", "email": "madison.gordon@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  madisonhunt: { login: "madisonhunt", "email": "madison.hunt@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  madisonkent: { login: "madisonkent", "email": "madison.kent@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  madisonknight: { login: "madisonknight", "email": "madison.knight@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  madisonprince: { login: "madisonprince", "email": "madison.prince@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  madisonsmith: { login: "madisonsmith", "email": "madison.smith@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  madisonwayne: { login: "madisonwayne", "email": "madison.wayne@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  masonclark: { login: "masonclark", "email": "mason.clark@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  masoncook: { login: "masoncook", "email": "mason.cook@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  masonfisher: { login: "masonfisher", "email": "mason.fisher@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  masongold: { login: "masongold", "email": "mason.gold@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  masongordon: { login: "masongordon", "email": "mason.gordon@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  masonhunt: { login: "masonhunt", "email": "mason.hunt@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  masonkent: { login: "masonkent", "email": "mason.kent@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  masonknight: { login: "masonknight", "email": "mason.knight@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  masonprince: { login: "masonprince", "email": "mason.prince@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  masonsmith: { login: "masonsmith", "email": "mason.smith@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  masonwayne: { login: "masonwayne", "email": "mason.wayne@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  noahclark: { login: "noahclark", "email": "noah.clark@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  noahcook: { login: "noahcook", "email": "noah.cook@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  noahfisher: { login: "noahfisher", "email": "noah.fisher@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  noahgold: { login: "noahgold", "email": "noah.gold@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  noahgordon: { login: "noahgordon", "email": "noah.gordon@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  noahhunt: { login: "noahhunt", "email": "noah.hunt@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  noahkent: { login: "noahkent", "email": "noah.kent@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  noahknight: { login: "noahknight", "email": "noah.knight@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  noahprince: { login: "noahprince", "email": "noah.prince@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  noahsmith: { login: "noahsmith", "email": "noah.smith@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  noahwayne: { login: "noahwayne", "email": "noah.wayne@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  rayclark: { login: "rayclark", "email": "ray.clark@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  raycook: { login: "raycook", "email": "ray.cook@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  rayfisher: { login: "rayfisher", "email": "ray.fisher@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  raygold: { login: "raygold", "email": "ray.gold@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  raygordon: { login: "raygordon", "email": "ray.gordon@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  rayhunt: { login: "rayhunt", "email": "ray.hunt@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  raykent: { login: "raykent", "email": "ray.kent@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  rayknight: { login: "rayknight", "email": "ray.knight@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  rayprince: { login: "rayprince", "email": "ray.prince@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  raysmith: { login: "raysmith", "email": "ray.smith@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  raywayne: { login: "raywayne", "email": "ray.wayne@sstech.us", "Fullname": "test", "workstation": "W4", "TimeZone": "-0500" }
+  johndark: { login: "johndark", "email": "john.dark@sstech.us"}
+
+TEMPLATES:
+  HTTP: '1562130647,"",80BE07AB597B2,1AFF-0024,1007,8354128,1,0,6,HTTP-proxy.SSTECH-Users-00,http/tcp,%SRCIP%,%SRCPORT%,%DSTIP%,%DSTPORT%,"",0,"",0,1-MAIN LAN,0-SSTECH WAN,525,0,0,"",HTTP-Client.SSTECH Users,"","","",rcvd_bytes=%RCVD_BYTES%; app_id=0,sent_bytes=%SENT_BYTES%,src_user=%SRCUSER%,elapsed_time=0.119784 sec(s); op=%METH%,dstname=%DSTDOMAIN%,arg=%URL%,"","","","","","",tr,HTTP request,"",%TS%'
+  HTTP_INFO: '1562130647,"",80BE07AB597B2,1AFF-0024,1007,8354128,1,0,6,HTTP-proxy.SSTECH-Users-00,http/tcp,%SRCIP%,%SRCPORT%,%DSTIP%,%DSTPORT%,"",0,"",0,1-MAIN LAN,0-SSTECH WAN,525,0,0,"",HTTP-Client.SSTECH Users,"","","","","","",elapsed_time=0.119784 sec(s); op=%METH%,duration=0; sent_bytes=%SENT_BYTES%; rcvd_bytes=%RCVD_BYTES%,src_user=%SRCUSER%,"","","","","","",tr,"","",%TS%'
+  HTTP_BEACONING: '694972612,"",80BE02956B355,3000-0151,1024,2886433,1,0,6,BOVPN-Allow.in-00,445/tcp,%SRCIP%,%SRCPORT%,%DSTIP%,%DSTPORT%,"",0,"",0,TampaWG to DallasWG,1-MAIN LAN,106,0,0,"","","","","","","","","",duration=12; sent_bytes=%SENT_BYTES%; rcvd_bytes=%RCVD_BYTES%,"","","","","","","",tr,"","",%TS%'
+
+SCENARIOS:
+  http_https_normal:
+  -
+    templateid: "HTTP"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%SRCPORT%":
+        - "py"
+        - !!python/name:random.randint
+        - [10000, 64000]
+      "%DSTIP%":
+        - "py"
+        - !!python/name:common.utils.get_random_external_internal_ip
+        - []
+      "%DSTPORT%":
+        - "set"
+        - [80, 443, 80, 443, 80, 443, 80, 443, 80, 443, 80, 443, 80, 443, 80, 443, 80, 443, 80, 443, 80, 443, 80, 443, 80, 443, 80, 443, 80, 443, 80, 443, 80, 443, 53]
+      "%SRCUSER%":
+        - "user"
+        - "email"
+      "%METH%":
+        - "set"
+        - ["GET", "POST"]
+      "%DSTDOMAIN%":
+        - "py"
+        - !!python/name:common.utils.get_random_host
+        - []
+      "%URL%":
+        - "py"
+        - !!python/name:common.utils.get_random_uripath
+        - []
+      "%SRCIP%":
+        - "py"
+        - !!python/name:common.utils.get_user_src_ip
+        - ['%VALS%']
+        - 1
+      "%SENT_BYTES%":
+        - "py"
+        - !!python/name:common.utils.get_user_sent_bytes
+        - ['%VALS%']
+        - 1
+      "%RCVD_BYTES%":
+        - "py"
+        - !!python/name:common.utils.get_user_rcvd_bytes
+        - ['%VALS%']
+        - 1
+  http_https_normal_vpn:
+  -
+    templateid: "HTTP"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%SRCPORT%":
+        - "py"
+        - !!python/name:random.randint
+        - [10000, 64000]
+      "%DSTIP%":
+        - "set"
+        - ["71.100.103.69", "70.169.165.199"]
+      "%DSTPORT%":
+        - "set"
+        - [443]
+      "%SRCUSER%":
+        - "user"
+        - "email"
+      "%METH%":
+        - "set"
+        - ["GET", "POST"]
+      "%DSTDOMAIN%":
+        - "py"
+        - !!python/name:common.utils.get_random_host
+        - []
+      "%URL%":
+        - "py"
+        - !!python/name:common.utils.get_random_uripath
+        - []
+      "%SRCIP%":
+        - "py"
+        - !!python/name:common.utils.get_user_src_ip
+        - ['%VALS%']
+        - 1
+      "%SENT_BYTES%":
+        - "py"
+        - !!python/name:common.utils.get_user_sent_bytes
+        - ['%VALS%']
+        - 1
+      "%RCVD_BYTES%":
+        - "py"
+        - !!python/name:common.utils.get_user_rcvd_bytes
+        - ['%VALS%']
+        - 1
+  http_https_normal_info:
+  -
+    templateid: "HTTP_INFO"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%SRCPORT%":
+        - "py"
+        - !!python/name:random.randint
+        - [10000, 64000]
+      "%DSTIP%":
+        - "py"
+        - !!python/name:common.utils.get_random_ip
+        - ["192.168.0.0/24"]
+      "%DSTPORT%":
+        - "set"
+        - [80, 443]
+      "%SRCUSER%":
+        - "user"
+        - "email"
+      "%METH%":
+        - "set"
+        - ["GET", "POST"]
+      "%DSTDOMAIN%":
+        - "py"
+        - !!python/name:common.utils.get_random_host
+        - []
+      "%URL%":
+        - "py"
+        - !!python/name:common.utils.get_random_uripath
+        - []
+      "%SRCIP%":
+        - "py"
+        - !!python/name:common.utils.get_user_src_ip
+        - ['%VALS%']
+        - 1
+      "%SENT_BYTES%":
+        - "py"
+        - !!python/name:common.utils.get_user_sent_bytes
+        - ['%VALS%']
+        - 1
+      "%RCVD_BYTES%":
+        - "py"
+        - !!python/name:common.utils.get_user_rcvd_bytes
+        - ['%VALS%']
+        - 1
+
+
+  http_https_normal2:
+  -
+    templateid: "HTTP"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%DSTIP%":
+        - "py"
+        - !!python/name:common.utils.get_ip_lateral2
+        - []
+      "%DSTDOMAIN%":
+        - "py"
+        - !!python/name:common.utils.get_dst_domain_lateral2
+        - []
+      "%SRCPORT%":
+        - "py"
+        - !!python/name:random.randint
+        - [10000, 64000]
+      "%DSTPORT%":
+        - "set"
+        - [80, 443]
+      "%SRCUSER%":
+        - "user"
+        - "email"
+      "%METH%":
+        - "set"
+        - ["GET"]
+      "%URL%":
+        - "py"
+        - !!python/name:common.utils.get_random_uripath
+        - []
+      "%SRCIP%":
+        - "py"
+        - !!python/name:common.utils.get_user_src_ip
+        - ['%VALS%']
+        - 1
+      "%SENT_BYTES%":
+        - "py"
+        - !!python/name:common.utils.get_user_sent_bytes
+        - ['%VALS%']
+        - 1
+      "%RCVD_BYTES%":
+        - "py"
+        - !!python/name:common.utils.get_user_rcvd_bytes
+        - ['%VALS%']
+        - 1
+
+  http_https_normal_printers:
+  -
+    templateid: "HTTP"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%SRCIP%":
+        - "set"
+        - ["192.168.0.137", "192.168.0.76", "192.168.100.23", "192.168.100.50", "192.168.110.124", "192.168.110.186", "192.168.1.101", "192.168.1.101", "192.168.110.204", "192.168.110.208", "192.168.110.240", "192.168.1.103", "192.168.1.131", "192.168.1.138", "192.168.1.144", "192.168.1.146", "192.168.1.148", "192.168.1.149", "192.168.1.151", "192.168.1.152", "192.168.1.156", "192.168.1.162", "192.168.1.18", "192.168.1.70", "192.168.1.97", "192.168.1.98", "192.168.200.225", "192.168.2.106", "192.168.2.134", "192.168.2.178", "192.168.2.21"]
+      "%SRCPORT%":
+        - "py"
+        - !!python/name:random.randint
+        - [10000, 64000]
+      "%DSTIP%":
+        - "py"
+        - !!python/name:common.utils.get_random_ip
+        - ["192.168.0.0/24"]
+      "%DSTPORT%":
+        - "set"
+        - [80, 443]
+      "%SRCUSER%":
+        - "user"
+        - "email"
+      "%METH%":
+        - "set"
+        - ["GET", "POST"]
+      "%DSTDOMAIN%":
+        - "py"
+        - !!python/name:common.utils.get_random_host
+        - []
+      "%URL%":
+        - "py"
+        - !!python/name:common.utils.get_random_uripath
+        - []
+      "%SENT_BYTES%":
+        - "py"
+        - !!python/name:common.utils.get_user_sent_bytes
+        - ['%VALS%']
+        - 1
+      "%RCVD_BYTES%":
+        - "py"
+        - !!python/name:common.utils.get_user_rcvd_bytes
+        - ['%VALS%']
+        - 1
+  download_bad_file:
+  -
+    templateid: "HTTP"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%SRCPORT%":
+        - "py"
+        - !!python/name:random.randint
+        - [10000, 64000]
+      "%DSTIP%":
+        - "set"
+        - ["11.22.33.44"]
+      "%DSTPORT%":
+        - "set"
+        - [80]
+      "%SRCUSER%":
+        - "user"
+        - "email"
+      "%METH%":
+        - "set"
+        - ["GET"]
+      "%DSTDOMAIN%":
+        - "set"
+        - ["badsite.com"]
+      "%URL%":
+        - "set"
+        - ["/download/bad_file.exe"]
+      "%SRCIP%":
+        - "py"
+        - !!python/name:common.utils.get_user_src_ip
+        - ['%VALS%']
+        - 1
+      "%SENT_BYTES%":
+        - "set"
+        - [19021]
+      "%RCVD_BYTES%":
+        - "set"
+        - [2139201]
+  beaconing_bad_site:
+  -
+    templateid: "HTTP_BEACONING"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%SRCPORT%":
+        - "py"
+        - !!python/name:random.randint
+        - [10000, 64000]
+      "%DSTIP%":
+        - "set"
+        - ["11.22.33.44"]
+      "%DSTPORT%":
+        - "set"
+        - [445]
+      "%SRCUSER%":
+        - "user"
+        - "email"
+      "%SRCIP%":
+        - "py"
+        - !!python/name:common.utils.get_user_src_ip
+        - ['%VALS%']
+        - 1
+      "%SENT_BYTES%":
+        - "py"
+        - !!python/name:random.randint
+        - [10000000, 100000000]
+      "%RCVD_BYTES%":
+        - "py"
+        - !!python/name:random.randint
+        - [10000000, 100000000]
+
+
+ACTIVITY:
+  JohnWhiteLateralMove:
+#    - [ "http_https_normal2",     ["* 8-18 * * 1-5",   200, [1,5]] ]
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [10, 12]]]
+    - [ "http_https_normal_info",     ["* 8-18 * * 1-5",   60, [10, 12]]]
+    - [ "http_https_normal_printers",     ["* 8-18 * * 1-5",   60, [10, 12]]]
+  bruceclark:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [1, 5]]]
+    - [ "http_https_normal_printers",     ["* 8-18 * * 1-5",   60, [1, 5]]]
+  brucecook:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [10, 11]]]
+    - [ "http_https_normal_info",     ["* 8-18 * * 1-5",   60, [10, 11]]]
+  brucefisher:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [10, 12]]]
+  brucegold:
+    - [ "http_https_normal_vpn",     ["* 10-20 * * 1-5",   60, [10, 13]]]
+  brucegordon:
+    - [ "http_https_normal",     ["* 2-22 * * 1-5",   60, [10, 11]]]
+  brucehunt:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [10, 12]]]
+  brucekent:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [10, 13]]]
+  bruceknight:
+    - [ "http_https_normal_vpn",     ["* 8-18 * * 1-5",   60, [10, 11]]]
+  bruceprince:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [10, 12]]]
+  brucesmith:
+    - [ "http_https_normal_vpn",     ["* 10-20 * * 1-5",   60, [10, 13]]]
+  brucewayne:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [10, 11]]]
+  camilleclark:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [1, 5]]]
+    - [ "http_https_normal_printers",     ["* 10-20 * * 1-5",   60, [1, 5]]]
+  camillecook:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [10, 12]]]
+  camillefisher:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [10, 13]]]
+  camillegold:
+    - [ "http_https_normal_vpn",     ["* 10-20 * * 1-5",   60, [10, 11]]]
+  camillegordon:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [10, 12]]]
+  camillehunt:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [10, 13]]]
+  camillekent:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [10, 11]]]
+  camilleknight:
+    - [ "http_https_normal",     ["* 2-22 * * 1-5",   60, [10, 12]]]
+  camilleprince:
+    - [ "http_https_normal_vpn",     ["* 11-21 * * 1-5",   60, [10, 13]]]
+  camillesmith:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [10, 11]]]
+  camillewayne:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [1, 5]]]
+    - [ "http_https_normal_info",     ["* 8-18 * * 1-5",   60, [1, 5]]]
+  clarkclark:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [1, 1]]]
+  clarkcook:
+    - [ "http_https_normal",     ["* 2-22 * * 1-5",   60, [1, 2]]]
+  clarkfisher:
+    - [ "http_https_normal_vpn",     ["* 8-18 * * 1-5",   60, [1, 3]]]
+  clarkgold:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [1, 5]]]
+    - [ "http_https_normal_printers",     ["* 11-21 * * 1-5",   60, [1, 5]]]
+  clarkgordon:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [1, 5]]]
+  clarkhunt:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [1, 1]]]
+  clarkkent:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [1, 2]]]
+  clarkknight:
+    - [ "http_https_normal_vpn",     ["* 8-18 * * 1-5",   60, [1, 3]]]
+  clarkprince:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [1, 4]]]
+  clarksmith:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [1, 5]]]
+  clarkwayne:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [1, 1]]]
+  danielclark:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [1, 2]]]
+    - [ "http_https_normal_info",     ["* 11-21 * * 1-5",   60, [1, 2]]]
+  danielcook:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [1, 3]]]
+  danielfisher:
+    - [ "http_https_normal_vpn",     ["* 2-22 * * 1-5",   60, [1, 4]]]
+  danielgold:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [1, 5]]]
+  danielgordon:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [1, 5]]]
+    - [ "http_https_normal_printers",     ["* 8-18 * * 1-5",   60, [1, 5]]]
+  danielhunt:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [1, 1]]]
+  danielkent:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [1, 2]]]
+  danielknight:
+    - [ "http_https_normal_vpn",     ["* 11-21 * * 1-5",   60, [1, 3]]]
+  danielprince:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [1, 4]]]
+  danielsmith:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [1, 5]]]
+    - [ "http_https_normal_info",     ["* 10-20 * * 1-5",   60, [1, 5]]]
+  danielwayne:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [1, 1]]]
+  dianaclark:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [1, 2]]]
+  dianacook:
+    - [ "http_https_normal_vpn",     ["* 10-20 * * 1-5",   60, [1, 3]]]
+  dianafisher:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [1, 5]]]
+    - [ "http_https_normal_printers",     ["* 8-18 * * 1-5",   60, [1, 5]]]
+  dianagold:
+    - [ "http_https_normal",     ["* 2-22 * * 1-5",   60, [1, 1]]]
+  dianagordon:
+    - [ "http_https_normal_vpn",     ["* 11-21 * * 1-5",   60, [1, 2]]]
+  dianahunt:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [1, 3]]]
+  dianakent:
+    - [ "http_https_normal_vpn",     ["* 10-20 * * 1-5",   60, [1, 4]]]
+  dianaknight:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [1, 5]]]
+  dianaprince:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [1, 1]]]
+  dianasmith:
+    - [ "http_https_normal_vpn",     ["* 10-20 * * 1-5",   60, [1, 2]]]
+  dianawayne:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [1, 3]]]
+  emmaclark:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [1, 4]]]
+    - [ "http_https_normal_info",     ["* 11-21 * * 1-5",   60, [1, 4]]]
+  emmacook:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [1, 5]]]
+  emmafisher:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [1, 5]]]
+    - [ "http_https_normal_printers",     ["* 8-18 * * 1-5",   60, [1, 5]]]
+  emmagold:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [1, 1]]]
+  emmagordon:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [1, 2]]]
+  emmahunt:
+    - [ "http_https_normal_vpn",     ["* 8-18 * * 1-5",   60, [1, 3]]]
+  emmakent:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [5, 6]]]
+  emmaknight:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [5, 7]]]
+  emmaprince:
+    - [ "http_https_normal_vpn",     ["* 8-18 * * 1-5",   60, [5, 8]]]
+  emmasmith:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [5, 9]]]
+    - [ "http_https_normal_info",     ["* 10-20 * * 1-5",   60, [5, 9]]]
+  emmawayne:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [5, 10]]]
+  ethanclark:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [5, 6]]]
+  ethancook:
+    - [ "http_https_normal_vpn",     ["* 2-22 * * 1-5",   60, [5, 7]]]
+  ethanfisher:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [5, 8]]]
+  ethangold:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [5, 9]]]
+  ethangordon:
+    - [ "http_https_normal_vpn",     ["* 10-20 * * 1-5",   60, [5, 10]]]
+  ethanhunt:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [5, 6]]]
+  ethankent:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [5, 10]]]
+    - [ "http_https_normal_printers",     ["* 8-18 * * 1-5",   60, [5, 10]]]
+  ethanknight:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [5, 7]]]
+    - [ "http_https_normal_info",     ["* 10-20 * * 1-5",   60, [5, 7]]]
+  ethanprince:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [5, 8]]]
+  ethansmith:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [5, 9]]]
+  ethanwayne:
+    - [ "http_https_normal_vpn",     ["* 10-20 * * 1-5",   60, [5, 10]]]
+  flashclark:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [5, 6]]]
+  flashcook:
+    - [ "http_https_normal_vpn",     ["* 8-18 * * 1-5",   60, [5, 7]]]
+  flashfisher:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [5, 8]]]
+  flashgold:
+    - [ "http_https_normal_vpn",     ["* 2-22 * * 1-5",   60, [5, 9]]]
+  flashgordon:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [5, 10]]]
+    - [ "http_https_normal_info",     ["* 8-18 * * 1-5",   60, [5, 10]]]
+  flashhunt:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [5, 6]]]
+  flashkent:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [5, 7]]]
+  flashknight:
+    - [ "http_https_normal_vpn",     ["* 8-18 * * 1-5",   60, [5, 8]]]
+  flashprince:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [5, 9]]]
+  flashsmith:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [5, 10]]]
+  flashwayne:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [5, 10]]]
+    - [ "http_https_normal_printers",     ["* 8-18 * * 1-5",   60, [5, 10]]]
+  jamesclark:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [5, 6]]]
+  jamescook:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [5, 7]]]
+  jamesfisher:
+    - [ "http_https_normal_vpn",     ["* 2-22 * * 1-5",   60, [5, 8]]]
+  jamesgold:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [5, 9]]]
+  jamesgordon:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [5, 10]]]
+  jameshunt:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [5, 6]]]
+    - [ "http_https_normal_info",     ["* 8-18 * * 1-5",   60, [5, 6]]]
+  jameskent:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [5, 7]]]
+  jamesknight:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [5, 8]]]
+  jamesprince:
+    - [ "http_https_normal_vpn",     ["* 8-18 * * 1-5",   60, [5, 9]]]
+  jamessmith:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [5, 10]]]
+  jameswayne:
+    - [ "http_https_normal_vpn",     ["* 11-21 * * 1-5",   60, [5, 6]]]
+  madisonclark:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [5, 7]]]
+  madisoncook:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [5, 10]]]
+    - [ "http_https_normal_printers",     ["* 8-18 * * 1-5",   60, [5, 10]]]
+  madisonfisher:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [5, 8]]]
+  madisongold:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [5, 9]]]
+  madisongordon:
+    - [ "http_https_normal_vpn",     ["* 8-18 * * 1-5",   60, [5, 10]]]
+  madisonhunt:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [5, 6]]]
+  madisonkent:
+    - [ "http_https_normal",     ["* 2-22 * * 1-5",   60, [5, 7]]]
+  madisonknight:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   60, [5, 8]]]
+    - [ "http_https_normal_info",     ["* 8-18 * * 1-5",   60, [5, 8]]]
+  madisonprince:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [5, 9]]]
+  madisonsmith:
+    - [ "http_https_normal",     ["* 10-20 * * 1-5",   60, [5, 10]]]
+  madisonwayne:
+    - [ "http_https_normal_vpn",     ["* 8-18 * * 1-5",   60, [5, 6]]]
+  masonclark:
+    - [ "http_https_normal",     ["* 11-21 * * 1-5",   60, [5, 7]]]
+  masoncook:
+    - [ "http_https_normal",     ["* 8-18 * * 6-7",   60, [5, 10]]]
+    - [ "http_https_normal_printers",     ["* 8-18 * * 6-7",   60, [5, 10]]]
+  masonfisher:
+    - [ "http_https_normal",     ["* 8-18 * * 6-7",   60, [5, 8]]]
+  masongold:
+    - [ "http_https_normal",     ["* 10-20 * * 6-7",   60, [5, 9]]]
+  masongordon:
+    - [ "http_https_normal",     ["* 11-21 * * 6-7",   60, [5, 10]]]
+  masonhunt:
+    - [ "http_https_normal_vpn",     ["* 8-18 * * 6-7",   60, [5, 6]]]
+  masonkent:
+    - [ "http_https_normal",     ["* 10-20 * * 6-7",   60, [5, 7]]]
+  masonknight:
+    - [ "http_https_normal",     ["* 11-21 * * 6-7",   60, [5, 8]]]
+  masonprince:
+    - [ "http_https_normal",     ["* 8-18 * * 6-7",   60, [5, 9]]]
+    - [ "http_https_normal_info",     ["* 8-18 * * 6-7",   60, [5, 9]]]
+  masonsmith:
+    - [ "http_https_normal",     ["* 10-20 * * 6-7",   60, [5, 10]]]
+  masonwayne:
+    - [ "http_https_normal",     ["* 11-21 * * 6-7",   60, [5, 6]]]
+  noahclark:
+    - [ "http_https_normal",     ["* 8-18 * * 6-7",   60, [5, 10]]]
+    - [ "http_https_normal_printers",     ["* 8-18 * * 6-7",   60, [5, 10]]]
+  noahcook:
+    - [ "http_https_normal",     ["* 10-20 * * 6-7",   60, [5, 7]]]
+  noahfisher:
+    - [ "http_https_normal",     ["* 11-21 * * 6-7",   60, [1, 5]]]
+  noahgold:
+    - [ "http_https_normal",     ["* 2-22 * * 6-7",   60, [1, 5]]]
+  noahgordon:
+    - [ "http_https_normal_vpn",     ["* 10-20 * * 6-7",   60, [1, 5]]]
+  noahhunt:
+    - [ "http_https_normal",     ["* 11-21 * * 6-7",   60, [1, 5]]]
+  noahkent:
+    - [ "http_https_normal",     ["* 8-18 * * 6-7",   60, [1, 5]]]
+    - [ "http_https_normal_info",     ["* 8-18 * * 6-7",   60, [1, 5]]]
+  noahknight:
+    - [ "http_https_normal",     ["* 10-20 * * 6-7",   60, [1, 5]]]
+  noahprince:
+    - [ "http_https_normal",     ["* 11-21 * * 6-7",   60, [1, 5]]]
+  noahsmith:
+    - [ "http_https_normal",     ["* 8-18 * * 6-7",   60, [1, 5]]]
+  noahwayne:
+    - [ "http_https_normal",     ["* 8-18 * * 6-7",   60, [1, 5]]]
+    - [ "http_https_normal_printers",     ["* 8-18 * * 6-7",   60, [1, 5]]]
+  rayclark:
+    - [ "http_https_normal",     ["* 11-21 * * 6-7",   60, [1, 5]]]
+  raycook:
+    - [ "http_https_normal",     ["* 8-18 * * 6-7",   60, [1, 5]]]
+  rayfisher:
+    - [ "http_https_normal_vpn",     ["* 10-20 * * 6-7",   60, [1, 5]]]
+  raygold:
+    - [ "http_https_normal",     ["* 11-21 * * 6-7",   60, [1, 5]]]
+  raygordon:
+    - [ "http_https_normal",     ["* 8-18 * * 6-7",   60, [1, 5]]]
+  rayhunt:
+    - [ "http_https_normal",     ["* 10-20 * * 6-7",   60, [1, 5]]]
+    - [ "http_https_normal_info",     ["* 10-20 * * 6-7",   60, [1, 5]]]
+  raykent:
+    - [ "http_https_normal",     ["* 11-21 * * 6-7",   60, [1, 5]]]
+  rayknight:
+    - [ "http_https_normal",     ["* 8-18 * * 6-7",   60, [1, 5]]]
+  rayprince:
+    - [ "http_https_normal_vpn",     ["* 10-20 * * 6-7",   60, [1, 5]]]
+  raysmith:
+    - [ "http_https_normal",     ["* 8-18 * * 6-7",   60, [1, 5]]]
+    - [ "http_https_normal_printers",     ["* 8-18 * * 6-7",   60, [1, 5]]]
+  raywayne:
+    - [ "http_https_normal",     ["* 11-21 * * 6-7",   60, [1, 5]]]
+  johndark:
+    - [ "download_bad_file",     ["33 8 * * 0-7", 59, [1, 1]]]
+    - [ "beaconing_bad_site",    ["12 9-17 * * 0-7", 59, [1, 1]]]
+    - [ "http_https_normal",     ["* 8-17 * * 0-7",   600, [1, 3]]]
+...

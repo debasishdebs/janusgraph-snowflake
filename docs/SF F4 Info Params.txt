@@ -1,0 +1,17 @@
+Neighbors Info step
+
+anchor: 
+	{
+		"id": "NA",
+		"property": "userName",
+		"value": "debasish",
+		"value_operator": "equals",
+		"label": "NA"
+	}
+
+project:
+	{
+		"all_properties": true,
+		"id": false,
+		"id_label": true
+	}

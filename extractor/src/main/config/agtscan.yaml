@@ -1,0 +1,29 @@
+---
+timeformat: "%Y-%m-%d %H:%M:%S"
+linebreak: "\n"
+templates:
+  - { type: 'list', samples: ['%TS%,Scan ID: %SCAN_ID%,%DURATION%,User1: %USER1%,User2: %USER2%,Scan started on selected drives and folders and all extensions.,Scan Complete:  Risks: 0   Scanned: %SCANNED_NUM%   Files/Folders/Drives Omitted: 0 Trusted Files Skipped: %SKIPPED_NUM%,Command: Not a command scan (),Threats: 0,Infected: %INFECTED%,Total files: %SCANNED_NUM%,Omitted: 0,Computer: %COMPUTER%,IP Address: %IP%,Domain: SSTECH,Group: %GROUP%,Server: SSTECHSYMEPM10'], period: 60, min: 1, max: 5 }
+replaces:
+  -
+    - '%SCAN_ID%'
+    - !!python/name:common.utils.get_id_num
+    - []
+  -
+    - '%DURATION%'
+    - !!python/name:common.utils.get_agtscan_duration
+    - ['%TS_NUM%']
+  - ['%USER1%', 'common/users2.txt']
+  - ['%USER2%', 'common/users2.txt']
+  -
+    - '%SCANNED_NUM%'
+    - !!python/name:random.randint
+    - [300, 2000]
+  -
+    - '%SKIPPED_NUM%'
+    - !!python/name:random.randint
+    - [50, 500]
+  - ['%COMPUTER%', 'common/agt_computer.txt']
+  - ['%IP%', 'common/agt_ips.txt']
+  - ['%GROUP%', ['My Company\Virtual Servers', 'My Company\Workstations']]
+  - ['%INFECTED%', ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']]
+...

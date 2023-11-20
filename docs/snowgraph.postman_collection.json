@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "820ba0da-08a3-45ba-aa5d-41709065cab4",
+		"name": "snowgraph",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "generate graph for id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": ""
+			},
+			"response": []
+		},
+		{
+			"name": "generate graph for property",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"search_for\": \"userName\",\r\n\t\"search_value\": \"flash.gordon\",\r\n\t\"dedup\": \"true\",\r\n\t\"hops\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/getGraphForProperty",
+				"description": "This API is used for search, i.e. Searching the graph for when a property is specified"
+			},
+			"response": []
+		},
+		{
+			"name": "Who downloaded process",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 817095,\r\n\t\"collapse_by\": \"process_user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/collapseGraph",
+				"description": "Collapse Graph process_user"
+			},
+			"response": []
+		},
+		{
+			"name": "User to Process",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 518679,\r\n\t\"collapse_by\": \"user_process\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "sstech-siagraph.centralus.cloudapp.azure.com:8000/collapseGraph"
+			},
+			"response": []
+		},
+		{
+			"name": "User -> Email -> User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 785866,\r\n\t\"collapse_by\": \"user_email_user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/collapseGraph"
+			},
+			"response": []
+		},
+		{
+			"name": "Other users clicking same URL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 785866,\r\n\t\"collapse_by\": \"user_URL_user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/collapseGraph"
+			},
+			"response": []
+		},
+		{
+			"name": "IP Used by Users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 665637,\r\n\t\"collapse_by\": \"ip_user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/collapseGraph"
+			},
+			"response": []
+		},
+		{
+			"name": "Process running on IP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 680137,\r\n\t\"collapse_by\": \"process_ip\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/collapseGraph"
+			},
+			"response": []
+		},
+		{
+			"name": "Process communicated with IP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 680137,\r\n\t\"collapse_by\": \"collapse_process_communicated\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/collapseGraph"
+			},
+			"response": []
+		},
+		{
+			"name": "Process downloaded on",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 680137,\r\n\t\"collapse_by\": \"process_downloaded_on\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/collapseGraph"
+			},
+			"response": []
+		},
+		{
+			"name": "User touched host",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 680139,\r\n\t\"collapse_by\": \"user_touched_host\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/collapseGraph"
+			},
+			"response": []
+		},
+		{
+			"name": "Host to user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 680139,\r\n\t\"collapse_by\": \"collapse_host_user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/collapseGraph"
+			},
+			"response": []
+		},
+		{
+			"name": "User clicked URL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 680139,\r\n\t\"collapse_by\": \"collapse_user_clicked_url\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/collapseGraph"
+			},
+			"response": []
+		},
+		{
+			"name": "get case status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"case_id\": \"159943_sstech_4596.3733921051025\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/getCaseStatus"
+			},
+			"response": []
+		},
+		{
+			"name": "startCaseExport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"startDate\": \"08/07/2020 01:00:00\",\r\n\t\"endDate\": \"08/07/2020 11:00:00\",\r\n\t\"dataSource\": [\"watchguard\"],\r\n\t\"query\": \r\n\t{\r\n\t\t\"IP\": {\r\n\t\t\t\"entityQueries\": [\"192.168.0.1\", \"192.168.0.100\"]\r\n\t\t\t},\r\n\t\t\"user\": {\r\n\t\t\t\"entityQueries\": [\"Debasish.Kanhar\", \"Manjunath.Sindagi\"]\r\n\t\t\t}\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/startCaseExport"
+			},
+			"response": []
+		},
+		{
+			"name": "Query Presence Status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"startDate\": \"08/07/2020 01:00:00\",\r\n\t\"endDate\": \"08/07/2020 11:00:00\",\r\n\t\"dataSource\": [\"watchguard\"],\r\n\t\"query\": \r\n\t{\r\n\t\t\"IP\": {\r\n\t\t\t\"entityQueries\": [\"192.168.0.19\", \"192.168.0.100\"]\r\n\t\t\t},\r\n\t\t\"user\": {\r\n\t\t\t\"entityQueries\": [\"Debasish.Kanhar\", \"Clark.Gordon\"]\r\n\t\t\t},\r\n            \"host\": {\r\n                \"entityQueries\": [\"ACMECL-20\"]\r\n            }\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/isQueryExported"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Graph for CaseId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"caseId\": \"159958_sstech_3357.343691110611\",\r\n    \"dedup\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/getGraphForCaseId"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

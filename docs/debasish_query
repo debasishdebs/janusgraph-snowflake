@@ -1,0 +1,61 @@
+//Outgoing
+with outgoing as
+(
+select NODE_ID as ID, MAP_ID as OUT_ID from nodes_with_edges_all where direction = 'outEdges'
+),
+outgoing_rcte as
+(
+  -- Anchor Clause
+  select id,out_id, 1 as lvl
+    from outgoing
+    where id = 500
+  union all
+  -- Recursive Clause
+  select base.id, base.out_id, outgoing_rcte.lvl + 1 as lvl
+    from outgoing base
+    join outgoing_rcte
+    on base.id = outgoing_rcte.out_id and lvl < 2
+)
+select  'outgoing' as direction, id, lvl, out_id from outgoing_rcte;
+
+//Incoming
+with incoming as
+(
+select MAP_ID as ID, NODE_ID as IN_ID from nodes_with_edges_all where direction = 'outEdges'
+),
+incoming_rcte as
+(
+  -- Anchor Clause
+  select id,in_id, 1 as lvl
+    from incoming
+    where id = 500
+  union all
+  -- Recursive Clause
+  select base.id, base.in_id, incoming_rcte.lvl + 1 as lvl
+    from incoming base
+    join incoming_rcte
+    on base.id = incoming_rcte.in_id and lvl < 2
+)
+select  'incoming' as direction, id, lvl, in_id from incoming_rcte;
+
+//Both Direction
+with parent as
+(
+select NODE_ID as ID_REF, MAP_ID as OTHER from nodes_with_edges_all where direction = 'outEdges'
+union all
+select MAP_ID as ID_REF, NODE_ID as OTHER from nodes_with_edges_all where direction = 'outEdges'
+),
+parent_rcte as
+(
+  -- Anchor Clause
+  select id_ref,other, 1 as lvl
+    from parent
+    where id_ref = 500
+  union all
+  -- Recursive Clause
+  select base.id_ref, base.other, parent_rcte.lvl + 1 as lvl
+    from parent base
+    join parent_rcte
+    on base.id_ref = parent_rcte.other and lvl < 2
+)
+select distinct other as other_id from parent_rcte;

@@ -1,0 +1,102 @@
+---
+USERS:
+  user1: { login: "user1", "email": "user1@local", "Fullname": "User 1", "workstation": "W1", "TimeZone": "-0500" }
+  user2: { login: "user3", "email": "user2@local", "Fullname": "User 2", "workstation": "W2", "TimeZone": "-0500" }
+  user3: { login: "user3", "email": "user3@local", "Fullname": "User 3", "workstation": "W3", "TimeZone": "-0500" }
+
+TEMPLATES:
+  #1562130647,"",80BE07AB597B2,1AFF-0024,1007,8354128,1,0,6,HTTP-proxy.SSTECH-Users-00,http/tcp,192.168.0.95,58982,63.247.138.174,80,"",0,"",0,1-MAIN LAN,0-SSTECH WAN,525,0,0,"",HTTP-Client.SSTECH Users,"","","",rcvd_bytes=19020,sent_bytes=461,src_user=Caitlin.Callahan@sstech.internal,elapsed_time=0.119784 sec(s); op=GET,dstname=www.partygameideas.com,arg=/bachelorette-party/bachelorette_bingo_1.php,"","","","","","",tr,HTTP request,"",2017-02-21 22:43:32
+  HTTP: '1562130647,"",80BE07AB597B2,1AFF-0024,1007,8354128,1,0,6,HTTP-proxy.SSTECH-Users-00,http/tcp,%SRCIP%,%SRCPORT%,%DSTIP%,%DSTPORT%,"",0,"",0,1-MAIN LAN,0-SSTECH WAN,525,0,0,"",HTTP-Client.SSTECH Users,"","","",rcvd_bytes=%RCVD_BYTES%,sent_bytes=%SENT_BYTES%,src_user=%SRCUSER%,elapsed_time=0.119784 sec(s); op=%METH%,dstname=%DSTDOMAIN%,arg=%URL%,"","","","","","",tr,HTTP request,"",%TS%'
+
+SCENARIOS:
+  http_https_normal:
+  -
+    templateid: "HTTP"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%SRCIP%":
+        - "py"
+        - !!python/name:common.utils.get_random_ip
+        - ["192.168.0.0/24"]
+      "%SRCPORT%":
+        - "py"
+        - !!python/name:random.randint
+        - [10000, 64000]
+      "%DSTIP%":
+        - "py"
+        - !!python/name:common.utils.get_random_ip
+        - ["0.0.0.0/32"]
+      "%DSTPORT%":
+        - "set"
+        - [80, 443]
+      "%RCVD_BYTES%":
+        - "py"
+        - !!python/name:random.randint
+        - [50, 10000]
+      "%SENT_BYTES%":
+        - "py"
+        - !!python/name:random.randint
+        - [50, 1000]
+      "%SRCUSER%":
+        - "user"
+        - "email"
+      "%METH%":
+        - "set"
+        - ["GET", "POST"]
+      "%DSTDOMAIN%":
+        - "py"
+        - !!python/name:common.utils.get_random_host
+        - []
+      "%URL%":
+        - "py"
+        - !!python/name:common.utils.get_random_uripath
+        - []
+
+  http_https_abn_domain:
+  -
+    templateid: "HTTP"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%SRCIP%":
+        - "py"
+        - !!python/name:common.utils.get_random_ip
+        - ["192.168.0.0/24"]
+      "%SRCPORT%":
+        - "py"
+        - !!python/name:random.randint
+        - [10000, 64000]
+      "%DSTIP%":
+        - "py"
+        - !!python/name:common.utils.get_random_ip
+        - ["0.0.0.0/32"]
+      "%DSTPORT%":
+        - "set"
+        - [80, 443]
+      "%RCVD_BYTES%":
+        - "py"
+        - !!python/name:random.randint
+        - [50, 10000]
+      "%SENT_BYTES%":
+        - "py"
+        - !!python/name:random.randint
+        - [50, 1000]
+      "%SRCUSER%":
+        - "user"
+        - "email"
+      "%METH%":
+        - "set"
+        - ["GET", "POST"]
+      "%DSTDOMAIN%":
+        - "set"
+        - ["wikileaks.org", "torrents.com"]
+      "%URL%":
+        - "py"
+        - !!python/name:common.utils.get_random_uripath
+        - []
+ACTIVITY:
+  user1:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   3600, [1,2]] ]
+    - [ "http_https_abn_domain", ["* 15-18 * * 1-5", 10000, [0,2]] ]
+  user2:
+    - [ "http_https_normal",     ["* 8-18 * * 1-5",   3600, [1,2]] ]
+...

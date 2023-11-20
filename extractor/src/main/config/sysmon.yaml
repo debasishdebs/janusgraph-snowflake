@@ -1,0 +1,206 @@
+---
+USERS:
+  johndark: { login: "johndark", "email": "john.dark@sstech.us"}
+
+TEMPLATES:
+  PROCESS_CREATED: 'Jul 12 00:32:41 %HOSTNAME% Microsoft-Windows-Sysmon[1288]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9223372036854775808,"EventType":"INFO","SeverityValue":2,"Severity":"INFO","EventID":1,"SourceName":"Microsoft-Windows-Sysmon","ProviderGuid":"%PROVIDER_GUID%","Version":5,"Task":1,"OpcodeValue":0,"RecordNumber":%RECORD_NUMBER%,"ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Microsoft-Windows-Sysmon/Operational","Domain":"NT AUTHORITY","AccountName":"SYSTEM","UserID":"%USERID%","AccountType":"User","Message":"Process Create:\r\nUtcTime: %TS%\r\nProcessGuid: %PROCESS_GUID%\r\nProcessId: 16776\r\nImage: %IMAGE%\r\nCommandLine: \"%COMMAND_LINE%\"\r\nCurrentDirectory: %CURRENT_DIR%\r\nUser: SSTECH\\%USER%\r\nLogonGuid: {841C7687-FCC4-5B03-0000-002072410100}\r\nLogonId: 0x14172\r\nTerminalSessionId: 0\r\nIntegrityLevel: High\r\nHashes: SHA1=0C0086215B7A1F1D4FDEF3C8C65CCBEEAE03D889\r\nParentProcessGuid: {841C7687-FCF5-5B03-0000-0010D24F0900}\r\nParentProcessId: 7104\r\nParentImage: C:\\Windows\\explorer.exe\r\nParentCommandLine: C:\\Windows\\Explorer.EXE","Category":"Process Create (rule: ProcessCreate)","Opcode":"Info","UtcTime":"%TS%","ProcessGuid":"%PROCESS_GUID%","Image":"%IMAGE%","CommandLine":"\"%COMMAND_LINE%\"","CurrentDirectory":"%CURRENT_DIR%","User":"SSTECH\\%USER%","LogonGuid":"{841C7687-FCC4-5B03-0000-002072410100}","LogonId":"0x14172","TerminalSessionId":"0","IntegrityLevel":"High","Hashes":"SHA1=0C0086215B7A1F1D4FDEF3C8C65CCBEEAE03D889","ParentProcessGuid":"{841C7687-FCF5-5B03-0000-0010D24F0900}","ParentProcessId":"7104","ParentImage":"C:\\Windows\\explorer.exe","ParentCommandLine":"C:\\Windows\\Explorer.EXE","EventReceivedTime":"%TS%","SourceModuleName":"sysmon_in","SourceModuleType":"im_msvistalog"}#015'
+  CHANGED_FILE_CREATION_TIME: 'Jul 12 23:54:47 %HOSTNAME% Microsoft-Windows-Sysmon[1308]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9223372036854775808,"EventType":"INFO","SeverityValue":2,"Severity":"INFO","EventID":2,"SourceName":"Microsoft-Windows-Sysmon","ProviderGuid":"%PROVIDER_GUID%","Version":4,"Task":2,"OpcodeValue":0,"RecordNumber":%RECORD_NUMBER%,"ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Microsoft-Windows-Sysmon/Operational","Domain":"NT AUTHORITY","AccountName":"SYSTEM","UserID":"%USERID%","AccountType":"User","Message":"File creation time changed:\r\nUtcTime: %TS%\r\nProcessGuid: %PROCESS_GUID%\r\nProcessId: 9460\r\nImage: %IMAGE%\r\nTargetFilename: %TARGET_FILENAME%\r\nCreationUtcTime: %SET_TIME%\r\nPreviousCreationUtcTime: %PREVIOUS_TIME%","Category":"File creation time changed (rule: FileCreateTime)","Opcode":"Info","UtcTime":"%TS%","ProcessGuid":"%PROCESS_GUID%","Image":"%IMAGE%","TargetFilename":"%TARGET_FILENAME%","CreationUtcTime":"%SET_TIME%","PreviousCreationUtcTime":"%PREVIOUS_TIME%","EventReceivedTime":"%TS%","SourceModuleName":"sysmon_in","SourceModuleType":"im_msvistalog"}#015'
+  FILE_CREATE: 'Aug 11 02:00:00 %HOSTNAME% Microsoft-Windows-Sysmon[1968]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9223372036854775808,"EventType":"INFO","SeverityValue":2,"Severity":"INFO","EventID":11,"SourceName":"Microsoft-Windows-Sysmon","ProviderGuid":"%PROVIDER_GUID%","Version":2,"Task":11,"OpcodeValue":0,"RecordNumber":%RECORD_NUMBER%,"ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Microsoft-Windows-Sysmon/Operational","Domain":"NT AUTHORITY","AccountName":"SYSTEM","UserID":"%USERID%","AccountType":"User","Message":"File created:\r\nRuleName: \r\nUtcTime: %TS%\r\nProcessGuid: %PROCESS_GUID%\r\nProcessId: 500\r\nImage: %IMAGE%\r\nTargetFilename: %TARGET_FILENAME%\r\nCreationUtcTime: %CREATE_TIME%","Category":"File created (rule: FileCreate)","Opcode":"Info","UtcTime":"%TS%","ProcessGuid":"%PROCESS_GUID%","Image":"%IMAGE%","TargetFilename":"%TARGET_FILENAME%","CreationUtcTime":"%CREATE_TIME%","EventReceivedTime":"%TS%","SourceModuleName":"in","SourceModuleType":"im_msvistalog"}#015'
+  PROCESS_TERMINATED: 'Sep  3 18:32:15 %HOSTNAME% Microsoft-Windows-Sysmon[1352]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9223372036854775808,"EventType":"INFO","SeverityValue":2,"Severity":"INFO","EventID":5,"SourceName":"Microsoft-Windows-Sysmon","ProviderGuid":"%PROVIDER_GUID%","Version":3,"Task":5,"OpcodeValue":0,"RecordNumber":%RECORD_NUMBER%,"ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Microsoft-Windows-Sysmon/Operational","Domain":"NT AUTHORITY","AccountName":"SYSTEM","UserID":"%USERID%","AccountType":"User","Message":"Process terminated:\r\nUtcTime: %TS%\r\nProcessGuid: %PROCESS_GUID%\r\nProcessId: 10576\r\nImage: %IMAGE%","Category":"Process terminated (rule: ProcessTerminate)","Opcode":"Info","UtcTime":"%TS%","ProcessGuid":"%PROCESS_GUID%","Image":"%IMAGE%","EventReceivedTime":"%TS%","SourceModuleName":"sysmon_in","SourceModuleType":"im_msvistalog"}#015'
+
+SCENARIOS:
+  bad_file_change_file_creation_time:
+  -
+    templateid: "CHANGED_FILE_CREATION_TIME"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%USER%":
+        - "user"
+        - "login"
+      "%USERID%":
+        - "py"
+        - !!python/name:common.utils.get_sysmon_userid
+        - ['%VALS%', 'john.black']
+        - 1
+      "%HOSTNAME%":
+        - "py"
+        - !!python/name:common.utils.get_sysmon_hostname
+        - ['%VALS%']
+        - 2
+      "%PROVIDER_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+      "%RECORD_NUMBER%":
+        - "py"
+        - !!python/name:common.utils.get_id_num
+        - []
+      "%PROCESS_ID%":
+        - "set"
+        - [12345]
+      "%THREAD_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%IMAGE%":
+        - "set"
+        - ['C:\\Users\\Administrator\\Downloads\\bad_file.exe']
+      "%PROCESS_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_guid_time
+        - ['-AAAA-BBBB-CCCC-012345678901']
+      "%TARGET_FILENAME%":
+        - "py"
+        - !!python/name:common.utils.get_random_filename
+        - ['C:\\Users\\Administrator\\']
+      "%PREVIOUS_TIME%":
+        - "py"
+        - !!python/name:common.utils.get_random_time
+        - [10080, '%VALS%']
+        - 2
+      "%SET_TIME%":
+        - "py"
+        - !!python/name:common.utils.get_random_time
+        - [600, '%VALS%']
+        - 2
+  bad_file_create_file:
+  -
+    templateid: "FILE_CREATE"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%USERID%":
+        - "py"
+        - !!python/name:common.utils.get_sysmon_userid
+        - ['%VALS%', 'john.black']
+        - 1
+      "%HOSTNAME%":
+        - "py"
+        - !!python/name:common.utils.get_sysmon_hostname
+        - ['%VALS%']
+        - 2
+      "%PROVIDER_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+      "%RECORD_NUMBER%":
+        - "py"
+        - !!python/name:common.utils.get_id_num
+        - []
+      "%PROCESS_ID%":
+        - "set"
+        - [12345]
+      "%THREAD_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%IMAGE%":
+        - "set"
+        - ['C:\\Users\\Administrator\\Downloads\\bad_file.exe']
+      "%PROCESS_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_guid_time
+        - ['-AAAA-BBBB-CCCC-012345678901']
+      "%TARGET_FILENAME%":
+        - "py"
+        - !!python/name:common.utils.get_random_filename
+        - ['C:\\Users\\Administrator\\']
+      "%CREATE_TIME%":
+        - "py"
+        - !!python/name:common.utils.get_random_time
+        - [10080, '%VALS%']
+        - 2
+  bad_file_process_created:
+  -
+    templateid: "PROCESS_CREATED"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%USER%":
+        - "user"
+        - "login"
+      "%USERID%":
+        - "py"
+        - !!python/name:common.utils.get_sysmon_userid
+        - ['%VALS%', 'john.black']
+        - 1
+      "%HOSTNAME%":
+        - "py"
+        - !!python/name:common.utils.get_sysmon_hostname
+        - ['%VALS%']
+        - 2
+      "%PROVIDER_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+      "%RECORD_NUMBER%":
+        - "py"
+        - !!python/name:common.utils.get_id_num
+        - []
+      "%PROCESS_ID%":
+        - "set"
+        - [12345]
+      "%THREAD_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%IMAGE%":
+        - "set"
+        - ['C:\\Users\\Administrator\\Downloads\\bad_file.exe']
+      "%PROCESS_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_guid_time
+        - ['-AAAA-BBBB-CCCC-012345678901']
+      "%TARGET_FILENAME%":
+        - "py"
+        - !!python/name:common.utils.get_random_filename
+        - ['C:\\Users\\Administrator\\']
+      "%COMMAND_LINE%":
+        - "set"
+        - ['C:\\Users\\Administrator\\Downloads\\bad_file.exe']
+      "%CURRENT_DIR%":
+        - "set"
+        - ['C:\\Users\\Administrator\\Downloads\\']
+  bad_file_process_terminated:
+  -
+    templateid: "PROCESS_TERMINATED"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%USERID%":
+        - "py"
+        - !!python/name:common.utils.get_sysmon_userid
+        - ['%VALS%', 'john.black']
+        - 1
+      "%HOSTNAME%":
+        - "py"
+        - !!python/name:common.utils.get_sysmon_hostname
+        - ['%VALS%']
+        - 2
+      "%PROVIDER_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+      "%RECORD_NUMBER%":
+        - "py"
+        - !!python/name:common.utils.get_id_num
+        - []
+      "%PROCESS_ID%":
+        - "set"
+        - [12345]
+      "%THREAD_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%IMAGE%":
+        - "set"
+        - ['C:\\Users\\Administrator\\Downloads\\bad_file.exe']
+      "%PROCESS_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_guid_time
+        - ['-AAAA-BBBB-CCCC-012345678901']
+
+ACTIVITY:
+  johndark:
+    - [ "bad_file_process_created",           ["34 8 * * 0-7", 59, [1, 1]]]
+    - [ "bad_file_change_file_creation_time", ["* 9-17 * * 0-7", 59, [1, 2]]]
+    - [ "bad_file_create_file",               ["* 9-17 * * 0-7", 59, [1, 2]]]
+    - [ "bad_file_process_terminated",        ["59 17 * * 0-7", 59, [1, 1]]]
+...

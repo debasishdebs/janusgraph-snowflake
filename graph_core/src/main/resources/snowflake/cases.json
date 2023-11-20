@@ -1,0 +1,52 @@
+[
+  {
+    "startTime": "2020-05-06 01:00:00",
+    "endTime": "2020-07-08 11:00:00",
+    "dataSource": ["all"],
+    "query":
+    {
+      "user": {
+        "entityQueries": ["satish.abburi@sstech.us", "sloan.hart", "satish.abburi@sstech.internal", "Venkat.Abburi",
+                        "venkat.abburi@sstech.internal", "venkat.abburi@sstech.us"]
+      },
+      "IP": {
+        "entityQueries": ["192.168.110.220"]
+      },
+      "host": {
+        "entityQueries": ["acmecl22"]
+      }
+    }
+  },
+  {
+    "startTime": "2020-05-06 01:00:00",
+    "endTime": "2020-07-08 11:00:00",
+    "dataSource": ["all"],
+    "query":
+    {
+      "user": {
+      "entityQueries": ["Camile.Gordon", "rakesh.satkuri@sstech.us", "william.walker", "rakesh.satkuri@sstech.internal",
+                      "neha.desai@sstech.us", "pritesh.p@sstech.us"]
+    },
+    "host": {
+      "entityQueries": ["acmecl22", "SSTECHLAPTOP357.sstech.internal"]
+    }
+    }
+  },
+  {
+    "startTime": "2020-05-06 01:00:00",
+    "endTime": "2020-07-08 11:00:00",
+    "dataSource": ["all"],
+    "query":
+    {
+      "IP": {
+        "entityQueries": ["192.168.0.112"]
+      },
+      "user": {
+        "entityQueries": ["rakesh.satkuri@sstech.us", "satish.chamana@sstech.internal"]
+      },
+      "host": {
+        "entityQueries": ["acmecl22"]
+      }
+    }
+  }
+]

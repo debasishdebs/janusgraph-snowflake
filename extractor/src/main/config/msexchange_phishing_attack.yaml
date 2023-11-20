@@ -1,0 +1,66 @@
+---
+USERS:
+  brucecook:   { hostname: "ACMECL-2", account_name: "Bruce.Cook", src_ip: '192.168.0.5'}
+  ethanclark: { hostname: 'ACMECL-15', account_name: 'Ethan.Clark', src_ip: '192.168.0.70'}
+  flashgordon: { hostname: 'ACMECL-16', account_name: 'Flash.Gordon', src_ip: '192.168.0.85'}
+  madisonclark: { hostname: 'ACMECL-17', account_name: 'Madison.Clark', src_ip: '192.168.0.103'}
+  camillegordon: { hostname: 'ACMECL-18', account_name: 'Camille.Gordon', src_ip: '192.168.0.19'}
+  camillewayne: { hostname: 'ACMECL-19', account_name: 'Camille.Wayne', src_ip: '192.168.0.25'}
+  clarkgordon: { hostname: 'ACMECL-20', account_name: 'Clark.Gordon', src_ip: '192.168.0.30'}
+  danielgordon: { hostname: 'ACMECL-21', account_name: 'Daniel.Gordon', src_ip: '192.168.0.41'}
+  dianaknight: { hostname: 'ACMECL-22', account_name: 'Diana.Knight', src_ip: '192.168.0.55'}
+  emmahunt: { hostname: 'ACMECL-23', account_name: 'Emma.Hunt', src_ip: '192.168.0.64'}
+
+TEMPLATES:
+  MSG: '%TS%.%RAND_MILLIS%Z,%SRC_IP%,mail.ess.barracuda.com,192.168.110.220,SSDLWPEXC01,08D6C7D37A401048;%TS%.%RAND_MILLIS%Z;0,SSDLWPEXC01\Barracuda ESS 25,SMTP,RECEIVE,%MSG_ID%,<%MSG_ID%.13239208.1560416628000.460119.1560416640313>,%USERNAME%,,4076,1,,,Limited Time Offer,news@baidu1.com,news@baidu1.com,00A: NTS: ,Incoming,,%SRC_IP%,192.168.110.220,S:FirstForestHop=SSDLWPEXC01.acme.internal'
+
+SCENARIOS:
+  msg:
+  -
+    templateid: "MSG"
+    timeformat: "%Y-%m-%dT%H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%RECORD_NUMBER%":
+        - "py"
+        - !!python/name:common.utils.get_id_num
+        - []
+      "%USERNAME%":
+        - "user"
+        - "account_name"
+      "%RAND_MILLIS%":
+        - "py"
+        - !!python/name:random.randint
+        - [100, 999]
+      "%MSG_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [100000, 999999]
+      "%SRC_IP%":
+        - "user"
+        - "src_ip"
+
+ACTIVITY:
+  brucecook:
+    - [ "msg", ["30 8 * * *", 59, [1, 1]] ]
+  ethanclark:
+    - [ "msg", ["30 8 * * *", 59, [1, 1]] ]
+  flashgordon:
+    - [ "msg", ["30 8 * * *", 59, [1, 1]] ]
+  madisonclark:
+    - [ "msg", ["30 8 * * *", 59, [1, 1]] ]
+  camillegordon:
+    - [ "msg", ["30 8 * * *", 59, [1, 1]] ]
+  camillewayne:
+    - [ "msg", ["30 8 * * *", 59, [1, 1]] ]
+  clarkgordon:
+    - [ "msg", ["30 8 * * *", 59, [1, 1]] ]
+  danielgordon:
+    - [ "msg", ["30 8 * * *", 59, [1, 1]] ]
+  dianaknight:
+    - [ "msg", ["30 8 * * *", 59, [1, 1]] ]
+  emmahunt:
+    - [ "msg", ["30 8 * * *", 59, [1, 1]] ]
+...

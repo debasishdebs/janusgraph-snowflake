@@ -1,0 +1,257 @@
+{
+  "__comment": "This is for data based on Maxim logs. Referred as WatchGuard everywhere. For Thomass datamapper goto guardduty",
+  "nodes": {
+    "srcIP": {
+      "maps": {
+        "ip": "ip_src_addr",
+        "eventId": "",
+        "node_label": "default=IP",
+        "dataSourceName": "default=watchguard"
+      },
+      "constraints": {
+        "unique": "ip"
+      }
+    },
+    "dstIP": {
+      "maps": {
+        "ip": "ip_dst_addr",
+        "eventId": "",
+        "node_label": "default=IP",
+        "dataSourceName": "default=watchguard"
+      },
+      "constraints": {
+        "unique": "ip"
+      }
+    },
+    "srcUser": {
+      "maps": {
+        "userName": "src_user",
+        "userId": "",
+        "node_label": "default=user",
+        "dataSourceName": "default=watchguard"
+      },
+      "constraints": {
+        "unique": "userName"
+      }
+    },
+    "dstUser": {
+      "maps": {
+        "userName": "dst_user",
+        "userId": "",
+        "node_label": "default=user",
+        "dataSourceName": "default=watchguard"
+      },
+      "constraints": {
+        "unique": "userName"
+      }
+    },
+    "URLs": {
+      "maps": {
+        "URL": "dstname",
+        "node_label": "default=URLs",
+        "dataSourceName": "default=watchguard"
+      },
+      "constraints": {
+        "unique": "URL"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "process": {
+      "maps": {
+        "fileName": "analyze-generate-process-for-watchguard",
+        "filePath": "analyze-generate-process-path-for-watchguard",
+        "fullFileName": "arg",
+        "node_label": "default=process",
+        "dataSourceName": "default=watchguard"
+      },
+      "constraints": {
+        "unique": "fileName"
+      },
+      "repeats": {
+        "times": 1
+      }
+    }
+  },
+  "edges": {
+    "IPsCommunicated": {
+      "maps": {
+        "policy": "policy",
+        "dstGeoLoc": "geoDst",
+        "srcGeoLoc": "geoSrc",
+        "srcPort": "ip_src_port",
+        "dstPort": "ip_dst_port",
+        "sentBytes": "sent_bytes",
+        "receivedBytes": "rcvd_bytes",
+        "elapsedTime": "duration",
+        "operation": "op",
+        "eventTime": "timestamp",
+        "counter": "default=0",
+        "edge_label": "default=IPsCommunicated",
+        "dataSourceName": "default=watchguard"
+      },
+      "constraints": {
+        "left": "IP.ip(ip_src_addr)",
+        "right": "IP.ip(ip_dst_addr)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "srcClicked": {
+      "maps": {
+        "sentBytes": "sent_bytes",
+        "receivedBytes": "rcvd_bytes",
+        "elapsedTime": "duration",
+        "args": "arg",
+        "operation": "op",
+        "counter": "default=0",
+        "edge_label": "default=clicked",
+        "dataSourceName": "default=watchguard"
+      },
+      "constraints": {
+        "left": "user.userName(src_user)",
+        "right": "URLs.URL(dstname)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "dstClicked": {
+      "maps": {
+        "sentBytes": "sent_bytes",
+        "receivedBytes": "rcvd_bytes",
+        "elapsedTime": "duration",
+        "args": "arg",
+        "operation": "op",
+        "counter": "default=0",
+        "edge_label": "default=clicked",
+        "dataSourceName": "default=watchguard"
+      },
+      "constraints": {
+        "left": "user.userName(dst_user)",
+        "right": "URLs.URL(dstname)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "downloadedFrom": {
+      "maps": {
+        "srcPort": "ip_src_port",
+        "dstPort": "ip_dst_port",
+        "sentBytes": "sent_bytes",
+        "receivedBytes": "rcvd_bytes",
+        "elapsedTime": "analyze-generate-elapsed-time-for-watchguard",
+        "counter": "default=0",
+        "edge_label": "default=downloadedFrom",
+        "dataSourceName": "default=watchguard"
+      },
+      "constraints": {
+        "right": "URLs.URL(dstname)",
+        "left": "process.fileName(analyze-generate-process-for-watchguard)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "srcDownloadedOn": {
+      "maps": {
+        "counter": "default=0",
+        "edge_label": "default=downloadedOn",
+        "dataSourceName": "default=watchguard"
+      },
+      "constraints": {
+        "left": "process.fileName(analyze-generate-process-for-watchguard)",
+        "right": "IP.ip(ip_src_addr)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "srcDownloadedBy": {
+      "maps": {
+        "downloadSize": "rcvd_bytes",
+        "counter": "default=0",
+        "edge_label": "default=downloadedBy",
+        "dataSourceName": "default=watchguard"
+      },
+      "constraints": {
+        "left": "process.fileName(analyze-generate-process-for-watchguard)",
+        "right": "user.userName(src_user)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "dstDownloadedOn": {
+      "maps": {
+        "counter": "default=0",
+        "edge_label": "default=downloadedOn",
+        "dataSourceName": "default=watchguard"
+      },
+      "constraints": {
+        "left": "process.fileName(analyze-generate-process-for-watchguard)",
+        "right": "IP.ip(ip_dst_addr)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "dstDownloadedBy": {
+      "maps": {
+        "downloadSize": "rcvd_bytes",
+        "counter": "default=0",
+        "edge_label": "default=downloadedBy",
+        "dataSourceName": "default=watchguard"
+      },
+      "constraints": {
+        "left": "process.fileName(analyze-generate-process-for-watchguard)",
+        "right": "user.userName(dst_user)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "dstHasIP": {
+      "maps": {
+        "counter": "default=0",
+        "edge_label": "default=hasIP",
+        "dataSourceName": "default=watchguard"
+      },
+      "constraints": {
+        "left": "user.userName(dst_user)",
+        "right": "IP.ip(ip_dst_addr)"
+      }
+    },
+    "srcHasIP": {
+      "maps": {
+        "counter": "default=0",
+        "edge_label": "default=hasIP",
+        "dataSourceName": "default=watchguard"
+      },
+      "constraints": {
+        "left": "user.userName(src_user)",
+        "right": "IP.ip(ip_src_addr)"
+      }
+    }
+  },
+  "analyze": {
+    "generate-process-for-watchguard": {
+      "params": "arg",
+      "package": "from=utils.DataExtractionUtilities&package=generate_process_name_for_watchguard",
+      "repeat": 1
+    },
+    "generate-process-path-for-watchguard": {
+      "params": "arg",
+      "package": "from=utils.DataExtractionUtilities&package=generate_process_path_for_watchguard",
+      "repeat": 1
+    },
+    "generate-elapsed-time-for-watchguard": {
+      "params": "elapsed_time",
+      "package": "from=utils.DataExtractionUtilities&package=generate_elapsed_time_for_watchguard",
+      "repeat": 1
+    }
+  }
+}

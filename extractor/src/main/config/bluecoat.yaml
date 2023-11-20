@@ -1,0 +1,35 @@
+---
+timeformat: "%Y-%m-%d %H:%M:%S"
+linebreak: "\n"
+templates:
+  - { type: 'file', samples: 'bluecoat/bluecoat.sample', period: 60, min: 1, max: 5 }
+replaces:
+  - [ '%CONTENT_TYPE%', 'common/content-types.txt' ]
+  - [ '%TIME_TAKEN%', [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 5, 10] ]
+  - [ '%USER_AGENT%', 'common/user-agents.txt' ]
+  - [ '%URI_EXTENSION%', 'common/extentsions.txt' ]
+  - [ '%DOMAIN%', 'common/hosts.txt' ]
+  - [ '%HOST%', 'common/hosts.txt' ]
+  - [ '%USERNAME%', 'common/users.txt' ]
+  - [ '%URI_PATH%', ['test', 'page', 'about', 'info', 'index', 'contacts' ] ]
+  -
+    - '%BYTES%'
+    - !!python/name:random.randint
+    - [1, 100000]
+  -
+    - '%NUMBER%'
+    - !!python/name:random.randint
+    - [1, 100000]
+  -
+    - '%DEST_IP%'
+    - !!python/name:common.utils.get_random_ip
+    - ['0.0.0.0/0']
+  -
+    - '%SRC_IP%'
+    - !!python/name:common.utils.get_random_ip
+    - ['0.0.0.0/0']
+  -
+    - '%IPADDR%'
+    - !!python/name:common.utils.get_random_ip
+    - ['0.0.0.0/0']
+...

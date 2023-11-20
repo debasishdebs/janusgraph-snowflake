@@ -1,0 +1,12 @@
+| default                  | NULL                  |
+| astra-prod@list.acme.com  | ATT-BO-UURC-DAI-DFW   |
+| bruce.clark@acme.com           | NULL                  |
+| bruce.smith@acme.com           | NULL                  |
+| daniel.cook@acme.com           | NULL                  |
+| ethan.smith@acme.com     | NULL                  |
+| madison.smith@sstech.us           | NULL                  |
+| noah.wayne@acme.com           | NULL                  |
+| ray.smith@acme.com           | NULL                  |
+| mason.wayne@acme.com           | NULL                  |
+| flash.knight@acme.com           | NULL                  |
+| system                   | ATG-AWS-NonProd       |

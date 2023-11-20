@@ -1,0 +1,15 @@
+.idea/*
+examples/*
+*.pyc
+sample/*
+extractor/src/main/resources/data
+extractor/target/
+__pycache__
+graph_app/target/
+graph_app/src/main/resources/output/
+graph_ui/node_modules/
+graphloader/target/
+graphloader/src/main/resources/dumps/
+graphtransformer/target/
+graphtransformer/libs/
+graphtransformer/src/main/resources/dumps/

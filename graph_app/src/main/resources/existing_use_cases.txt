@@ -1,0 +1,104 @@
+Based on Chris' meeting invite for 26th June 20
+
+Purpose:
+
+We need everyone’s assistance with shaking the applications for bugs in the analytics dashboards.  Concretely, I want you to test the analytics to see if each 1) dashboard workflow works, 2) Identify any misspelling, 3) Identify possible UX improvements, 4)  Any missing data from tables that you expect, 5)  Report any drill downs that don’t make any sense, 6) any missing enrichment data, like geo or AD.
+
+Overall Testing Process:
+
+Check for misspells on the charts
+Is there a legend for each chart
+Does the legend make senses for the chart
+Are there any unpleasant experiences with using the app or chart
+Are you able to investigate a possible anomaly on the charts
+Is the chart empty or are there gaps in the data on the chart
+Are there any errors reports or unexpected messages
+Are there any mixed values (like numbers and strings in an integer field)  in a column
+Are there NULLs or NAs in the columns
+Can you view the details of the report
+Can you think of an easier/better to show the data in the charts
+
+Your Output:
+
+Document any discrepancies with any charts on a dashboard in a JIRA ticket
+Provide steps to reproduce it
+Feedback must reference a app and/or chart
+If in doubt, document your feedback
+
+ITD
+
+    Select 3 users or entities from the risky tables and drilldown to the 360 User/IP view
+    Review the Event List records to identify any missing (like no records) or obviously wrong information.
+
+
+UEBA
+
+    Select each UEBA, and ask yourself if the y and x values make sense for the high variance clusters?
+    Can you drill down on a clustering centroid to do a search
+
+
+Security Posture
+
+    Select an indicator from the top and drill down to the detailed records.
+    Does the result make sense
+    Can you jump to search from this page
+    Can you drill down on a specific UEBA
+
+
+SOC Dashboard
+
+    Can you investigate the risky users and entities by pivoting to 360 View or Search?
+
+
+Statistical Dashboard
+
+    Do the stats look accurate for users and entities
+    Can you compare two records to contract their stats
+
+
+
+Search
+
+    Run a query over the last 7 days with SRC_HOST: john.white and SRC_IP: 192.168.5.53
+    Run a query over the last 7 days with SRC_HOST: acmecl23 and SRC_TYPE: Sysmon and EVENT_ID
+    Identify a value in the results returned by above queries and do a string search on the value.  Do you get results back?
+
+
+360 Views
+
+    View one user in 360 View
+    View one entity in 360 View
+
+
+Endpoint
+
+    Can you identify endpoints that are missing A/V
+
+
+VPN Sessions
+
+    Can you filter on a user and see their traffic
+
+
+Outlook Sessions
+
+    Can you filter on a user to see their email client activity
+
+
+Alerts
+
+    Are all the alerts labeled with human readable names
+    Can you drill down to search
+
+
+
+NIST CSF P1 & P2
+
+    Are there any empty reports
+    Can you drill down from a record to search
+
+
+Windows Source Analysis
+
+    Are they any empty reports
+    Can you drill down to search app

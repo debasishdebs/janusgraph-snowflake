@@ -1,0 +1,61 @@
+Repeat & Simple Ego mix
+
+
+anchor: 
+	{
+		"id": "NA",
+		"property": "userName",
+		"value": "debasish",
+		"value_operator": "equals",
+		"label": "NA"
+	}
+	
+repeats: 
+	{
+		"repeat": 3,
+		"edge": true,
+		"edge_filters": {
+							"label": "hasIP",
+							"id": "NA",
+							"property": "eventTime",
+							"value": "2020-07-13 00:01:59, 2020-07-14 00:01:59"
+							"value_operator": "between"
+						},
+		"node_filters": {
+							"label": "NA",
+							"id": "NA",
+							"property": "userName",
+							"value": "Arav"
+							"value_operator": "%LIKE%"
+						},
+		"emit": "last"
+	}
+
+iteration: 
+	{
+	4: {
+			"direction": "both",
+			"edge": true,
+			"edge_filters": "NA",
+			"node_filters": "NA"
+		},
+	5: {
+			"direction": "out",
+			"edge": false,
+			"edge_filters": "NA",
+			"node_filters": {
+								"label": "NA",
+								"id": "NA",
+								"property": "userName",
+								"value": "Arav"
+								"value_operator": "%LIKE%"
+							}
+		}
+	}
+
+project:
+	{
+		"all_properties": true,
+		"id": false,
+		"id_label": true
+	}

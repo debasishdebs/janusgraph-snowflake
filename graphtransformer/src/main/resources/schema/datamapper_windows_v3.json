@@ -1,0 +1,147 @@
+{
+  "nodes": {
+    "IP": {
+      "maps": {
+        "ip": "IpAddress",
+        "ports": "IpPort",
+        "node_label": "default=IP",
+        "dataSourceName": "default=windows"
+      },
+      "constraints": {
+        "unique": "ip"
+      }
+    },
+    "subjectUser": {
+      "maps": {
+        "userName": "analyze-generate-subject-usernme-for-windows",
+        "userId": "SubjectUserSid",
+        "node_label": "default=user",
+        "dataSourceName": "default=windows"
+      },
+      "constraints": {
+        "unique": "userName"
+      }
+    },
+    "targetUser": {
+      "maps": {
+        "userName": "analyze-generate-target-usernme-for-windows",
+        "userId": "TargetUserSid",
+        "node_label": "default=user",
+        "dataSourceName": "default=windows"
+      },
+      "constraints": {
+        "unique": "userName"
+      }
+    },
+    "host": {
+      "maps": {
+        "hostname": "Hostname",
+        "node_label": "default=host",
+        "dataSourceName": "default=windows"
+      },
+      "constraints": {
+        "unique": "hostname"
+      }
+    },
+    "process": {
+      "maps": {
+        "fileName": "FileName",
+        "filePath": "Path",
+        "fullFileName": "FullFileName",
+        "node_label": "default=process",
+        "dataSourceName": "default=windows"
+      },
+      "constraints": {
+        "unique": "fullFileName"
+      }
+    }
+  },
+  "edges": {
+    "loggedIn": {
+      "maps": {
+        "eventTime": "EventTime",
+        "objectName": "ObjectName",
+        "processID": "ProcessID",
+        "eventId": "EventID",
+        "category": "Category",
+        "isAlert": "isAlert",
+        "severityValue": "SeverityValue",
+        "counter": "default=0",
+        "workStationName": "WorkStationName",
+        "edge_label": "default=loggedIn",
+        "dataSourceName": "default=windows"
+      },
+      "constraints": {
+        "aggregate": "counter-eventTime-5s",
+        "left": "user.userName(TargetUserName)",
+        "right": "IP.ip(IpAddress)"
+      }
+    },
+    "createdProcess": {
+      "maps": {
+        "eventTime": "EventTime",
+        "severityValue": "SeverityValue",
+        "processID": "ProcessID",
+        "eventId": "EventID",
+        "category": "Category",
+        "isAlert": "isAlert",
+        "counter": "default=0",
+        "edge_label": "default=createdProcess",
+        "dataSourceName": "default=windows"
+      },
+      "constraints": {
+        "left": "user.userName(TargetUserName)",
+        "right": "process.fullFileName(FullFileName)"
+      }
+    },
+    "withIP": {
+      "maps": {
+        "eventTime": "EventTime",
+        "severityValue": "SeverityValue",
+        "processID": "ProcessID",
+        "eventId": "EventID",
+        "category": "Category",
+        "isAlert": "isAlert",
+        "counter": "default=0",
+        "edge_label": "default=withIP",
+        "dataSourceName": "default=windows"
+      },
+      "constraints": {
+        "left": "host.hostname(Hostname)",
+        "right": "IP.ip(IpAddress)"
+      }
+    },
+    "hasIP": {
+      "maps": {
+        "eventTime": "EventTime",
+        "severityValue": "SeverityValue",
+        "processID": "ProcessID",
+        "eventId": "EventID",
+        "category": "Category",
+        "isAlert": "isAlert",
+        "counter": "default=0",
+        "edge_label": "default=hasIP",
+        "dataSourceName": "default=windows"
+      },
+      "constraints": {
+        "left": "user.userName(TargetUserName)",
+        "right": "IP.ip(IpAddress)"
+      }
+    }
+  },
+  "analyze": {
+    "generate-subject-usernme-for-windows": {
+      "params": "SubjectUserName",
+      "package": "from=utils.DataExtractionUtilities&package=generate_user_name_for_windowsnxlog",
+      "repeat": 1
+    },
+    "generate-target-usernme-for-windows": {
+      "params": "TargetUserName",
+      "package": "from=utils.DataExtractionUtilities&package=generate_user_name_for_windowsnxlog",
+      "repeat": 1
+    },
+    "identify-ip-src-dst": "from=utils.DataExtractionUtilities&package=identify_if_ip_is_src_or_dest",
+    "ip4-ip6": "from=utils.DataExtractionUtilities&package=identify_if_ip_is_ip4_or_ip6",
+    "generate-username": "from=utils.DataExtractionUtilities&package=generate_username_for_windows_v3"
+  }
+}

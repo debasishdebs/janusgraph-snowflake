@@ -1,0 +1,55 @@
+---
+USERS:
+  brucecook:   { hostname: "ACMECL-2", account_name: "Bruce.Cook"}
+  ethanclark: { hostname: 'ACMECL-15', account_name: 'Ethan.Clark'}
+  flashgordon: { hostname: 'ACMECL-16', account_name: 'Flash.Gordon'}
+  madisonclark: { hostname: 'ACMECL-17', account_name: 'Madison.Clark'}
+  camillegordon: { hostname: 'ACMECL-18', account_name: 'Camille.Gordon'}
+  camillewayne: { hostname: 'ACMECL-19', account_name: 'Camille.Wayne'}
+  clarkgordon: { hostname: 'ACMECL-20', account_name: 'Clark.Gordon'}
+  danielgordon: { hostname: 'ACMECL-21', account_name: 'Daniel.Gordon'}
+  dianaknight: { hostname: 'ACMECL-22', account_name: 'Diana.Knight'}
+  emmahunt: { hostname: 'ACMECL-23', account_name: 'Emma.Hunt'}
+
+TEMPLATES:
+  ALERT: 'Jun  6 08:48:35 %HOSTNAME% Symantec_Endpoint_Protection_Client[0]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":36028797018963968,"EventType":"ERROR","SeverityValue":4,"Severity":"ERROR","EventID":51,"SourceName":"Symantec Endpoint Protection Client","Task":0,"RecordNumber":%RECORD_NUMBER%,"ProcessID":0,"ThreadID":0,"Channel":"Symantec Endpoint Protection Client","Message":" \r\n\r\nApplication Heuristic SONAR.SuspLaunch!g52 in File: C:\\Users\\%USERNAME%\\Downloads\\XNAGS31_setup.exe by: SONAR scan.  Action: Quarantine failed : Leave Alone failed.  Action Description: Reboot Processing","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+
+SCENARIOS:
+  alert:
+  -
+    templateid: "ALERT"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%RECORD_NUMBER%":
+        - "py"
+        - !!python/name:common.utils.get_id_num
+        - []
+      "%USERNAME%":
+        - "user"
+        - "account_name"
+
+ACTIVITY:
+  brucecook:
+    - [ "alert", ["45 9 * * *", 59, [1, 1]] ]
+  ethanclark:
+    - [ "alert", ["4 11 * * *", 59, [1, 1]] ]
+  flashgordon:
+    - [ "alert", ["15 10 * * *", 59, [1, 1]] ]
+  madisonclark:
+    - [ "alert", ["25 10 * * *", 59, [1, 1]] ]
+  camillegordon:
+    - [ "alert", ["19 12 * * *", 59, [1, 1]] ]
+  camillewayne:
+    - [ "alert", ["19 13 * * *", 59, [1, 1]] ]
+  clarkgordon:
+    - [ "alert", ["38 10 * * *", 59, [1, 1]] ]
+  danielgordon:
+    - [ "alert", ["14 11 * * *", 59, [1, 1]] ]
+  dianaknight:
+    - [ "alert", ["4 14 * * *", 59, [1, 1]] ]
+  emmahunt:
+    - [ "alert", ["5 15 * * *", 59, [1, 1]] ]
+...

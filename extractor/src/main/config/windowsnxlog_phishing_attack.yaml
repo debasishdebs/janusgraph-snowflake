@@ -1,0 +1,431 @@
+---
+USERS:
+  raywayne:    { hostname: "ACMECL-0", account_name: "Ray.Wayne"}
+  bruceclark:  { hostname: "ACMECL-1", account_name: "Bruce.Clark" }
+  brucecook:   { hostname: "ACMECL-2", account_name: "Bruce.Cook", src_ip: '192.168.0.5' }
+  brucefisher: { hostname: "ACMECL-3", account_name: "Bruce.Fisher" }
+  brucegold:   { hostname: "ACMECL-4", account_name: "Bruce.Gold" }
+  brucegordon: { hostname: "ACMECL-5", account_name: "Bruce.Gordon" }
+  brucehunt:   { hostname: "ACMECL-6", account_name: "Bruce.Hunt" }
+  brucekent:   { hostname: "ACMECL-7", account_name: "Bruce.Kent" }
+  bruceknight: { hostname: "ACMECL-8", account_name: "Bruce.Knight" }
+  bruceprince: { hostname: "ACMECL-9", account_name: "Bruce.Prince" }
+  brucesmith:  { hostname: "ACMECL-10", account_name: "Bruce.Smith" }
+  brucewayne:  { hostname: "ACMECL-11", account_name: "Bruce.Wayne" }
+  camilleclark: { hostname: "ACMECL-12", account_name: "Camille.Clark" }
+  camillecook: { hostname: "ACMECL-13", account_name: "Camille.Cook" }
+  camillefisher: { hostname: "ACMECL-14", account_name: "Camille.Fisher" }
+
+  ethanclark: { hostname: "ACMECL-15", account_name: 'Ethan.Clark', src_ip: '192.168.0.70' }
+  flashgordon: { hostname: "ACMECL-16", account_name: 'Flash.Gordon', src_ip: '192.168.0.85' }
+  madisonclark: { hostname: "ACMECL-17", account_name: 'Madison.Clark', src_ip: '192.168.0.103' }
+  camillegordon: { hostname: "ACMECL-18", account_name: 'Camille.Gordon', src_ip: '192.168.0.19' }
+  camillewayne: { hostname: "ACMECL-19", account_name: 'Camille.Wayne', src_ip: '192.168.0.25' }
+  clarkgordon: { hostname: "ACMECL-20", account_name: 'Clark.Gordon', src_ip: '192.168.0.30' }
+  danielgordon: { hostname: "ACMECL-21", account_name: 'Daniel.Gordon', src_ip: '192.168.0.41' }
+  dianaknight: { hostname: "ACMECL-22", account_name: 'Diana.Knight', src_ip: '192.168.0.55' }
+  emmahunt: { hostname: "ACMECL-23", account_name: 'Emma.Hunt', src_ip: '192.168.0.64' }
+
+TEMPLATES:
+  AUDIT_LOG_CLEARED: 'May 23 10:53:36 %HOSTNAME% Microsoft-Windows-Eventlog[2632]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":4620693217682128896,"EventType":"INFO","SeverityValue":2,"Severity":"INFO","EventID":1102,"SourceName":"Microsoft-Windows-Eventlog","ProviderGuid":"{%PROVIDER_GUID%}","Version":0,"Task":104,"OpcodeValue":0,"RecordNumber":262462,"ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Security","Message":"The audit log was cleared.\r\nSubject:\r\n\tSecurity ID:\tS-1-5-21-1086840289-4070117063-4100749663-18199\r\n\tAccount Name:\t%ACCOUNT_NAME%\r\n\tDomain Name:\tSSTECH\r\n\tLogon ID:\t0xD1112","Category":"Log clear","Opcode":"Info","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  PRIVILEGE_ESCALATION_ON_A_DEVICE_4672: 'May 27 09:40:54 %HOSTNAME% Microsoft-Windows-Security-Auditing[716]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9214364837600034816,"EventType":"AUDIT_SUCCESS","SeverityValue":2,"Severity":"INFO","EventID":4672,"SourceName":"Microsoft-Windows-Security-Auditing","ProviderGuid":"{%PROVIDER_GUID%}","Version":0,"Task":12548,"OpcodeValue":0,"RecordNumber":67448,"ActivityID":"{1F6550FB-149A-0002-1051-651F9A14D501}","ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Security","Message":"Special privileges assigned to new logon.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tSYSTEM\r\n\tAccount Domain:\t\tNT AUTHORITY\r\n\tLogon ID:\t\t0x3E7\r\n\r\nPrivileges:\t\tSeAssignPrimaryTokenPrivilege\r\n\t\t\tSeTcbPrivilege\r\n\t\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\n\t\t\tSeDebugPrivilege\r\n\t\t\tSeAuditPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeImpersonatePrivilege\r\n\t\t\tSeDelegateSessionUserImpersonatePrivilege","Category":"Special Logon","Opcode":"Info","SubjectUserSid":"S-1-5-18","SubjectUserName":"SYSTEM","SubjectDomainName":"NT AUTHORITY","SubjectLogonId":"0x3e7","PrivilegeList":"SeAssignPrimaryTokenPrivilege\r\n\t\t\tSeTcbPrivilege\r\n\t\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\n\t\t\tSeDebugPrivilege\r\n\t\t\tSeAuditPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeImpersonatePrivilege\r\n\t\t\tSeDelegateSessionUserImpersonatePrivilege","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  PRIVILEGE_ESCALATION_ON_A_DEVICE_4674: 'May 22 11:55:59 %HOSTNAME% Microsoft-Windows-Security-Auditing[616]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9214364837600034816,"EventType":"AUDIT_SUCCESS","SeverityValue":2,"Severity":"INFO","EventID":4674,"SourceName":"Microsoft-Windows-Security-Auditing","ProviderGuid":"{%PROVIDER_GUID%}","Version":0,"Task":13056,"OpcodeValue":0,"RecordNumber":399197925,"ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Security","Message":"An operation was attempted on a privileged object.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-21-1086840289-4070117063-4100749663-1416\r\n\tAccount Name:\t\t%ACCOUNT_NAME%\r\n\tAccount Domain:\t\tSSTECH\r\n\tLogon ID:\t\t0x44e94572\r\n\r\nObject:\r\n\tObject Server:\tSecurity\r\n\tObject Type:\tFile\r\n\tObject Name:\tE:\\IT Admin Dept\\Documentation\\IP Lists\\EF764400\r\n\tObject Handle:\t0x1bac\r\n\r\nProcess Information:\r\n\tProcess ID:\t0x4\r\n\tProcess Name:\t\r\n\r\nRequested Operation:\r\n\tDesired Access:\tWRITE_DAC\r\n\t\t\t\tWRITE_OWNER\r\n\t\t\t\tReadAttributes\r\n\t\t\t\t\r\n\tPrivileges:\t\tSeTakeOwnershipPrivilege","Category":"Sensitive Privilege Use","Opcode":"Info","SubjectUserSid":"S-1-5-21-1086840289-4070117063-4100749663-1416","SubjectUserName":"ljohnson","SubjectDomainName":"SSTECH","SubjectLogonId":"0x44e94572","ObjectServer":"Security","ObjectType":"File","ObjectName":"E:\\IT Admin Dept\\Documentation\\IP Lists\\EF764400","HandleId":"0x1bac","AccessMask":"%%1539\r\n\t\t\t\t%%1540\r\n\t\t\t\t%%4423\r\n\t\t\t\t","PrivilegeList":"SeTakeOwnershipPrivilege","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  PRIVILEGE_ESCALATION_ON_A_DEVICE_4728: 'May 22 10:03:04 %HOSTNAME% Microsoft-Windows-Security-Auditing[776]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9214364837600034816,"EventType":"AUDIT_SUCCESS","SeverityValue":2,"Severity":"INFO","EventID":4728,"SourceName":"Microsoft-Windows-Security-Auditing","ProviderGuid":"{%PROVIDER_GUID%}","Version":0,"Task":13826,"OpcodeValue":0,"RecordNumber":107713,"ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Security","Message":"A member was added to a security-enabled global group.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tSSTECHLAPTOP407$\r\n\tAccount Domain:\t\tSSTECH\r\n\tLogon ID:\t\t0x3e7\r\n\r\nMember:\r\n\tSecurity ID:\t\tS-1-5-21-1659567969-1978191588-3587872617-1681\r\n\tAccount Name:\t\t-\r\n\r\nGroup:\r\n\tSecurity ID:\t\tS-1-5-21-1659567969-1978191588-3587872617-513\r\n\tGroup Name:\t\tNone\r\n\tGroup Domain:\t\tSSTECHLAPTOP407\r\n\r\nAdditional Information:\r\n\tPrivileges:\t\t-","Category":"Security Group Management","Opcode":"Info","MemberName":"-","MemberSid":"S-1-5-21-1659567969-1978191588-3587872617-1681","TargetUserName":"None","TargetDomainName":"SSTECHLAPTOP407","TargetSid":"S-1-5-21-1659567969-1978191588-3587872617-513","SubjectUserSid":"S-1-5-18","SubjectUserName":"SSTECHLAPTOP407$","SubjectDomainName":"SSTECH","SubjectLogonId":"0x3e7","PrivilegeList":"-","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  PRIVILEGE_ESCALATION_ON_A_DEVICE_4729: 'May 22 10:03:12 %HOSTNAME% Microsoft-Windows-Security-Auditing[776]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9214364837600034816,"EventType":"AUDIT_SUCCESS","SeverityValue":2,"Severity":"INFO","EventID":4729,"SourceName":"Microsoft-Windows-Security-Auditing","ProviderGuid":"{%PROVIDER_GUID%}","Version":0,"Task":13826,"OpcodeValue":0,"RecordNumber":107726,"ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Security","Message":"A member was removed from a security-enabled global group.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tSSTECHLAPTOP407$\r\n\tAccount Domain:\t\tSSTECH\r\n\tLogon ID:\t\t0x3e7\r\n\r\nMember:\r\n\tSecurity ID:\t\tS-1-5-21-1659567969-1978191588-3587872617-1681\r\n\tAccount Name:\t\t-\r\n\r\nGroup:\r\n\tSecurity ID:\t\tS-1-5-21-1659567969-1978191588-3587872617-513\r\n\tGroup Name:\t\tNone\r\n\tGroup Domain:\t\tSSTECHLAPTOP407\r\n\r\nAdditional Information:\r\n\tPrivileges:\t\t-","Category":"Security Group Management","Opcode":"Info","MemberName":"-","MemberSid":"S-1-5-21-1659567969-1978191588-3587872617-1681","TargetUserName":"None","TargetDomainName":"SSTECHLAPTOP407","TargetSid":"S-1-5-21-1659567969-1978191588-3587872617-513","SubjectUserSid":"S-1-5-18","SubjectUserName":"SSTECHLAPTOP407$","SubjectDomainName":"SSTECH","SubjectLogonId":"0x3e7","PrivilegeList":"-","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  IMPOSSIBLE_GEO_LOGON: 'May 21 22:02:07 %HOSTNAME% Microsoft-Windows-Security-Auditing[652]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9214364837600034816,"EventType":"AUDIT_SUCCESS","SeverityValue":2,"Severity":"INFO","EventID":4624,"SourceName":"Microsoft-Windows-Security-Auditing","ProviderGuid":"{%PROVIDER_GUID%}","Version":2,"Task":12544,"OpcodeValue":0,"RecordNumber":5565042,"ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Security","Message":"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-0-0\r\n\tAccount Name:\t\t-\r\n\tAccount Domain:\t\t-\r\n\tLogon ID:\t\t0x0\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t3\r\n\tRestricted Admin Mode:\t-\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1086840289-4070117063-4100749663-24614\r\n\tAccount Name:\t\tSSDLWPEXC01$\r\n\tAccount Domain:\t\tSSTECH.INTERNAL\r\n\tLogon ID:\t\t0x104E1524B\r\n\tLinked Logon ID:\t\t0x0\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{4C3B4B12-88A8-B7F9-39B7-1460E0701586}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x0\r\n\tProcess Name:\t\t-\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\t-\r\n\tSource Network Address:\t%IP%\r\n\tSource Port:\t\t32758\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tKerberos\r\n\tAuthentication Package:\tKerberos\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","Category":"Logon","Opcode":"Info","SubjectUserSid":"S-1-0-0","SubjectUserName":"-","SubjectDomainName":"-","SubjectLogonId":"0x0","TargetUserSid":"S-1-5-21-1086840289-4070117063-4100749663-24614","TargetUserName":"SSDLWPEXC01$","TargetDomainName":"SSTECH.INTERNAL","TargetLogonId":"0x104e1524b","LogonType":"3","LogonProcessName":"Kerberos","AuthenticationPackageName":"Kerberos","WorkstationName":"-","LogonGuid":"{4C3B4B12-88A8-B7F9-39B7-1460E0701586}","TransmittedServices":"-","LmPackageName":"-","KeyLength":"0","ProcessName":"-","IpAddress":"%IP%","IpPort":"32758","ImpersonationLevel":"%%1833","RestrictedAdminMode":"-","TargetOutboundUserName":"-","TargetOutboundDomainName":"-","VirtualAccount":"%%1843","TargetLinkedLogonId":"0x0","ElevatedToken":"%%1842","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  USER_ACCOUNT_LOCKED: 'May 22 12:32:40 %HOSTNAME% Microsoft-Windows-Security-Auditing[604]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9214364837600034816,"EventType":"AUDIT_SUCCESS","SeverityValue":2,"Severity":"INFO","EventID":4740,"SourceName":"Microsoft-Windows-Security-Auditing","ProviderGuid":"{%PROVIDER_GUID%}","Version":0,"Task":13824,"OpcodeValue":0,"RecordNumber":196113311,"ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Security","Message":"A user account was locked out.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tSSTECHGCDC01$\r\n\tAccount Domain:\t\tSSTECH\r\n\tLogon ID:\t\t0x3e7\r\n\r\nAccount That Was Locked Out:\r\n\tSecurity ID:\t\tS-1-5-21-1086840289-4070117063-4100749663-18108\r\n\tAccount Name:\t\t%ACCOUNT_NAME%\r\n\r\nAdditional Information:\r\n\tCaller Computer Name:\tSSTECHLAPTOP340","Category":"User Account Management","Opcode":"Info","TargetUserName":"%ACCOUNT_NAME%","TargetDomainName":"SSTECHLAPTOP340","TargetSid":"S-1-5-21-1086840289-4070117063-4100749663-18108","SubjectUserSid":"S-1-5-18","SubjectUserName":"SSTECHGCDC01$","SubjectDomainName":"SSTECH","SubjectLogonId":"0x3e7","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  UNUSUAL_PRIVILEGED_ACCOUNT_LOGON: 'May 22 00:15:09 %HOSTNAME% Microsoft-Windows-Security-Auditing[532]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9214364837600034816,"EventType":"AUDIT_SUCCESS","SeverityValue":2,"Severity":"INFO","EventID":4624,"SourceName":"Microsoft-Windows-Security-Auditing","ProviderGuid":"{%PROVIDER_GUID%}","Version":0,"Task":12544,"OpcodeValue":0,"RecordNumber":71247800,"ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Security","Message":"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tSSTECHVADC01$\r\n\tAccount Domain:\t\tSSTECH\r\n\tLogon ID:\t\t0x3e7\r\n\r\nLogon Type:\t\t\t3\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1086840289-4070117063-4100749663-500\r\n\tAccount Name:\t\tAdministrator\r\n\tAccount Domain:\t\tSSTECH\r\n\tLogon ID:\t\t0x22f85a9c\r\n\tLogon GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x214\r\n\tProcess Name:\t\tC:\\Windows\\System32\\lsass.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tSSTECHVADC01\r\n\tSource Network Address:\t209.222.82.5\r\n\tSource Port:\t\t1718\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tAdvapi  \r\n\tAuthentication Package:\tMICROSOFT_AUTHENTICATION_PACKAGE_V1_0\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","Category":"Logon","Opcode":"Info","SubjectUserSid":"S-1-5-18","SubjectUserName":"SSTECHVADC01$","SubjectDomainName":"SSTECH","SubjectLogonId":"0x3e7","TargetUserSid":"S-1-5-21-1086840289-4070117063-4100749663-500","TargetUserName":"Administrator","TargetDomainName":"SSTECH","TargetLogonId":"0x22f85a9c","LogonType":"3","LogonProcessName":"Advapi  ","AuthenticationPackageName":"MICROSOFT_AUTHENTICATION_PACKAGE_V1_0","WorkstationName":"SSTECHVADC01","LogonGuid":"{00000000-0000-0000-0000-000000000000}","TransmittedServices":"-","LmPackageName":"-","KeyLength":"0","ProcessName":"C:\\Windows\\System32\\lsass.exe","IpAddress":"209.222.82.5","IpPort":"1718","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  ACCOUNT_CREATED: 'May 22 19:24:29 %HOSTNAME% Microsoft-Windows-Security-Auditing[692]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9214364837600034816,"EventType":"AUDIT_SUCCESS","SeverityValue":2,"Severity":"INFO","EventID":4720,"SourceName":"Microsoft-Windows-Security-Auditing","ProviderGuid":"{%PROVIDER_GUID%}","Version":0,"Task":13824,"OpcodeValue":0,"RecordNumber":35098,"ActivityID":"{A2FE6D20-10D3-0000-B96D-FEA2D310D501}","ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Security","Message":"A user account was created.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tSSDLWTSIEM$\r\n\tAccount Domain:\t\tSSTECH\r\n\tLogon ID:\t\t0x3E7\r\n\r\nNew Account:\r\n\tSecurity ID:\t\tS-1-5-21-1537100716-200302694-3467260118-1005\r\n\tAccount Name:\t\t%ACCOUNT_NAME%\r\n\tAccount Domain:\t\tSSDLWTSIEM\r\n\r\nAttributes:\r\n\tSAM Account Name:\t%ACCOUNT_NAME%\r\n\tDisplay Name:\t\t<value not set>\r\n\tUser Principal Name:\t-\r\n\tHome Directory:\t\t<value not set>\r\n\tHome Drive:\t\t<value not set>\r\n\tScript Path:\t\t<value not set>\r\n\tProfile Path:\t\t<value not set>\r\n\tUser Workstations:\t<value not set>\r\n\tPassword Last Set:\t<never>\r\n\tAccount Expires:\t\t<never>\r\n\tPrimary Group ID:\t513\r\n\tAllowed To Delegate To:\t-\r\n\tOld UAC Value:\t\t0x0\r\n\tNew UAC Value:\t\t0x15\r\n\tUser Account Control:\t\r\n\t\tAccount Disabled\r\n\t\tPassword Not Required - Enabled\r\n\t\tNormal Account - Enabled\r\n\tUser Parameters:\t<value not set>\r\n\tSID History:\t\t-\r\n\tLogon Hours:\t\tAll\r\n\r\nAdditional Information:\r\n\tPrivileges\t\t-","Category":"User Account Management","Opcode":"Info","TargetUserName":"%ACCOUNT_NAME%","TargetDomainName":"SSDLWTSIEM","TargetSid":"S-1-5-21-1537100716-200302694-3467260118-1005","SubjectUserSid":"S-1-5-18","SubjectUserName":"SSDLWTSIEM$","SubjectDomainName":"SSTECH","SubjectLogonId":"0x3e7","PrivilegeList":"-","SamAccountName":"%ACCOUNT_NAME%","DisplayName":"%%1793","UserPrincipalName":"-","HomeDirectory":"%%1793","HomePath":"%%1793","ScriptPath":"%%1793","ProfilePath":"%%1793","UserWorkstations":"%%1793","PasswordLastSet":"%%1794","AccountExpires":"%%1794","PrimaryGroupId":"513","AllowedToDelegateTo":"-","OldUacValue":"0x0","NewUacValue":"0x15","UserAccountControl":"\r\n\t\t%%2080\r\n\t\t%%2082\r\n\t\t%%2084","UserParameters":"%%1793","SidHistory":"-","LogonHours":"%%1797","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  ACCOUNT_DELETED: 'May 22 19:24:30 %HOSTNAME% Microsoft-Windows-Security-Auditing[692]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9214364837600034816,"EventType":"AUDIT_SUCCESS","SeverityValue":2,"Severity":"INFO","EventID":4726,"SourceName":"Microsoft-Windows-Security-Auditing","ProviderGuid":"{54849625-5478-4994-A5BA-3E3B0328C30D}","Version":0,"Task":13824,"OpcodeValue":0,"RecordNumber":35108,"ActivityID":"{A2FE6D20-10D3-0000-B96D-FEA2D310D501}","ProcessID":692,"ThreadID":756,"Channel":"Security","Message":"A user account was deleted.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tSSDLWTSIEM$\r\n\tAccount Domain:\t\tSSTECH\r\n\tLogon ID:\t\t0x3E7\r\n\r\nTarget Account:\r\n\tSecurity ID:\t\tS-1-5-21-1537100716-200302694-3467260118-1005\r\n\tAccount Name:\t\t%ACCOUNT_NAME%\r\n\tAccount Domain:\t\tSSDLWTSIEM\r\n\r\nAdditional Information:\r\n\tPrivileges\t-","Category":"User Account Management","Opcode":"Info","TargetUserName":"%ACCOUNT_NAME%","TargetDomainName":"SSDLWTSIEM","TargetSid":"S-1-5-21-1537100716-200302694-3467260118-1005","SubjectUserSid":"S-1-5-18","SubjectUserName":"SSDLWTSIEM$","SubjectDomainName":"SSTECH","SubjectLogonId":"0x3e7","PrivilegeList":"-","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  SAME_ACCOUNT_MULTIPLE_HOSTS_LOGON: 'May 22 21:59:26 %HOSTNAME% Microsoft-Windows-Security-Auditing[580]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9214364837600034816,"EventType":"AUDIT_SUCCESS","SeverityValue":2,"Severity":"INFO","EventID":4624,"SourceName":"Microsoft-Windows-Security-Auditing","ProviderGuid":"{%PROVIDER_GUID%}","Version":1,"Task":12544,"OpcodeValue":0,"RecordNumber":16418742,"ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Security","Message":"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-0-0\r\n\tAccount Name:\t\t-\r\n\tAccount Domain:\t\t-\r\n\tLogon ID:\t\t0x0\r\n\r\nLogon Type:\t\t\t3\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tSSTECHCADC01$\r\n\tAccount Domain:\t\tSSTECH\r\n\tLogon ID:\t\t0x144AA762\r\n\tLogon GUID:\t\t{83090816-9DAE-1B54-FE7A-1779230F1CD1}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x0\r\n\tProcess Name:\t\t-\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\t-\r\n\tSource Network Address:\t192.168.150.5\r\n\tSource Port:\t\t64357\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tKerberos\r\n\tAuthentication Package:\tKerberos\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","Category":"Logon","Opcode":"Info","SubjectUserSid":"S-1-0-0","SubjectUserName":"-","SubjectDomainName":"-","SubjectLogonId":"0x0","TargetUserSid":"S-1-5-18","TargetUserName":"SSTECHCADC01$","TargetDomainName":"SSTECH","TargetLogonId":"0x144aa762","LogonType":"3","LogonProcessName":"Kerberos","AuthenticationPackageName":"Kerberos","WorkstationName":"-","LogonGuid":"{83090816-9DAE-1B54-FE7A-1779230F1CD1}","TransmittedServices":"-","LmPackageName":"-","KeyLength":"0","ProcessName":"-","IpAddress":"192.168.150.5","IpPort":"64357","ImpersonationLevel":"%%1833","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  ACCOUNT_LOGON: 'Feb  1 00:00:01 %HOSTNAME% Microsoft-Windows-Security-Auditing[580]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9214364837600034816,"EventType":"AUDIT_SUCCESS","SeverityValue":2,"Severity":"INFO","EventID":4624,"SourceName":"Microsoft-Windows-Security-Auditing","ProviderGuid":"{54849625-5478-4994-A5BA-3E3B0328C30D}","Version":0,"Task":12544,"OpcodeValue":0,"RecordNumber":59795109,"ProcessID":532,"ThreadID":408,"Channel":"Security","Message":"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-0-0\r\n\tAccount Name:\t\t-\r\n\tAccount Domain:\t\t-\r\n\tLogon ID:\t\t0x0\r\n\r\nLogon Type:\t\t\t3\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\t%TARGET_DOMAIN%\r\n\tAccount Domain:\t\tSSTECH\r\n\tLogon ID:\t\t0x1da1cdb6\r\n\tLogon GUID:\t\t{FEB50683-C36D-826D-AE56-6D351339049B}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x0\r\n\tProcess Name:\t\t-\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\t\r\n\tSource Network Address:\t::1\r\n\tSource Port:\t\t59714\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tKerberos\r\n\tAuthentication Package:\tKerberos\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.","Category":"Logon","Opcode":"Info","SubjectUserSid":"S-1-0-0","SubjectUserName":"-","SubjectDomainName":"-","SubjectLogonId":"0x%SUBJECT_LOGONID%","TargetUserSid":"S-1-5-18","TargetUserName":"%TARGET_ACCOUNT%","TargetDomainName":"%TARGET_DOMAIN%","TargetLogonId":"0x%TARGET_LOGONID%","LogonType":"%LOGON_TYPE%","LogonProcessName":"Kerberos","AuthenticationPackageName":"Kerberos","WorkstationName":"-", LogonGuid":"{FEB50683-C36D-826D-AE56-6D351339049B}","TransmittedServices":"-","LmPackageName":"-","KeyLength":"0","ProcessName":"-","IpAddress":"%IP%","IpPort":"%PORT%","EventReceivedTime":"%TS%","SourceModuleName":"in","SourceModuleType":"im_msvistalog"}#015'
+  ACCOUNT_LOGOFF: 'Feb  1 00:00:01 %HOSTNAME% Microsoft-Windows-Security-Auditing[580]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9214364837600034816,"EventType":"AUDIT_SUCCESS","SeverityValue":2,"Severity":"INFO","EventID":4634,"SourceName":"Microsoft-Windows-Security-Auditing","ProviderGuid":"{54849625-5478-4994-A5BA-3E3B0328C30D}","Version":0,"Task":12545,"OpcodeValue":0,"RecordNumber":24274711,"ProcessID":580,"ThreadID":1452,"Channel":"Security","Message":"An account was logged off.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\t%TARGET_ACCOUNT%\r\n\tAccount Domain:\t\t%TARGET_DOMAIN%\r\n\tLogon ID:\t\t0x%TARGET_LOGONID%\r\n\r\nLogon Type:\t\t\t0x%TARGET_LOGONID%\r\n\r\nThis event is generated when a logon session is destroyed. It may be positively correlated with a logon event using the Logon ID value. Logon IDs are only unique between reboots on the same computer.","Category":"Logoff","Opcode":"Info","TargetUserSid":"S-1-5-18","TargetUserName":"%TARGET_ACCOUNT%","TargetDomainName":"%TARGET_DOMAIN%","TargetLogonId":"0x%TARGET_LOGONID%","LogonType":"%LOGON_TYPE%","EventReceivedTime":"%TS%","SourceModuleName":"in","SourceModuleType":"im_msvistalog"}#015'
+SCENARIOS:
+  audit_log_cleared:
+  -
+    templateid: "AUDIT_LOG_CLEARED"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%PROVIDER_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+      "%PROCESS_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%THREAD_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%ACCOUNT_NAME%":
+        - "user"
+        - "account_name"
+  privilege_escalation_on_a_device_4672:
+  -
+    templateid: "PRIVILEGE_ESCALATION_ON_A_DEVICE_4672"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%PROVIDER_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+      "%PROCESS_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%THREAD_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%ACCOUNT_NAME%":
+        - "user"
+        - "account_name"
+  privilege_escalation_on_a_device_4674:
+  -
+    templateid: "PRIVILEGE_ESCALATION_ON_A_DEVICE_4674"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%PROVIDER_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+      "%PROCESS_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%THREAD_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%ACCOUNT_NAME%":
+        - "user"
+        - "account_name"
+  privilege_escalation_on_a_device_4728:
+  -
+    templateid: "PRIVILEGE_ESCALATION_ON_A_DEVICE_4728"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%PROVIDER_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+      "%PROCESS_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%THREAD_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%ACCOUNT_NAME%":
+        - "user"
+        - "account_name"
+  privilege_escalation_on_a_device_4729:
+  -
+    templateid: "PRIVILEGE_ESCALATION_ON_A_DEVICE_4729"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%PROVIDER_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+      "%PROCESS_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%THREAD_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%ACCOUNT_NAME%":
+        - "user"
+        - "account_name"
+  impossible_geo_logon:
+  -
+    templateid: "IMPOSSIBLE_GEO_LOGON"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%PROVIDER_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+      "%PROCESS_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%THREAD_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%ACCOUNT_NAME%":
+        - "user"
+        - "account_name"
+      "%IP%":
+        - "set"
+        - ["182.75.35.48", "45.76.76.19", "218.108.175.15", "103.199.12.30"]
+  user_account_locked:
+  -
+    templateid: "USER_ACCOUNT_LOCKED"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%PROVIDER_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+      "%PROCESS_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%THREAD_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%ACCOUNT_NAME%":
+        - "user"
+        - "account_name"
+  unusual_privileged_account_logon:
+  -
+    templateid: "UNUSUAL_PRIVILEGED_ACCOUNT_LOGON"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%PROVIDER_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+      "%PROCESS_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%THREAD_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%ACCOUNT_NAME%":
+        - "user"
+        - "account_name"
+  account_created:
+  -
+    templateid: "ACCOUNT_CREATED"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%PROVIDER_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+      "%PROCESS_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%THREAD_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%ACCOUNT_NAME%":
+        - "user"
+        - "account_name"
+  account_deleted:
+  -
+    templateid: "ACCOUNT_DELETED"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%PROVIDER_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+      "%PROCESS_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%THREAD_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%ACCOUNT_NAME%":
+        - "user"
+        - "account_name"
+  same_account_multiple_hosts_logon:
+  -
+    templateid: "SAME_ACCOUNT_MULTIPLE_HOSTS_LOGON"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "set"
+        - ["hostname14-1", "hostname14-2", "hostname14-3", "hostname14-4", "hostname14-5"]
+      "%PROVIDER_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+      "%PROCESS_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%THREAD_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%ACCOUNT_NAME%":
+        - "user"
+        - "account_name"
+  account_logon:
+  -
+    templateid: "ACCOUNT_LOGON"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%TARGET_DOMAIN%":
+        - "user"
+        - "hostname"
+      "%SUBJECT_LOGONID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%TARGET_ACCOUNT%":
+        - "user"
+        - "account_name"
+      "%TARGET_LOGONID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%LOGON_TYPE%":
+        - "set"
+        - ["2"]
+      "%IP%":
+        - "user"
+        - "src_ip"
+      "%PORT%":
+        - "py"
+        - !!python/name:random.randint
+        - [1, 65534]
+  account_logoff:
+  -
+    templateid: "ACCOUNT_LOGOFF"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%TARGET_DOMAIN%":
+        - "user"
+        - "hostname"
+      "%SUBJECT_LOGONID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%TARGET_ACCOUNT%":
+        - "user"
+        - "account_name"
+      "%TARGET_LOGONID%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 10000]
+      "%LOGON_TYPE%":
+        - "set"
+        - ["2"]
+      "%IP%":
+        - "user"
+        - "src_ip"
+      "%PORT%":
+        - "py"
+        - !!python/name:random.randint
+        - [1, 65534]
+
+ACTIVITY:
+  raywayne:
+    - [ "audit_log_cleared", ["1-2 18 * * *", 60, [1, 1]] ]
+    - [ "privilege_escalation_on_a_device_4672", ["1-2 8-18 * * *", 60, [1, 1]] ]
+    - [ "privilege_escalation_on_a_device_4674", ["1-2 8-18 * * *", 60, [1, 1]] ]
+    - [ "privilege_escalation_on_a_device_4728", ["1-2 18 * * *", 60, [1, 1]] ]
+    - [ "privilege_escalation_on_a_device_4729", ["1-2 18 * * *", 60, [1, 1]] ]
+    - [ "unusual_privileged_account_logon", ["1-2 18 * * *", 60, [1, 1]] ]
+  bruceclark:
+    - [ "user_account_locked", ["3-4 18 * * *", 60, [1, 1]] ]
+  brucecook:
+    - [ "user_account_locked", ["5-6 18 * * *", 60, [1, 1]] ]
+    - [ "account_logon", ["0 8 * * *", 59, [1, 1]] ]
+    - [ "account_logoff", ["0 18 * * *", 59, [1, 1]] ]
+  brucefisher:
+    - [ "user_account_locked", ["7-8 18 * * *", 60, [1, 1]] ]
+  brucegold:
+    - [ "user_account_locked", ["9-10 18 * * *", 60, [1, 1]] ]
+  brucegordon:
+    - [ "user_account_locked", ["11-12 18 * * *", 60, [1, 1]] ]
+  brucehunt:
+    - [ "user_account_locked", ["13-14 18 * * *", 60, [1, 1]] ]
+  brucekent:
+    - [ "user_account_locked", ["15-16 18 * * *", 60, [1, 1]] ]
+  bruceknight:
+    - [ "user_account_locked", ["17-18 18 * * *", 60, [1, 1]] ]
+  bruceprince:
+    - [ "user_account_locked", ["19-20 18 * * *", 60, [1, 1]] ]
+  brucesmith:
+    - [ "user_account_locked", ["20-21 18 * * *", 60, [1, 1]] ]
+  brucewayne:
+    - [ "user_account_locked", ["22-23 18 * * *", 60, [1, 1]] ]
+  camilleclark:
+    - [ "impossible_geo_logon", ["1 8-18 * * *", 60, [1, 1]] ]
+  camillecook:
+    - [ "account_created", ["1 10 * * *", 60, [1, 1]] ]
+    - [ "account_deleted", ["5 10 * * *", 60, [1, 1]] ]
+  camillefisher:
+    - [ "same_account_multiple_hosts_logon", ["0 8-18 * * *", 60, [1, 1]] ]
+  ethanclark:
+    - [ "account_logon", ["0 8 * * *", 59, [1, 1]] ]
+    - [ "account_logoff", ["0 18 * * *", 59, [1, 1]] ]
+  flashgordon:
+    - [ "account_logon", ["0 8 * * *", 59, [1, 1]] ]
+    - [ "account_logoff", ["0 18 * * *", 59, [1, 1]] ]
+  madisonclark:
+    - [ "account_logon", ["0 8 * * *", 59, [1, 1]] ]
+    - [ "account_logoff", ["0 18 * * *", 59, [1, 1]] ]
+  camillegordon:
+    - [ "account_logon", ["0 8 * * *", 59, [1, 1]] ]
+    - [ "account_logoff", ["0 18 * * *", 59, [1, 1]] ]
+  camillewayne:
+    - [ "account_logon", ["0 8 * * *", 59, [1, 1]] ]
+    - [ "account_logoff", ["0 18 * * *", 59, [1, 1]] ]
+  clarkgordon:
+    - [ "account_logon", ["0 8 * * *", 59, [1, 1]] ]
+    - [ "account_logoff", ["0 18 * * *", 59, [1, 1]] ]
+  danielgordon:
+    - [ "account_logon", ["0 8 * * *", 59, [1, 1]] ]
+    - [ "account_logoff", ["0 18 * * *", 59, [1, 1]] ]
+  dianaknight:
+    - [ "account_logon", ["0 8 * * *", 59, [1, 1]] ]
+    - [ "account_logoff", ["0 18 * * *", 59, [1, 1]] ]
+  emmahunt:
+    - [ "account_logon", ["0 8 * * *", 59, [1, 1]] ]
+    - [ "account_logoff", ["0 18 * * *", 59, [1, 1]] ]
+...

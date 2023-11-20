@@ -1,0 +1,39 @@
+[
+  {
+    "label": "hasIP",
+    "source": "user",
+    "destination": "IP",
+    "ratio": {
+      "_comment_": "Defines the ratio of edges between pair of source and dest. Can be INT or FLOAT. Here means one user connects to 5 IP on avg",
+      "ratio": 3
+    },
+    "properties": [
+      "eventTime",
+      "counter"
+    ]
+  },
+  {
+    "label": "withIP",
+    "source": "hosts",
+    "destination": "IP",
+    "ratio": {
+      "ratio": 5
+    },
+    "properties": [
+      "eventTime",
+      "counter"
+    ]
+  },
+  {
+    "label": "IPsCommunicated",
+    "source": "IP",
+    "destination": "IP",
+    "ratio": {
+      "ratio": 30
+    },
+    "properties": [
+      "eventTime",
+      "counter"
+    ]
+  }
+]

@@ -1,0 +1,61 @@
+#startExportbtn {
+  display: none;
+}
+
+#viewGraph {
+  display: none;
+}
+
+#submitQueryBtn {
+  border-radius: 25px;
+  padding: 5px 30px;
+}
+
+#casefilterSources {
+  border-radius: 25px;
+  padding: 5px 20px;
+}
+
+thead input {
+  width: 100%;
+}
+
+.bar {
+  margin: 20px 20px 20px 100px;
+  width: 450px;
+  background-color: #d0cfce;
+}
+
+.searchbar {
+  padding-left: 10px;
+  height: 35px;
+  border: none;
+  width: 380px;
+  font-size: 14px;
+  outline: none;
+  z-index: -1;
+  /* border-radius: 30px; */
+}
+
+.datePickerIcon {
+  height: 20px;
+  position: relative;
+  top: 0px;
+  left: 30px;
+}
+
+.p-30 {
+  padding: 5px 20px 5px 20px;
+}
+
+input.search-bar {
+  outline: none;
+  margin: 0 auto;
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 13px;
+  border: none;
+  border-bottom: 1px solid #d0cfce;
+  outline: none;
+}

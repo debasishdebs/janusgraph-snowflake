@@ -1,0 +1,20 @@
+---
+timeformat: "%Y-%m-%d %H:%M:%S"
+linebreak: "\n"
+templates:
+  - { type: 'file', samples: 'wgdhcp/wgdhcp.sample', period: 60, min: 1, max: 5 }
+replaces:
+  - [ '%DEVICE%', ['IPhone', 'Android', 'Laptop'] ]
+  -
+    - '%NUM%'
+    - !!python/name:random.randint
+    - [1, 100000]
+  -
+    - '%IP%'
+    - !!python/name:common.utils.get_random_ip
+    - ['192.168.0.0/16']
+  -
+    - '%MAC_ADDR%'
+    - !!python/name:common.utils.get_random_mac
+    - []
+...

@@ -1,0 +1,12 @@
+application/json
+application/msword
+application/x-shockwave-flash
+image/jpeg
+image/jpg
+image/png
+text/css
+text/csv
+text/html
+text/javascript
+text/plain
+text/xml

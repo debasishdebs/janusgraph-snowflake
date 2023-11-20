@@ -1,0 +1,10 @@
+target/*
+.idea/*
+src/main/resources/sample/io/*
+output.logs
+*.zip
+cache/*
+/target/
+src/main/resources/credentials.properties
+src/main/resources/data/*
+src/main/resources/temp/*

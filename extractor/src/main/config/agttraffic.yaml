@@ -1,0 +1,19 @@
+---
+timeformat: "%Y-%m-%d %H:%M:%S"
+linebreak: "\n"
+templates:
+  - { type: 'list', samples: ['%TS%,Info,%COMPUTER%,SHA-256: ,MD-5: ,Local: %IP%,Local: %PORT%,Local: 0050568848A5,Remote: %IP2%,Remote: ,Remote: %PORT2%,Remote: E09D310F1794,%PROTOCOL%,%DIRECTION%,Begin: %TS%,End: %TS%,Occurrences: %OCCURENCIES%,Application: ,Rule: Block all other IP traffic and log,Location: Default,User: %USER%,Domain: SSTECH,Action: Blocked'], period: 60, min: 1, max: 5 }
+replaces:
+  - ['%COMPUTER%', 'common/agt_computer.txt']
+  - ['%IP%', 'common/agt_ips.txt']
+  - ['%IP2%', 'common/agt_ips.txt']
+  - ['%PORT%', ['80', '80', '80', '80', '80', '443', '443', '443', '443', '443', '58577', '547', '4132', '50810', '60186', '17500', '58491']]
+  -
+    - '%PORT2%'
+    - !!python/name:random.randint
+    - [50000, 60000]
+  - ['%PROTOCOL%', ['TCP', 'TCP', 'TCP', 'TCP', 'UDP']]
+  - ['%DIRECTION%', ['Inbound', 'Inbound', 'Inbound', 'Inbound', 'Inbound', 'Outbound']]
+  - ['%OCCURENCIES%', [1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 6, 7]]
+  - ['%USER%', 'common/users2.txt']
+...

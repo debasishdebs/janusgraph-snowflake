@@ -1,0 +1,2228 @@
+2021-09-25 15:36:58,865 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 15:36:58,874 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 481, in complete_value_catching_error
+    exe_context, return_type, field_asts, info, path, result
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 563, in complete_value
+    return complete_leaf_value(return_type, path, result)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 626, in complete_leaf_value
+    serialized_result = return_type.serialize(result)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphene\types\json.py", line 20, in serialize
+    return json.dumps(dt)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'EdgeVertexStep' is not JSON serializable
+
+2021-09-25 15:36:58,878 127.0.0.1 - - [25/Sep/2021 15:36:58] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 15:37:18,516 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 15:37:18,517 127.0.0.1 - - [25/Sep/2021 15:37:18] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 15:38:35,171 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 15:38:35,172 127.0.0.1 - - [25/Sep/2021 15:38:35] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 15:39:12,971 127.0.0.1 - - [25/Sep/2021 15:39:12] "[31m[1mPOST /graphql HTTP/1.1[0m" 400 -
+2021-09-25 15:39:32,173 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 15:39:32,174 127.0.0.1 - - [25/Sep/2021 15:39:32] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 15:39:59,655 127.0.0.1 - - [25/Sep/2021 15:39:59] "[31m[1mPOST /graphql HTTP/1.1[0m" 400 -
+2021-09-25 15:45:41,030 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 15:45:41,031 127.0.0.1 - - [25/Sep/2021 15:45:41] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 15:48:10,130 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 15:48:10,132 127.0.0.1 - - [25/Sep/2021 15:48:10] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 15:49:03,099 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 15:49:03,101 127.0.0.1 - - [25/Sep/2021 15:49:03] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 15:49:17,528 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 15:49:17,529 127.0.0.1 - - [25/Sep/2021 15:49:17] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 15:50:08,187 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 15:50:08,189 127.0.0.1 - - [25/Sep/2021 15:50:08] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 15:50:22,805 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 15:50:22,806 127.0.0.1 - - [25/Sep/2021 15:50:22] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 15:51:08,529 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 15:51:08,529 127.0.0.1 - - [25/Sep/2021 15:51:08] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 15:51:27,855 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 15:51:27,857 127.0.0.1 - - [25/Sep/2021 15:51:27] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 15:51:50,674 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 15:51:50,675 127.0.0.1 - - [25/Sep/2021 15:51:50] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 20:13:19,501 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 20:13:19,502 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 67, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 35, in generate_graph
+    lvl_dir = lvl_info["direction"]
+KeyError: 'direction'
+2021-09-25 20:13:19,506 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 67, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 35, in generate_graph
+    lvl_dir = lvl_info["direction"]
+graphql.error.located_error.GraphQLLocatedError: 'direction'
+
+2021-09-25 20:13:19,507 127.0.0.1 - - [25/Sep/2021 20:13:19] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 20:15:06,309 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 20:15:06,309 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 67, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 35, in generate_graph
+    lvl_dir = lvl_info["direction"]
+KeyError: 'direction'
+2021-09-25 20:15:06,311 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 67, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 35, in generate_graph
+    lvl_dir = lvl_info["direction"]
+graphql.error.located_error.GraphQLLocatedError: 'direction'
+
+2021-09-25 20:15:06,312 127.0.0.1 - - [25/Sep/2021 20:15:06] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 20:17:01,606 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 20:17:01,606 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 68, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 35, in generate_graph
+    lvl_dir = lvl_info["direction"]
+KeyError: 'direction'
+2021-09-25 20:17:01,608 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 68, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 35, in generate_graph
+    lvl_dir = lvl_info["direction"]
+graphql.error.located_error.GraphQLLocatedError: 'direction'
+
+2021-09-25 20:17:01,609 127.0.0.1 - - [25/Sep/2021 20:17:01] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 20:23:19,565 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 20:23:19,565 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 68, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 35, in generate_graph
+    lvl_dir = lvl_info["direction"]
+KeyError: 'direction'
+2021-09-25 20:23:19,567 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 68, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 35, in generate_graph
+    lvl_dir = lvl_info["direction"]
+graphql.error.located_error.GraphQLLocatedError: 'direction'
+
+2021-09-25 20:23:19,568 127.0.0.1 - - [25/Sep/2021 20:23:19] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 20:23:43,606 An error occurred while resolving field LevelTwoType.level3
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 204, in resolve_level3
+    edge_filters = {"edge": {parent.edge_props[i]: parent.edge_vals[i] for i in range(len(parent.edge_props))}}
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 204, in <dictcomp>
+    edge_filters = {"edge": {parent.edge_props[i]: parent.edge_vals[i] for i in range(len(parent.edge_props))}}
+IndexError: list index out of range
+2021-09-25 20:23:43,703 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 204, in resolve_level3
+    edge_filters = {"edge": {parent.edge_props[i]: parent.edge_vals[i] for i in range(len(parent.edge_props))}}
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 204, in <dictcomp>
+    edge_filters = {"edge": {parent.edge_props[i]: parent.edge_vals[i] for i in range(len(parent.edge_props))}}
+graphql.error.located_error.GraphQLLocatedError: list index out of range
+
+2021-09-25 20:23:43,704 127.0.0.1 - - [25/Sep/2021 20:23:43] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 20:34:51,390 None Bytecode in vstep  [[['V'], ['label', 'test']]]
+2021-09-25 20:34:51,390 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 69, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 36, in generate_graph
+    lvl_dir = lvl_info["direction"]
+KeyError: 'direction'
+2021-09-25 20:34:51,392 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 69, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 36, in generate_graph
+    lvl_dir = lvl_info["direction"]
+graphql.error.located_error.GraphQLLocatedError: 'direction'
+
+2021-09-25 20:34:51,397 127.0.0.1 - - [25/Sep/2021 20:34:51] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 20:54:16,763 None Bytecode in vstep  [[['V'], ['label', 'test']]]
+2021-09-25 20:54:16,763 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 121, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 38, in generate_graph
+    graph = graph.withLabel(v)
+AttributeError: 'BothEStep' object has no attribute 'withLabel'
+2021-09-25 20:54:16,773 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 121, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 38, in generate_graph
+    graph = graph.withLabel(v)
+graphql.error.located_error.GraphQLLocatedError: 'BothEStep' object has no attribute 'withLabel'
+
+2021-09-25 20:54:16,775 127.0.0.1 - - [25/Sep/2021 20:54:16] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 20:57:17,871 None Bytecode in vstep  [[['V'], ['label', 'test']]]
+2021-09-25 20:57:17,871 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 121, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 40, in generate_graph
+    graph = graph.outE().with_(p, v)
+AttributeError: 'BothEStep' object has no attribute 'outE'
+2021-09-25 20:57:17,873 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 121, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 40, in generate_graph
+    graph = graph.outE().with_(p, v)
+graphql.error.located_error.GraphQLLocatedError: 'BothEStep' object has no attribute 'outE'
+
+2021-09-25 20:57:17,883 127.0.0.1 - - [25/Sep/2021 20:57:17] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 20:57:51,408 None Bytecode in vstep  [[['V'], ['label', 'test']]]
+2021-09-25 20:57:51,408 None Label is test
+2021-09-25 20:57:51,408 None ByteCode generated is [[['V'], ['label', 'test']], [['bothE'], [], [], [['T.label', 'eq,hasIP']], ['direction', 'both']], [['otherV'], [], [], ['T.label', 'test']]]
+2021-09-25 20:57:51,409 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 121, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 90, in generate_graph
+    graph = graph.withId(v)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\multipledispatch\dispatcher.py", line 434, in __call__
+    (self.name, str_signature(types)))
+NotImplementedError: Could not find signature for withId: <str>
+2021-09-25 20:57:51,416 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 121, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 90, in generate_graph
+    graph = graph.withId(v)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\multipledispatch\dispatcher.py", line 434, in __call__
+    (self.name, str_signature(types)))
+graphql.error.located_error.GraphQLLocatedError: Could not find signature for withId: <str>
+
+2021-09-25 20:57:51,417 127.0.0.1 - - [25/Sep/2021 20:57:51] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 20:58:25,811 None Bytecode in vstep  [[['V'], ['label', 'test']]]
+2021-09-25 20:58:25,812 None Label is test
+2021-09-25 20:58:25,812 None ByteCode generated is [[['V'], ['label', 'test']], [['bothE'], [], [], [['T.label', 'eq,hasIP']], ['direction', 'both']], [['otherV'], [], [], ['T.label', 'test']]]
+2021-09-25 20:58:25,813 None Label is IP
+2021-09-25 20:58:25,813 None ByteCode generated is [[['V'], ['label', 'test']], [['bothE'], [], [], [['T.label', 'eq,hasIP']], ['direction', 'both']], [['otherV'], [], [], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['T.label', 'eq,withIP']], [['outV'], [], [], ['T.label', 'IP']]]
+2021-09-25 20:58:25,814 127.0.0.1 - - [25/Sep/2021 20:58:25] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 20:59:32,169 None Bytecode in vstep  [[['V'], ['label', 'test']]]
+2021-09-25 20:59:32,170 None Label is test
+2021-09-25 20:59:32,172 None ByteCode generated is [[['V'], ['label', 'test']], [['bothE'], [], [], [['T.label', 'eq,hasIP']]], [['otherV'], [], [], ['T.label', 'test']]]
+2021-09-25 20:59:32,173 None Label is IP
+2021-09-25 20:59:32,173 None ByteCode generated is [[['V'], ['label', 'test']], [['bothE'], [], [], [['T.label', 'eq,hasIP']]], [['otherV'], [], [], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['T.label', 'eq,withIP']], [['outV'], [], [], ['T.label', 'IP']]]
+2021-09-25 20:59:32,175 127.0.0.1 - - [25/Sep/2021 20:59:32] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:00:34,855 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:00:34,855 None Label is test
+2021-09-25 21:00:34,856 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], [], [], [['T.label', 'eq,hasIP']]], [['otherV'], [], [], ['T.label', 'test']]]
+2021-09-25 21:00:34,856 None Label is IP
+2021-09-25 21:00:34,856 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], [], [], [['T.label', 'eq,hasIP']]], [['otherV'], [], [], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['T.label', 'eq,withIP']], [['outV'], [], [], ['T.label', 'IP']]]
+2021-09-25 21:00:34,858 127.0.0.1 - - [25/Sep/2021 21:00:34] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:01:53,204 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:01:53,205 None Label is test
+2021-09-25 21:01:53,205 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], [], [], ['T.label', 'eq,hasIP']], [['otherV'], [], [], ['T.label', 'test']]]
+2021-09-25 21:01:53,206 None Label is IP
+2021-09-25 21:01:53,206 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], [], [], ['T.label', 'eq,hasIP']], [['otherV'], [], [], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['T.label', 'eq,withIP']], [['outV'], [], [], ['T.label', 'IP']]]
+2021-09-25 21:01:53,208 127.0.0.1 - - [25/Sep/2021 21:01:53] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:03:28,692 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:03:28,693 None Label is test
+2021-09-25 21:03:28,693 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], [], [], ['T.label', 'eq,hasIP']], [['otherV'], [], [], ['T.label', 'test']]]
+2021-09-25 21:03:28,693 None Label is IP
+2021-09-25 21:03:28,693 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], [], [], ['T.label', 'eq,hasIP']], [['otherV'], [], [], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['counter', 'eq,1']], [['outV'], [], [], ['T.label', 'IP']]]
+2021-09-25 21:03:28,694 127.0.0.1 - - [25/Sep/2021 21:03:28] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:06:53,230 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:06:53,231 None Label is test
+2021-09-25 21:06:53,231 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], [], [], ['T.label', 'test']]]
+2021-09-25 21:06:53,231 None Label is IP
+2021-09-25 21:06:53,231 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], [], [], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['counter', 'eq,1']], [['outV'], [], [], ['T.label', 'IP']]]
+2021-09-25 21:06:53,232 127.0.0.1 - - [25/Sep/2021 21:06:53] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:09:32,703 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:09:32,703 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 133, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 63, in generate_graph
+    graph = graph.otherV(v)
+AttributeError: 'EdgeVertexStep' object has no attribute 'otherV'
+2021-09-25 21:09:32,708 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 133, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 63, in generate_graph
+    graph = graph.otherV(v)
+graphql.error.located_error.GraphQLLocatedError: 'EdgeVertexStep' object has no attribute 'otherV'
+
+2021-09-25 21:09:32,709 127.0.0.1 - - [25/Sep/2021 21:09:32] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:09:50,075 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:09:50,076 None Label is test
+2021-09-25 21:09:50,076 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 21:09:50,076 None Label is IP
+2021-09-25 21:09:50,077 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['counter', 'eq,1']], [['outV'], [], [], ['T.label', 'IP']]]
+2021-09-25 21:09:50,078 127.0.0.1 - - [25/Sep/2021 21:09:50] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:42:42,177 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:42:42,177 None Label is test
+2021-09-25 21:42:42,178 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 21:42:42,178 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 205, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 163, in generate_graph
+    graph = graph.otherV()
+AttributeError: 'EdgeVertexStep' object has no attribute 'otherV'
+2021-09-25 21:42:42,180 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 205, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 163, in generate_graph
+    graph = graph.otherV()
+graphql.error.located_error.GraphQLLocatedError: 'EdgeVertexStep' object has no attribute 'otherV'
+
+2021-09-25 21:42:42,185 127.0.0.1 - - [25/Sep/2021 21:42:42] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:44:03,300 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:44:03,300 None Label is test
+2021-09-25 21:44:03,301 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 21:44:03,301 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 209, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 167, in generate_graph
+    graph = graph.otherV()
+AttributeError: 'EdgeVertexStep' object has no attribute 'otherV'
+2021-09-25 21:44:03,302 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 209, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 167, in generate_graph
+    graph = graph.otherV()
+graphql.error.located_error.GraphQLLocatedError: 'EdgeVertexStep' object has no attribute 'otherV'
+
+2021-09-25 21:44:03,303 127.0.0.1 - - [25/Sep/2021 21:44:03] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:45:05,704 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:45:05,704 None Label is test
+2021-09-25 21:45:05,705 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 21:45:05,705 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 209, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 160, in generate_graph
+    graph = graph.inV()
+AttributeError: 'EdgeVertexStep' object has no attribute 'inV'
+2021-09-25 21:45:05,817 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 209, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 160, in generate_graph
+    graph = graph.inV()
+graphql.error.located_error.GraphQLLocatedError: 'EdgeVertexStep' object has no attribute 'inV'
+
+2021-09-25 21:45:05,819 127.0.0.1 - - [25/Sep/2021 21:45:05] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:45:47,571 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:45:47,572 None Label is test
+2021-09-25 21:45:47,572 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 21:45:47,572 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 209, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 160, in generate_graph
+    graph = graph.inV()
+AttributeError: 'EdgeVertexStep' object has no attribute 'inV'
+2021-09-25 21:45:47,574 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 209, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 160, in generate_graph
+    graph = graph.inV()
+graphql.error.located_error.GraphQLLocatedError: 'EdgeVertexStep' object has no attribute 'inV'
+
+2021-09-25 21:45:47,575 127.0.0.1 - - [25/Sep/2021 21:45:47] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:47:15,041 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:47:15,042 None Label is test
+2021-09-25 21:47:15,042 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 21:47:15,042 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 216, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 132, in generate_graph
+    graph = graph.inE()
+AttributeError: 'EdgeStep' object has no attribute 'inE'
+2021-09-25 21:47:15,048 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 216, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 132, in generate_graph
+    graph = graph.inE()
+graphql.error.located_error.GraphQLLocatedError: 'EdgeStep' object has no attribute 'inE'
+
+2021-09-25 21:47:15,049 127.0.0.1 - - [25/Sep/2021 21:47:15] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:48:00,522 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:48:00,522 None Label is test
+2021-09-25 21:48:00,522 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 21:48:00,523 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 217, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 132, in generate_graph
+    graph = graph.inE()
+AttributeError: 'EdgeStep' object has no attribute 'inE'
+2021-09-25 21:48:00,525 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 217, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 132, in generate_graph
+    graph = graph.inE()
+graphql.error.located_error.GraphQLLocatedError: 'EdgeStep' object has no attribute 'inE'
+
+2021-09-25 21:48:00,528 127.0.0.1 - - [25/Sep/2021 21:48:00] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:49:26,554 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:49:26,554 None Label is test
+2021-09-25 21:49:26,555 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 21:49:26,555 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 217, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 132, in generate_graph
+    graph = graph.inE()
+AttributeError: 'EdgeStep' object has no attribute 'inE'
+2021-09-25 21:49:26,558 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 217, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 132, in generate_graph
+    graph = graph.inE()
+graphql.error.located_error.GraphQLLocatedError: 'EdgeStep' object has no attribute 'inE'
+
+2021-09-25 21:49:26,559 127.0.0.1 - - [25/Sep/2021 21:49:26] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:50:28,980 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:50:28,980 None Label is test
+2021-09-25 21:50:28,980 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 21:50:28,985 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 225, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 143, in generate_graph
+    graph = graph.inE()
+AttributeError: 'EdgeStep' object has no attribute 'inE'
+2021-09-25 21:50:28,987 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 225, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 143, in generate_graph
+    graph = graph.inE()
+graphql.error.located_error.GraphQLLocatedError: 'EdgeStep' object has no attribute 'inE'
+
+2021-09-25 21:50:28,992 127.0.0.1 - - [25/Sep/2021 21:50:28] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:51:39,557 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:51:39,558 None Label is test
+2021-09-25 21:51:39,558 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 21:51:39,569 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 226, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 143, in generate_graph
+    graph = graph.inE()
+AttributeError: 'EdgeStep' object has no attribute 'inE'
+2021-09-25 21:51:39,571 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 226, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 143, in generate_graph
+    graph = graph.inE()
+graphql.error.located_error.GraphQLLocatedError: 'EdgeStep' object has no attribute 'inE'
+
+2021-09-25 21:51:39,572 127.0.0.1 - - [25/Sep/2021 21:51:39] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:53:43,674 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:53:43,675 None Label is test
+2021-09-25 21:53:43,675 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 21:53:43,680 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 228, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 145, in generate_graph
+    graph = graph.inE()
+AttributeError: 'EdgeStep' object has no attribute 'inE'
+2021-09-25 21:53:43,772 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 228, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 145, in generate_graph
+    graph = graph.inE()
+graphql.error.located_error.GraphQLLocatedError: 'EdgeStep' object has no attribute 'inE'
+
+2021-09-25 21:53:43,774 127.0.0.1 - - [25/Sep/2021 21:53:43] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:54:08,771 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:54:08,771 None Label is test
+2021-09-25 21:54:08,771 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 21:54:08,772 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 229, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 146, in generate_graph
+    graph = graph.inE()
+AttributeError: 'EdgeStep' object has no attribute 'inE'
+2021-09-25 21:54:08,773 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 229, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 146, in generate_graph
+    graph = graph.inE()
+graphql.error.located_error.GraphQLLocatedError: 'EdgeStep' object has no attribute 'inE'
+
+2021-09-25 21:54:08,774 127.0.0.1 - - [25/Sep/2021 21:54:08] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:55:13,394 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:55:13,395 None Label is test
+2021-09-25 21:55:13,395 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 21:55:13,408 127.0.0.1 - - [25/Sep/2021 21:55:13] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:58:02,580 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:58:02,581 None Label is test
+2021-09-25 21:58:02,584 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 21:58:02,685 None columns of project
+2021-09-25 21:58:02,685 None Columns of project are (['select', 'C.all', ''],)
+2021-09-25 21:58:02,685 None I'm inside next of ProjectStep
+2021-09-25 21:58:02,685 None Bytecode status till now [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['counter', 'eq,1']], [['outV'], ['T.label', 'IP']], [['bothE'], ['T.label', 'sentEmail'], ['counter', 'eq,5']], [['otherV'], [], []], [['project', ['select', 'C.all', '']]]]
+2021-09-25 21:58:02,721 None protobuf generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['counter', 'eq,1']], [['outV'], ['T.label', 'IP']], [['bothE'], ['T.label', 'sentEmail'], ['counter', 'eq,5']], [['otherV'], [], []], [['project', ['select', 'C.all', '']]]]
+2021-09-25 21:58:02,734 None    ByteCode generated is
+2021-09-25 21:58:02,735 steps {
+  middle_layer {
+    inner_values: "V"
+  }
+  middle_layer {
+    inner_values: "ip"
+    inner_values: "8.8.8.8"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "hasIP"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "test"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+  middle_layer {
+    inner_values: "T.id"
+  }
+  middle_layer {
+    inner_values: "1234567"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+  middle_layer {
+    inner_values: "counter"
+    inner_values: "eq,1"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outV"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "IP"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "sentEmail"
+  }
+  middle_layer {
+    inner_values: "counter"
+    inner_values: "eq,5"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "project"
+    inner_values: "select"
+    inner_values: "C.all"
+    inner_values: ""
+  }
+}
+
+2021-09-25 21:58:02,735 None Going to Graph core endpoint connection
+2021-09-25 21:58:06,824 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 235, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 210, in generate_graph
+    graph = graph.project(C.all_()).next()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\traversal\ProjectStep.py", line 156, in next
+    return ExecuteByteCode(self.byte_rep).execute().to_json()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 61, in execute
+    results = self._execute_bytecode_(bytecode, id)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 255, in _execute_bytecode_
+    results = stub.ExecuteByteCode(bytec)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\grpc\_channel.py", line 826, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\grpc\_channel.py", line 729, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1632587286.825000000","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3962,"referenced_errors":[{"created":"@1632587286.825000000","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+2021-09-25 21:58:06,935 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 235, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 210, in generate_graph
+    graph = graph.project(C.all_()).next()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\traversal\ProjectStep.py", line 156, in next
+    return ExecuteByteCode(self.byte_rep).execute().to_json()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 61, in execute
+    results = self._execute_bytecode_(bytecode, id)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 255, in _execute_bytecode_
+    results = stub.ExecuteByteCode(bytec)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\grpc\_channel.py", line 826, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\grpc\_channel.py", line 729, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+graphql.error.located_error.GraphQLLocatedError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1632587286.825000000","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3962,"referenced_errors":[{"created":"@1632587286.825000000","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+
+2021-09-25 21:58:06,937 127.0.0.1 - - [25/Sep/2021 21:58:06] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:58:22,816 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:58:22,816 None Label is test
+2021-09-25 21:58:22,816 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 21:58:22,831 None columns of project
+2021-09-25 21:58:22,831 None Columns of project are (['select', 'C.all', ''],)
+2021-09-25 21:58:22,831 None I'm inside next of ProjectStep
+2021-09-25 21:58:22,831 None Bytecode status till now [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['counter', 'eq,1']], [['outV'], ['T.label', 'IP']], [['bothE'], ['T.label', 'sentEmail'], ['counter', 'eq,5']], [['otherV'], [], []], [['project', ['select', 'C.all', '']]]]
+2021-09-25 21:58:22,832 None protobuf generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['counter', 'eq,1']], [['outV'], ['T.label', 'IP']], [['bothE'], ['T.label', 'sentEmail'], ['counter', 'eq,5']], [['otherV'], [], []], [['project', ['select', 'C.all', '']]]]
+2021-09-25 21:58:22,847 None    ByteCode generated is
+2021-09-25 21:58:22,847 steps {
+  middle_layer {
+    inner_values: "V"
+  }
+  middle_layer {
+    inner_values: "ip"
+    inner_values: "8.8.8.8"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "hasIP"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "test"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+  middle_layer {
+    inner_values: "T.id"
+  }
+  middle_layer {
+    inner_values: "1234567"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+  middle_layer {
+    inner_values: "counter"
+    inner_values: "eq,1"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outV"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "IP"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "sentEmail"
+  }
+  middle_layer {
+    inner_values: "counter"
+    inner_values: "eq,5"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "project"
+    inner_values: "select"
+    inner_values: "C.all"
+    inner_values: ""
+  }
+}
+
+2021-09-25 21:58:22,848 None Going to Graph core endpoint connection
+2021-09-25 21:58:23,194 None returning from Graph core endpoint connection
+2021-09-25 21:58:23,195 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 235, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 210, in generate_graph
+    graph = graph.project(C.all_()).next()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\traversal\ProjectStep.py", line 156, in next
+    return ExecuteByteCode(self.byte_rep).execute().to_json()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 72, in execute
+    responses = self._parse_result(response, field_name.name)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 179, in _parse_result
+    return self._parse_map_value(result, field)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 186, in _parse_map_value
+    raise Exception(response)
+Exception: {'Exception occurred': ['cause is: None with parameter as: list index (1) out of range context: None']}
+2021-09-25 21:58:23,196 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 235, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 210, in generate_graph
+    graph = graph.project(C.all_()).next()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\traversal\ProjectStep.py", line 156, in next
+    return ExecuteByteCode(self.byte_rep).execute().to_json()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 72, in execute
+    responses = self._parse_result(response, field_name.name)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 179, in _parse_result
+    return self._parse_map_value(result, field)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 186, in _parse_map_value
+    raise Exception(response)
+graphql.error.located_error.GraphQLLocatedError: {'Exception occurred': ['cause is: None with parameter as: list index (1) out of range context: None']}
+
+2021-09-25 21:58:23,197 127.0.0.1 - - [25/Sep/2021 21:58:23] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 21:59:47,813 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 21:59:47,814 None Label is test
+2021-09-25 21:59:47,814 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 21:59:47,825 127.0.0.1 - - [25/Sep/2021 21:59:47] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 22:00:00,080 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 22:00:00,080 None Label is test
+2021-09-25 22:00:00,081 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 22:00:00,088 127.0.0.1 - - [25/Sep/2021 22:00:00] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 22:00:09,113 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 22:00:09,114 None Label is test
+2021-09-25 22:00:09,114 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 22:00:09,116 None columns of project
+2021-09-25 22:00:09,116 None Columns of project are (['select', 'C.all', ''],)
+2021-09-25 22:00:09,116 None I'm inside next of ProjectStep
+2021-09-25 22:00:09,116 None Bytecode status till now [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], []], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['counter', 'eq,1']], [['outV'], ['T.label', 'IP']], [['bothE'], ['T.label', 'sentEmail'], ['counter', 'eq,5']], [['otherV'], [], []], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:00:09,124 None protobuf generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], []], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['counter', 'eq,1']], [['outV'], ['T.label', 'IP']], [['bothE'], ['T.label', 'sentEmail'], ['counter', 'eq,5']], [['otherV'], [], []], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:00:09,131 None    ByteCode generated is
+2021-09-25 22:00:09,131 steps {
+  middle_layer {
+    inner_values: "V"
+  }
+  middle_layer {
+    inner_values: "ip"
+    inner_values: "8.8.8.8"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "hasIP"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "test"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+  middle_layer {
+    inner_values: "counter"
+    inner_values: "eq,1"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outV"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "IP"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "sentEmail"
+  }
+  middle_layer {
+    inner_values: "counter"
+    inner_values: "eq,5"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "project"
+    inner_values: "select"
+    inner_values: "C.all"
+    inner_values: ""
+  }
+}
+
+2021-09-25 22:00:09,132 None Going to Graph core endpoint connection
+2021-09-25 22:04:33,773 None returning from Graph core endpoint connection
+2021-09-25 22:04:33,774 None Parsing Query result of list
+2021-09-25 22:04:33,774 None Query Result Parsed in List Format are
+2021-09-25 22:04:33,774 None values
+2021-09-25 22:04:33,774 None Converting results to graph:
+2021-09-25 22:04:33,775 None snowgraph conversion started
+2021-09-25 22:04:33,775 None Graph created
+2021-09-25 22:04:33,775 converted to snowgraph
+2021-09-25 22:04:33,777 127.0.0.1 - - [25/Sep/2021 22:04:33] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 22:07:51,889 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 22:07:51,889 None Label is test
+2021-09-25 22:07:51,890 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 22:07:51,897 None columns of project
+2021-09-25 22:07:51,897 None Columns of project are (['select', 'C.all', ''],)
+2021-09-25 22:07:51,897 None I'm inside next of ProjectStep
+2021-09-25 22:07:51,898 None Bytecode status till now [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], []], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['counter', 'eq,1']], [['outV'], ['T.label', 'IP']], [['bothE'], ['T.label', 'sentEmail'], ['counter', 'eq,5']], [['otherV'], [], []], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:07:51,899 None protobuf generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], []], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['counter', 'eq,1']], [['outV'], ['T.label', 'IP']], [['bothE'], ['T.label', 'sentEmail'], ['counter', 'eq,5']], [['otherV'], [], []], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:07:51,912 None    ByteCode generated is
+2021-09-25 22:07:51,912 steps {
+  middle_layer {
+    inner_values: "V"
+  }
+  middle_layer {
+    inner_values: "ip"
+    inner_values: "8.8.8.8"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "hasIP"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "test"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+  middle_layer {
+    inner_values: "counter"
+    inner_values: "eq,1"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outV"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "IP"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "sentEmail"
+  }
+  middle_layer {
+    inner_values: "counter"
+    inner_values: "eq,5"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "project"
+    inner_values: "select"
+    inner_values: "C.all"
+    inner_values: ""
+  }
+}
+
+2021-09-25 22:07:51,913 None Going to Graph core endpoint connection
+2021-09-25 22:07:53,770 None returning from Graph core endpoint connection
+2021-09-25 22:07:53,771 None Parsing Query result of list
+2021-09-25 22:07:53,771 None Query Result Parsed in List Format are
+2021-09-25 22:07:53,771 None values
+2021-09-25 22:07:53,771 None Converting results to graph:
+2021-09-25 22:07:53,772 None snowgraph conversion started
+2021-09-25 22:07:53,772 None Graph created
+2021-09-25 22:07:53,772 converted to snowgraph
+2021-09-25 22:07:53,773 127.0.0.1 - - [25/Sep/2021 22:07:53] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 22:10:12,592 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 22:10:12,593 None Label is test
+2021-09-25 22:10:12,593 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 22:10:12,598 None columns of project
+2021-09-25 22:10:12,599 None Columns of project are (['select', 'C.all', ''],)
+2021-09-25 22:10:12,599 None I'm inside next of ProjectStep
+2021-09-25 22:10:12,599 None Bytecode status till now [[['V'], ['ip', '8.8.8.8']], [['bothE'], []], [['otherV'], [], []], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['inE'], ['T.label', 'hasIP']], [['outV'], ['T.label', 'test']], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:10:12,608 None protobuf generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], []], [['otherV'], [], []], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['inE'], ['T.label', 'hasIP']], [['outV'], ['T.label', 'test']], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:10:12,609 None    ByteCode generated is
+2021-09-25 22:10:12,609 steps {
+  middle_layer {
+    inner_values: "V"
+  }
+  middle_layer {
+    inner_values: "ip"
+    inner_values: "8.8.8.8"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+  middle_layer {
+    inner_values: "T.id"
+  }
+  middle_layer {
+    inner_values: "1234567"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inE"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "hasIP"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outV"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "test"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "project"
+    inner_values: "select"
+    inner_values: "C.all"
+    inner_values: ""
+  }
+}
+
+2021-09-25 22:10:12,609 None Going to Graph core endpoint connection
+2021-09-25 22:10:12,651 None returning from Graph core endpoint connection
+2021-09-25 22:10:12,652 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 237, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 211, in generate_graph
+    print(tr.V().with_("ip", "8.8.8.8").both().outE().inV().withId(1234567).inE("hasIP").outV("test").project(C.all_()).next())
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\traversal\ProjectStep.py", line 156, in next
+    return ExecuteByteCode(self.byte_rep).execute().to_json()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 72, in execute
+    responses = self._parse_result(response, field_name.name)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 179, in _parse_result
+    return self._parse_map_value(result, field)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 186, in _parse_map_value
+    raise Exception(response)
+Exception: {'Exception occurred': ['cause is: None with parameter as: list index (1) out of range context: None']}
+2021-09-25 22:10:12,655 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 237, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 211, in generate_graph
+    print(tr.V().with_("ip", "8.8.8.8").both().outE().inV().withId(1234567).inE("hasIP").outV("test").project(C.all_()).next())
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\traversal\ProjectStep.py", line 156, in next
+    return ExecuteByteCode(self.byte_rep).execute().to_json()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 72, in execute
+    responses = self._parse_result(response, field_name.name)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 179, in _parse_result
+    return self._parse_map_value(result, field)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 186, in _parse_map_value
+    raise Exception(response)
+graphql.error.located_error.GraphQLLocatedError: {'Exception occurred': ['cause is: None with parameter as: list index (1) out of range context: None']}
+
+2021-09-25 22:10:12,659 127.0.0.1 - - [25/Sep/2021 22:10:12] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 22:10:42,996 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 22:10:42,996 None Label is test
+2021-09-25 22:10:42,996 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 22:10:43,008 None columns of project
+2021-09-25 22:10:43,008 None Columns of project are (['select', 'C.all', ''],)
+2021-09-25 22:10:43,008 None I'm inside next of ProjectStep
+2021-09-25 22:10:43,009 None Bytecode status till now [[['V'], ['ip', '8.8.8.8']], [['bothE'], []], [['otherV'], [], []], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['inE'], ['T.label', 'hasIP']], [['outV'], ['T.label', 'test']], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:10:43,016 None protobuf generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], []], [['otherV'], [], []], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['inE'], ['T.label', 'hasIP']], [['outV'], ['T.label', 'test']], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:10:43,022 None    ByteCode generated is
+2021-09-25 22:10:43,023 steps {
+  middle_layer {
+    inner_values: "V"
+  }
+  middle_layer {
+    inner_values: "ip"
+    inner_values: "8.8.8.8"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+  middle_layer {
+    inner_values: "T.id"
+  }
+  middle_layer {
+    inner_values: "1234567"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inE"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "hasIP"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outV"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "test"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "project"
+    inner_values: "select"
+    inner_values: "C.all"
+    inner_values: ""
+  }
+}
+
+2021-09-25 22:10:43,023 None Going to Graph core endpoint connection
+2021-09-25 22:10:43,059 None returning from Graph core endpoint connection
+2021-09-25 22:10:43,059 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 238, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 212, in generate_graph
+    print(tr.V().with_("ip", "8.8.8.8").both().outE().inV().withId(1234567).inE("hasIP").outV("test").project(C.all_()).next())
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\traversal\ProjectStep.py", line 156, in next
+    return ExecuteByteCode(self.byte_rep).execute().to_json()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 72, in execute
+    responses = self._parse_result(response, field_name.name)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 179, in _parse_result
+    return self._parse_map_value(result, field)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 186, in _parse_map_value
+    raise Exception(response)
+Exception: {'Exception occurred': ['cause is: None with parameter as: list index (1) out of range context: None']}
+2021-09-25 22:10:43,062 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 238, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 212, in generate_graph
+    print(tr.V().with_("ip", "8.8.8.8").both().outE().inV().withId(1234567).inE("hasIP").outV("test").project(C.all_()).next())
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\traversal\ProjectStep.py", line 156, in next
+    return ExecuteByteCode(self.byte_rep).execute().to_json()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 72, in execute
+    responses = self._parse_result(response, field_name.name)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 179, in _parse_result
+    return self._parse_map_value(result, field)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 186, in _parse_map_value
+    raise Exception(response)
+graphql.error.located_error.GraphQLLocatedError: {'Exception occurred': ['cause is: None with parameter as: list index (1) out of range context: None']}
+
+2021-09-25 22:10:43,064 127.0.0.1 - - [25/Sep/2021 22:10:43] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 22:11:27,895 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 22:11:27,897 None Label is test
+2021-09-25 22:11:27,897 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 22:11:27,911 None columns of project
+2021-09-25 22:11:27,911 None Columns of project are (['select', 'C.all', ''],)
+2021-09-25 22:11:27,911 None I'm inside next of ProjectStep
+2021-09-25 22:11:27,912 None Bytecode status till now [[['V'], ['ip', '8.8.8.8']], [['bothE'], []], [['otherV'], [], []], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['inE'], ['T.label', 'hasIP']], [['outV'], ['T.label', 'test']], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:11:27,919 None protobuf generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], []], [['otherV'], [], []], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['inE'], ['T.label', 'hasIP']], [['outV'], ['T.label', 'test']], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:11:27,926 None    ByteCode generated is
+2021-09-25 22:11:27,926 steps {
+  middle_layer {
+    inner_values: "V"
+  }
+  middle_layer {
+    inner_values: "ip"
+    inner_values: "8.8.8.8"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+  middle_layer {
+    inner_values: "T.id"
+  }
+  middle_layer {
+    inner_values: "1234567"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inE"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "hasIP"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outV"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "test"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "project"
+    inner_values: "select"
+    inner_values: "C.all"
+    inner_values: ""
+  }
+}
+
+2021-09-25 22:11:27,926 None Going to Graph core endpoint connection
+2021-09-25 22:11:27,960 None returning from Graph core endpoint connection
+2021-09-25 22:11:27,960 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 240, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 214, in generate_graph
+    print(t.project(C.all_()).next())
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\traversal\ProjectStep.py", line 156, in next
+    return ExecuteByteCode(self.byte_rep).execute().to_json()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 72, in execute
+    responses = self._parse_result(response, field_name.name)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 179, in _parse_result
+    return self._parse_map_value(result, field)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 186, in _parse_map_value
+    raise Exception(response)
+Exception: {'Exception occurred': ['cause is: None with parameter as: list index (1) out of range context: None']}
+2021-09-25 22:11:27,964 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 240, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 214, in generate_graph
+    print(t.project(C.all_()).next())
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\traversal\ProjectStep.py", line 156, in next
+    return ExecuteByteCode(self.byte_rep).execute().to_json()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 72, in execute
+    responses = self._parse_result(response, field_name.name)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 179, in _parse_result
+    return self._parse_map_value(result, field)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 186, in _parse_map_value
+    raise Exception(response)
+graphql.error.located_error.GraphQLLocatedError: {'Exception occurred': ['cause is: None with parameter as: list index (1) out of range context: None']}
+
+2021-09-25 22:11:27,966 127.0.0.1 - - [25/Sep/2021 22:11:27] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 22:11:51,858 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 22:11:51,859 None Label is test
+2021-09-25 22:11:51,859 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 22:11:51,875 None columns of project
+2021-09-25 22:11:51,875 None Columns of project are (['select', 'C.all', ''],)
+2021-09-25 22:11:51,875 None I'm inside next of ProjectStep
+2021-09-25 22:11:51,875 None Bytecode status till now [[['V'], ['ip', '8.8.8.8']], [['bothE'], []], [['otherV'], [], []], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['inE'], ['T.label', 'hasIP']], [['outV'], ['T.label', 'test']], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:11:51,883 None protobuf generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], []], [['otherV'], [], []], [['outE'], [], []], [['inV'], [], [], 'T.id', '1234567'], [['inE'], ['T.label', 'hasIP']], [['outV'], ['T.label', 'test']], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:11:51,890 None    ByteCode generated is
+2021-09-25 22:11:51,891 steps {
+  middle_layer {
+    inner_values: "V"
+  }
+  middle_layer {
+    inner_values: "ip"
+    inner_values: "8.8.8.8"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+  middle_layer {
+    inner_values: "T.id"
+  }
+  middle_layer {
+    inner_values: "1234567"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inE"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "hasIP"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outV"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "test"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "project"
+    inner_values: "select"
+    inner_values: "C.all"
+    inner_values: ""
+  }
+}
+
+2021-09-25 22:11:51,894 None Going to Graph core endpoint connection
+2021-09-25 22:11:51,926 None returning from Graph core endpoint connection
+2021-09-25 22:11:51,927 An error occurred while resolving field LevelFiveType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 240, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 214, in generate_graph
+    print(t.project(C.all_()).next())
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\traversal\ProjectStep.py", line 156, in next
+    return ExecuteByteCode(self.byte_rep).execute().to_json()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 72, in execute
+    responses = self._parse_result(response, field_name.name)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 179, in _parse_result
+    return self._parse_map_value(result, field)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 186, in _parse_map_value
+    raise Exception(response)
+Exception: {'Exception occurred': ['cause is: None with parameter as: list index (1) out of range context: None']}
+2021-09-25 22:11:51,930 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 240, in resolve_graph
+    return str(generate_graph(json.loads(parent.current)))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 214, in generate_graph
+    print(t.project(C.all_()).next())
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\traversal\ProjectStep.py", line 156, in next
+    return ExecuteByteCode(self.byte_rep).execute().to_json()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 72, in execute
+    responses = self._parse_result(response, field_name.name)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 179, in _parse_result
+    return self._parse_map_value(result, field)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 186, in _parse_map_value
+    raise Exception(response)
+graphql.error.located_error.GraphQLLocatedError: {'Exception occurred': ['cause is: None with parameter as: list index (1) out of range context: None']}
+
+2021-09-25 22:11:51,933 127.0.0.1 - - [25/Sep/2021 22:11:51] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 22:14:30,965 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 22:14:30,966 None Label is test
+2021-09-25 22:14:30,966 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 22:14:30,973 None columns of project
+2021-09-25 22:14:30,973 None Columns of project are (['select', 'C.all', ''],)
+2021-09-25 22:14:30,974 None I'm inside next of ProjectStep
+2021-09-25 22:14:30,974 None Bytecode status till now [[['V'], ['ip', '8.8.8.8']], [['bothE'], []], [['otherV'], [], []], [['outE'], [], []], [['inV'], [], [], ['T.id', '1234567']], [['inE'], ['T.label', 'hasIP']], [['outV'], ['T.label', 'test']], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:14:30,982 None protobuf generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], []], [['otherV'], [], []], [['outE'], [], []], [['inV'], [], [], ['T.id', '1234567']], [['inE'], ['T.label', 'hasIP']], [['outV'], ['T.label', 'test']], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:14:30,989 None    ByteCode generated is
+2021-09-25 22:14:30,989 steps {
+  middle_layer {
+    inner_values: "V"
+  }
+  middle_layer {
+    inner_values: "ip"
+    inner_values: "8.8.8.8"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+  middle_layer {
+    inner_values: "T.id"
+    inner_values: "1234567"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inE"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "hasIP"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outV"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "test"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "project"
+    inner_values: "select"
+    inner_values: "C.all"
+    inner_values: ""
+  }
+}
+
+2021-09-25 22:14:30,989 None Going to Graph core endpoint connection
+2021-09-25 22:17:23,348 None returning from Graph core endpoint connection
+2021-09-25 22:17:23,348 None Parsing Query result of list
+2021-09-25 22:17:23,466 None Query Result Parsed in List Format are
+2021-09-25 22:17:23,466 None values
+2021-09-25 22:17:23,466 None Converting results to graph:
+2021-09-25 22:17:23,467 None snowgraph conversion started
+2021-09-25 22:17:23,475 None Graph created
+2021-09-25 22:17:23,475 converted to snowgraph
+2021-09-25 22:17:23,517 127.0.0.1 - - [25/Sep/2021 22:17:23] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 22:18:35,134 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 22:18:35,134 None Label is test
+2021-09-25 22:18:35,134 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 22:18:35,146 None columns of project
+2021-09-25 22:18:35,147 None Columns of project are (['select', 'C.all', ''],)
+2021-09-25 22:18:35,147 None I'm inside next of ProjectStep
+2021-09-25 22:18:35,147 None Bytecode status till now [[['V'], ['ip', '8.8.8.8']], [['bothE'], []], [['otherV'], [], []], [['outE'], [], []], [['inV'], [], [], ['T.id', 'eq,1234567']], [['inE'], ['T.label', 'hasIP']], [['outV'], ['T.label', 'test']], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:18:35,155 None protobuf generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], []], [['otherV'], [], []], [['outE'], [], []], [['inV'], [], [], ['T.id', 'eq,1234567']], [['inE'], ['T.label', 'hasIP']], [['outV'], ['T.label', 'test']], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:18:35,159 None    ByteCode generated is
+2021-09-25 22:18:35,160 steps {
+  middle_layer {
+    inner_values: "V"
+  }
+  middle_layer {
+    inner_values: "ip"
+    inner_values: "8.8.8.8"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+  middle_layer {
+    inner_values: "T.id"
+    inner_values: "eq,1234567"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inE"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "hasIP"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outV"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "test"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "project"
+    inner_values: "select"
+    inner_values: "C.all"
+    inner_values: ""
+  }
+}
+
+2021-09-25 22:18:35,160 None Going to Graph core endpoint connection
+2021-09-25 22:20:30,053 None returning from Graph core endpoint connection
+2021-09-25 22:20:30,069 None Parsing Query result of list
+2021-09-25 22:20:30,163 None Query Result Parsed in List Format are
+2021-09-25 22:20:30,163 None values
+2021-09-25 22:20:30,163 None Converting results to graph:
+2021-09-25 22:20:30,163 None snowgraph conversion started
+2021-09-25 22:20:30,179 None Graph created
+2021-09-25 22:20:30,179 converted to snowgraph
+2021-09-25 22:20:30,195 127.0.0.1 - - [25/Sep/2021 22:20:30] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 22:21:25,311 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 22:21:25,311 None Label is test
+2021-09-25 22:21:25,312 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 22:21:25,323 127.0.0.1 - - [25/Sep/2021 22:21:25] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 22:21:36,419 None Bytecode in vstep  [[['V'], ['ip', '8.8.8.8']]]
+2021-09-25 22:21:36,420 None Label is test
+2021-09-25 22:21:36,420 None ByteCode generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']]]
+2021-09-25 22:21:36,425 None columns of project
+2021-09-25 22:21:36,425 None Columns of project are (['select', 'C.all', ''],)
+2021-09-25 22:21:36,425 None I'm inside next of ProjectStep
+2021-09-25 22:21:36,426 None Bytecode status till now [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], [], ['T.id', 'eq,1234567']], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['counter', 'eq,1']], [['outV'], ['T.label', 'IP']], [['bothE'], ['T.label', 'sentEmail'], ['counter', 'eq,5']], [['otherV'], [], []], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:21:36,434 None protobuf generated is [[['V'], ['ip', '8.8.8.8']], [['bothE'], ['T.label', 'hasIP']], [['otherV'], ['T.label', 'test']], [['outE'], [], []], [['inV'], [], [], ['T.id', 'eq,1234567']], [['bothE'], [], []], [['otherV'], [], []], [['inE'], [], [], ['counter', 'eq,1']], [['outV'], ['T.label', 'IP']], [['bothE'], ['T.label', 'sentEmail'], ['counter', 'eq,5']], [['otherV'], [], []], [['project', ['select', 'C.all', '']]]]
+2021-09-25 22:21:36,441 None    ByteCode generated is
+2021-09-25 22:21:36,441 steps {
+  middle_layer {
+    inner_values: "V"
+  }
+  middle_layer {
+    inner_values: "ip"
+    inner_values: "8.8.8.8"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "hasIP"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "test"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+  middle_layer {
+    inner_values: "T.id"
+    inner_values: "eq,1234567"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "inE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+  middle_layer {
+    inner_values: "counter"
+    inner_values: "eq,1"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "outV"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "IP"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+    inner_values: "T.label"
+    inner_values: "sentEmail"
+  }
+  middle_layer {
+    inner_values: "counter"
+    inner_values: "eq,5"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "project"
+    inner_values: "select"
+    inner_values: "C.all"
+    inner_values: ""
+  }
+}
+
+2021-09-25 22:21:36,444 None Going to Graph core endpoint connection
+2021-09-25 22:21:45,784 None returning from Graph core endpoint connection
+2021-09-25 22:21:45,785 None Parsing Query result of list
+2021-09-25 22:21:45,785 None Query Result Parsed in List Format are
+2021-09-25 22:21:45,785 None values
+2021-09-25 22:21:45,785 None Converting results to graph:
+2021-09-25 22:21:45,785 None snowgraph conversion started
+2021-09-25 22:21:45,789 None Graph created
+2021-09-25 22:21:45,789 converted to snowgraph
+2021-09-25 22:21:45,791 127.0.0.1 - - [25/Sep/2021 22:21:45] "POST /graphql HTTP/1.1" 200 -
+2021-09-25 22:22:02,151 127.0.0.1 - - [25/Sep/2021 22:22:02] "[31m[1mPOST /graphql HTTP/1.1[0m" 400 -
+2021-10-03 22:26:20,296 None Bytecode in vstep  [[['V'], ['T.id', '123456']]]
+2021-10-03 22:26:20,318 None columns of project
+2021-10-03 22:26:20,318 None Columns of project are (['select', 'C.all', ''],)
+2021-10-03 22:26:20,320 None I'm inside next of ProjectStep
+2021-10-03 22:26:20,320 None Bytecode status till now [[['V'], ['T.id', '123456']], [['bothE'], [], []], [['otherV'], [], []], [['bothE'], [], []], [['otherV'], [], []], [['project', ['select', 'C.all', '']]]]
+2021-10-03 22:26:20,345 None protobuf generated is [[['V'], ['T.id', '123456']], [['bothE'], [], []], [['otherV'], [], []], [['bothE'], [], []], [['otherV'], [], []], [['project', ['select', 'C.all', '']]]]
+2021-10-03 22:26:20,347 None    ByteCode generated is
+2021-10-03 22:26:20,347 steps {
+  middle_layer {
+    inner_values: "V"
+  }
+  middle_layer {
+    inner_values: "T.id"
+    inner_values: "123456"
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "bothE"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "otherV"
+  }
+  middle_layer {
+  }
+  middle_layer {
+  }
+}
+steps {
+  middle_layer {
+    inner_values: "project"
+    inner_values: "select"
+    inner_values: "C.all"
+    inner_values: ""
+  }
+}
+
+2021-10-03 22:26:20,348 None Going to Graph core endpoint connection
+2021-10-03 22:26:24,397 An error occurred while resolving field LevelThreeType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 361, in resolve_graph
+    queried_graph = generate_graph(json.loads(parent.current))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 212, in generate_graph
+    graph = graph.project(C.all_()).next()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\traversal\ProjectStep.py", line 156, in next
+    return ExecuteByteCode(self.byte_rep).execute().to_json()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 61, in execute
+    results = self._execute_bytecode_(bytecode, id)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 255, in _execute_bytecode_
+    results = stub.ExecuteByteCode(bytec)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\grpc\_channel.py", line 826, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\grpc\_channel.py", line 729, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1633280184.397000000","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3962,"referenced_errors":[{"created":"@1633280184.397000000","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+2021-10-03 22:26:24,443 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 361, in resolve_graph
+    queried_graph = generate_graph(json.loads(parent.current))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 212, in generate_graph
+    graph = graph.project(C.all_()).next()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\traversal\ProjectStep.py", line 156, in next
+    return ExecuteByteCode(self.byte_rep).execute().to_json()
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 61, in execute
+    results = self._execute_bytecode_(bytecode, id)
+  File "B:\Projects\Freelancing\Elysium Analytics\graphdb-in-snowflake\snowflake-graphdb\graph_app\src\main\python\client\connection\ExecuteByteCode.py", line 255, in _execute_bytecode_
+    results = stub.ExecuteByteCode(bytec)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\grpc\_channel.py", line 826, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\grpc\_channel.py", line 729, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+graphql.error.located_error.GraphQLLocatedError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1633280184.397000000","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3962,"referenced_errors":[{"created":"@1633280184.397000000","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+
+2021-10-03 22:26:24,443 127.0.0.1 - - [03/Oct/2021 22:26:24] "POST /graphql HTTP/1.1" 200 -
+2021-10-03 23:54:31,462 None Bytecode in vstep  [[['V'], ['T.id', '123456']]]
+2021-10-03 23:54:31,462 An error occurred while resolving field LevelThreeType.graph
+Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 361, in resolve_graph
+    queried_graph = generate_graph(json.loads(parent.current))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 134, in generate_graph
+    graph = graph.bothE(v)
+AttributeError: 'BothEStep' object has no attribute 'bothE'
+2021-10-03 23:54:31,464 Traceback (most recent call last):
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executor.py", line 452, in resolve_or_error
+    return executor.execute(resolve_fn, source, info, **args)
+  File "C:\Users\debas\anaconda3\envs\snowgraph-graphene\lib\site-packages\graphql\execution\executors\sync.py", line 16, in execute
+    return fn(*args, **kwargs)
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 361, in resolve_graph
+    queried_graph = generate_graph(json.loads(parent.current))
+  File "B:/Projects/Freelancing/Elysium Analytics/graphdb-in-snowflake/snowflake-graphdb/graph_app/src/main/python/gql/graphene_lib/graphql_schema.py", line 134, in generate_graph
+    graph = graph.bothE(v)
+graphql.error.located_error.GraphQLLocatedError: 'BothEStep' object has no attribute 'bothE'
+
+2021-10-03 23:54:31,465 127.0.0.1 - - [03/Oct/2021 23:54:31] "POST /graphql HTTP/1.1" 200 -

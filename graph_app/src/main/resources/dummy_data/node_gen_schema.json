@@ -1,0 +1,30 @@
+[
+  {
+    "label": "user",
+    "number": 100,
+    "properties": [
+      "userName",
+      "email",
+      "age",
+      "address",
+      "country"
+    ]
+  },
+  {
+    "label": "IP",
+    "number": 500,
+    "properties": [
+      "ip",
+      "country",
+      "ipFormat"
+    ]
+  },
+  {
+    "label": "hosts",
+    "number": 200,
+    "properties": [
+      "hostname",
+      "country"
+    ]
+  }
+]

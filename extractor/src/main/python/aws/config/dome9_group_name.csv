@@ -1,0 +1,12 @@
+| default                  | NULL                                         |
+| astra-prod@list.acme.com  | packer_5a4d6a01-46cb-5f87-e5c1-4931b8e3b850  |
+| bruce.clark@acme.com           | NULL                                         |
+| bruce.smith@acme.com           | NULL                                         |
+| daniel.cook@acme.com           | NULL                                         |
+| ethan.smith@acme.com     | NULL                                         |
+| madison.smith@sstech.us           | NULL                                         |
+| noah.wayne@acme.com           | NULL                                         |
+| ray.smith@acme.com           | NULL                                         |
+| mason.wayne@acme.com           | NULL                                         |
+| flash.knight@acme.com           | NULL                                         |
+| system                   | workspaces-endpoint-sg                       |

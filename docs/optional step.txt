@@ -1,0 +1,75 @@
+tr.V().with_("address", "address_0").in("lives").withLabel("user").optional(__.out("resolved")).withLabel("user").out("hasIP").repeat(__.out("IPsCommunicated")).times(3).in("hasIP").project(C.all()).next()
+
+with main as 
+(
+	select nm.node_id,ne.map_id, 1 as lvl 
+	from nodes_with_edges_demo ne 
+	inner join nodes_master_demo nm on nm.node_id = ne.node_id   
+	where  nm.properties:address = 'address_0'
+),
+level1 as 
+(
+	select main.node_id, main.map_id, 1 as lvl 
+    from main  
+    inner join nodes_with_edges_demo ne on ne.map_id = main.node_id
+    inner join nodes_master_demo nm on nm.node_id = ne.node_id
+	where ne.value_label = 'lives'
+), 
+level2 as 
+(
+	with step1 as 
+	(
+		select ne.node_id, ne.map_id, 2 as lvl
+		from level1 l
+		inner join nodes_with_edges_demo ne on ne.node_id = l.map_id
+		inner join nodes_master_demo nm on nm.node_id = ne.node_id
+		where ne.value_label = 'resolved'
+	)
+	case 
+		when select count(*) from coalesce_step1 c where c.tbl = 'step1' > 0 then select node_id, map_id, lvl from step1
+		else select * from level1
+	end 
+),
+with level3 as 
+(
+	select ne.node_id, ne.map_id, 1 as lvl
+	from level2 l
+	inner join nodes_with_edges_demo ne on ne.node_id = l.map_id
+	inner join nodes_master_demo nm on nm.node_id = ne.node_id
+	where ne.value_label = 'resolved'
+)
+repeat3 as
+(
+	select root_id, edge_direction, edge_id, edge_label, edge_properties, oth_id             
+	from nodes_master nm, 
+	(
+		select node_id as root_id, value_id as edge_id, 'outgoing' as edge_direction, value_label as edge_label, value_properties as edge_properties, map_id as oth_id 
+        from nodes_with_edges_all ne where ne.value_label = 'IPsCommunicated'
+    ) ne 
+    where nm.node_id = ne.oth_id
+),
+repeat3_rcte as 
+(
+   select root_id as node_id, oth_id as map_id, 3 as lvl 
+   from repeat3 base 
+   inner join level2 l on l.map_id = base.root_id 
+	union all 
+   select base.root_id, base.oth_id, r.lvl + 1 as lvl 
+   from repeat3 base                 
+   join repeat3_rcte r on base.root_id = r.map_id and lvl < 6
+),
+level6 as 
+(
+	select ne.node_id, ne.map_id, 6 as lvl
+	from repeat3_rcte l
+	inner join nodes_with_edges_demo ne on ne.map_id = l.node_id
+	inner join nodes_master_demo nm on nm.node_id = ne.node_id
+	where ne.value_label = 'hasIP'
+)
+select * from level1
+union all
+select * from level2
+union all 
+select * from repeat3_rcte
+union all 
+select * from level6;

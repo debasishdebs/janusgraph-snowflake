@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
+body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+:-webkit-full-screen #fullscreen {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+#fullscreen:-ms-fullscreen {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.versions .active a,
+.versions .active a:hover {
+  background-color: #3a87ad;
+}
+
+#kl-container {
+  min-height: 580px;
+}
+
+.nav-pills li.fshide {
+  display: none;
+}
+
+.fshide {
+  display: none;
+}
+
+.fs-tabs {
+  display: block;
+}
+
+.accordion-group {
+  border: 1px solid #e5e5e5;
+}
+
+#rhscontent > .tab-content {
+  /* Align with the top of the chart */
+  margin-top: -5px;
+}
+
+.tab-pane {
+  padding: 0px 6px;
+}
+
+.vertical-tabs.fs-tabs {
+  margin-left: -48px;
+  height: 20px;
+  margin-top: -20px;
+  border-bottom: 0px;
+}
+
+.vertical-tabs.fs-tabs > li {
+  margin-top: 340px;
+  margin-bottom: 0px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.badge.badge-male {
+  background-color: rgb(0, 85, 165);
+}
+
+.badge.badge-female {
+  background-color: rgb(176, 0, 110);
+}
+
+#customDownloadModal {
+  top: 100px;
+  left: 15%;
+  right: 15%;
+
+  width: auto;
+  margin-left: 0;
+
+  border-radius: 0;
+}
+
+#customDownloadModal table {
+  margin-top: 14px;
+}
+
+#customDownloadModal #username {
+  border-radius: 0px;
+  padding: 10px 6px;
+}
+
+#customDownloadModal .form-search {
+  text-align: center;
+}
+
+#usernameSearch {
+  margin-top: 0px;
+  margin-left: -4px;
+}
+
+#loginsTableBody .form-inline {
+  margin: 0;
+}
+
+.cichart,
+.citimebar {
+  /* border: solid 1px #cacdcf; */
+}
+
+.citimebar {
+  border-top: none;
+}
+
+.demoAbout {
+  background-color: #fff;
+  margin-left: 10px;
+}
+
+.citext {
+  background-color: #fff;
+  padding-bottom: -2px;
+  line-height: 20px;
+}
+
+.chart-wrapper {
+  margin-bottom: 18px;
+  margin-left: -30px;
+}
+
+.about-wrapper {
+  margin-bottom: 24px;
+}
+
+.lhs {
+  width: 100%;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+.rhs {
+  margin-left: 20px;
+}
+
+legend {
+  border-bottom: none;
+  margin-bottom: 10px;
+}
+
+.demo-title {
+  margin-top: 0px;
+  border-bottom: solid 1px #cacdcf;
+}
+
+#kl-mask {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background: white;
+  opacity: 0;
+}
+
+.kl-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10001;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  background-color: white;
+  border: 1px solid white;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+.kl-dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 20px;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* .kl-dropdown-menu > li > a:hover,
+.kl-dropdown-menu > li > a.highlight {
+    color: #fff;
+    text-decoration: none;
+    background-color: #009968;
+} */
+
+#selectLinked1:hover,
+#selectLinked1.highlight {
+  color: #fff;
+  text-decoration: none;
+  background-color: #009968;
+}
+
+#selectLinked2:hover,
+#selectLinked2.highlight {
+  color: #fff;
+  text-decoration: none;
+  background-color: #009968;
+}
+
+#selectLinked3:hover,
+#selectLinked3.highlight {
+  color: #fff;
+  text-decoration: none;
+  background-color: #009968;
+}
+
+.rhs .ui-slider-horizontal,
+#rhscontent .ui-slider-horizontal {
+  margin: 0 12px;
+}
+
+.rhs .tooltip,
+#rhscontent .tooltip {
+  opacity: 1;
+}
+
+#fullscreenButton + .tooltip.left,
+#fullscreenDisabled + .tooltip.left {
+  margin-left: -9px;
+}
+
+#savedCharts .thumbnail {
+  border-radius: 0;
+}
+
+.input-append .btn {
+  margin-top: 8px;
+}
+
+.cipad {
+  padding: 5px 20px 0px;
+}
+
+.cipad legend .link {
+  display: block;
+  font-size: 14px;
+  line-height: 14px;
+  margin-bottom: 10px;
+}
+
+.cipad legend {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1200px) {
+  .lhs {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .lhs {
+    width: 100%;
+    margin-left: 15px;
+  }
+
+  .rhs {
+    margin-top: 12px;
+  }
+
+  #rhscontent {
+    margin-right: 10px;
+  }
+}
+
+.savedNodes {
+  height: 0%;
+  /* width: 100%; */
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border: solid 1px #efefef;
+}

@@ -1,0 +1,213 @@
+---
+USERS:
+  ethanclark: { src_ip: '192.168.0.70', account_name: 'Ethan.Clark', user_agent: 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36'}
+  flashgordon: { src_ip: '192.168.0.85', account_name: 'Flash.Gordon', user_agent: 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'}
+  madisonclark: { src_ip: '192.168.0.103', account_name: 'Madison.Clark', user_agent: 'Mozilla/5.0 (compatible; MSIE 8.0;)'}
+  brucecook: { src_ip: '192.168.0.5', account_name: "Bruce.Cook", user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko'}
+  camillegordon: { src_ip: '192.168.0.19', account_name: 'Camille.Gordon', user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; BOIE8;ENUS; rv:11.0) like Gecko'}
+  camillewayne: { src_ip: '192.168.0.25', account_name: 'Camille.Wayne', user_agent: 'Mozilla/4.0 (compatible)'}
+  clarkgordon: { src_ip: '192.168.0.30', account_name: 'Clark.Gordon', user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; Trident/7.0; Touch; rv:11.0) like Gecko'}
+  danielgordon: { src_ip: '192.168.0.41', account_name: 'Daniel.Gordon', user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; Trident/7.0; rv:11.0) like Gecko'}
+  dianaknight: { src_ip: '192.168.0.55', account_name: 'Diana.Knight', user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; BOIE8;ENUS; rv:11.0) like Gecko'}
+  emmahunt: { src_ip: '192.168.0.64', account_name: 'Emma.Hunt', user_agent: 'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; gdn/adcp; rv:11.0) like Gecko'}
+
+TEMPLATES:
+  GET_DOWNLOAD_PAGE: '%TS% %TIME_TAKEN% %SRC_IP% %USERNAME% - - OBSERVED "Technology/Internet" - 200 TCP_NC_MISS GET text/html http %HOSTNAME% 80 /downloads.php/content.xml.xz - xz "%USER_AGENT%" %DST_IP% %SC_BYTES% %CS_BYTES% - "none" "none" - - - -'
+  GET_MALICIOUS_SOFTWARE: '%TS% %TIME_TAKEN% %SRC_IP% %USERNAME% - - OBSERVED "Technology/Internet" - 200 TCP_NC_MISS GET - http %HOSTNAME% 80 /downloads.php/content.xml.xz/XNAGS31_setup.exe - exe "%USER_AGENT%" %DST_IP% %SC_BYTES% %CS_BYTES% - "none" "none" - - - -'
+  ENDPOINTS_BEACONING: '%TS% %TIME_TAKEN% %SRC_IP% %USERNAME% - - OBSERVED "Technology/Internet" - 200 TCP_TUNNELED CONNECT - tcp %HOSTNAME% 443 / - - "%USER_AGENT%" %DST_IP% %SC_BYTES% %CS_BYTES% - "none" "none" - - - -'
+  ACTIVITY: '%TS% %TIME_TAKEN% %SRC_IP% %USERNAME% - - OBSERVED "Content Servers" - 200 TCP_RESCAN_HIT GET %CONTENT_TYPE% http %HOSTNAME% 80 /%URI_PATH%-%URI_SUFFIX%.%URI_EXTENSION% - %URI_EXTENSION% "%USER_AGENT%" %DST_IP% %SC_BYTES% %CS_BYTES% - "none" "none" - - - -'
+SCENARIOS:
+  phishing_attack_get_malicious_html_download_page:
+  -
+    templateid: "GET_DOWNLOAD_PAGE"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%TIME_TAKEN%":
+        - "py"
+        - !!python/name:random.randint
+        - [30, 200]
+      "%SRC_IP%":
+        - "user"
+        - "src_ip"
+      "%HOSTNAME%":
+        - "set"
+        - ["www.baidu1.com"]
+      "%DST_IP%":
+        - "set"
+        - ["103.235.46.39"]
+      "%SC_BYTES%":
+        - "py"
+        - !!python/name:random.randint
+        - [30000, 50000]
+      "%CS_BYTES%":
+        - "py"
+        - !!python/name:random.randint
+        - [200, 1000]
+      "%USER_AGENT%":
+        - "user"
+        - "user_agent"
+      "%USERNAME%":
+        - "user"
+        - "account_name"
+  phishing_attack_get_malicious_software:
+  -
+    templateid: "GET_MALICIOUS_SOFTWARE"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%TIME_TAKEN%":
+        - "py"
+        - !!python/name:random.randint
+        - [5000, 10000]
+      "%SRC_IP%":
+        - "user"
+        - "src_ip"
+      "%HOSTNAME%":
+        - "set"
+        - ["www.baidu1.com"]
+      "%DST_IP%":
+        - "set"
+        - ["103.235.46.39"]
+      "%SC_BYTES%":
+        - "py"
+        - !!python/name:random.randint
+        - [300000, 500000]
+      "%CS_BYTES%":
+        - "py"
+        - !!python/name:random.randint
+        - [300, 1000]
+      "%USER_AGENT%":
+        - "user"
+        - "user_agent"
+      "%USERNAME%":
+        - "user"
+        - "account_name"
+  phishing_attack_beaconing:
+  -
+    templateid: "ENDPOINTS_BEACONING"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%TIME_TAKEN%":
+        - "py"
+        - !!python/name:random.randint
+        - [5000, 10000]
+      "%SRC_IP%":
+        - "user"
+        - "src_ip"
+      "%HOSTNAME%":
+        - "set"
+        - ["beacon.krxd.net"]
+      "%DST_IP%":
+        - "set"
+        - ["103.235.46.39"]
+      "%SC_BYTES%":
+        - "py"
+        - !!python/name:random.randint
+        - [3000, 5000]
+      "%CS_BYTES%":
+        - "py"
+        - !!python/name:random.randint
+        - [30000, 100000]
+      "%USER_AGENT%":
+        - "set"
+        - ["NoaaNow/1 CFNetwork/902.2 Darwin/17.7.0"]
+      "%USERNAME%":
+        - "user"
+        - "account_name"
+  activity:
+  -
+    templateid: "ACTIVITY"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%TIME_TAKEN%":
+        - "py"
+        - !!python/name:random.randint
+        - [5000, 10000]
+      "%SRC_IP%":
+        - "user"
+        - "src_ip"
+      "%HOSTNAME%":
+        - "set"
+        - ["google.com", "wikipedia.org", "acme.com", "acme.com", "acme.com", "acme.com", "acme.com", "acme.com", "acme.com", "acme.com", "acme.com", "acme.com"]
+      "%DST_IP%":
+        - "set"
+        - ["216.58.215.110", "91.198.174.192", "157.131.250.208", "157.131.250.208", "157.131.250.208", "157.131.250.208", "157.131.250.208", "157.131.250.208", "157.131.250.208", "157.131.250.208", "157.131.250.208", "157.131.250.208"]
+      "%SC_BYTES%":
+        - "py"
+        - !!python/name:random.randint
+        - [3000, 5000]
+      "%CS_BYTES%":
+        - "py"
+        - !!python/name:random.randint
+        - [10000, 30000]
+      "%USER_AGENT%":
+        - "user"
+        - "user_agent"
+      "%USERNAME%":
+        - "user"
+        - "account_name"
+      "%CONTENT_TYPE%":
+        - "set"
+        - ["application/json", "application/msword", "application/x-shockwave-flash", "image/jpeg", "image/jpg", "image/png", "text/css", "text/csv", "text/html", "text/javascript", "text/plain", "text/xml"]
+      "%URI_PATH%":
+        - "set"
+        - ["test", "page", "about", "info", "index", "contacts"]
+      "%URI_SUFFIX%":
+        - "set"
+        - ["", "-1", "-2", "-3", "-4", "-5", "-data"]
+      "%URI_EXTENSION%":
+        - "set"
+        - ["bmp", "cgi", "css", "csv", "doc", "gif", "htm", "html", "jpeg", "jpg", "js", "json", "php", "pl", "png", "py", "rb", "swf", "txt", "xml"]
+
+ACTIVITY:
+  ethanclark:
+    - [ "phishing_attack_get_malicious_html_download_page", ["0 11 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_get_malicious_software", ["1 11 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_beaconing", ["30 11-23 * * *", 59, [1, 1]] ]
+    - [ "activity", ["* 8-18 * * *", 59, [1, 5]] ]
+  flashgordon:
+    - [ "phishing_attack_get_malicious_html_download_page", ["10 10 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_get_malicious_software", ["11 10 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_beaconing", ["50 10-23 * * *", 59, [1, 1]] ]
+    - [ "activity", ["* 8-18 * * *", 59, [1, 5]] ]
+  madisonclark:
+    - [ "phishing_attack_get_malicious_html_download_page", ["20 10 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_get_malicious_software", ["21 10 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_beaconing", ["35 10-23 * * *", 59, [1, 1]] ]
+    - [ "activity", ["* 8-18 * * *", 59, [1, 5]] ]
+  brucecook:
+    - [ "phishing_attack_get_malicious_html_download_page", ["40 9 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_get_malicious_software", ["41 9 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_beaconing", ["55 9-23 * * *", 59, [1, 1]] ]
+    - [ "activity", ["* 8-18 * * *", 59, [1, 5]] ]
+  camillegordon:
+    - [ "phishing_attack_get_malicious_html_download_page", ["15 12 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_get_malicious_software", ["16 12 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_beaconing", ["25 12-23 * * *", 59, [1, 1]] ]
+    - [ "activity", ["* 8-18 * * *", 59, [1, 5]] ]
+  camillewayne:
+    - [ "phishing_attack_get_malicious_html_download_page", ["17 13 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_get_malicious_software", ["18 13 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_beaconing", ["40 13-23 * * *", 59, [1, 1]] ]
+    - [ "activity", ["* 8-18 * * *", 59, [1, 5]] ]
+  clarkgordon:
+    - [ "phishing_attack_get_malicious_html_download_page", ["33 10 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_get_malicious_software", ["34 10 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_beaconing", ["40 10-23 * * *", 59, [1, 1]] ]
+    - [ "activity", ["* 8-18 * * *", 59, [1, 5]] ]
+  danielgordon:
+    - [ "phishing_attack_get_malicious_html_download_page", ["10 11 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_get_malicious_software", ["11 11 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_beaconing", ["25 11-23 * * *", 59, [1, 1]] ]
+    - [ "activity", ["* 8-18 * * *", 59, [1, 5]] ]
+  dianaknight:
+    - [ "phishing_attack_get_malicious_html_download_page", ["0 14 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_get_malicious_software", ["1 14 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_beaconing", ["15 14-23 * * *", 59, [1, 1]] ]
+    - [ "activity", ["* * * * *", 59, [1, 3]] ]
+  emmahunt:
+    - [ "phishing_attack_get_malicious_html_download_page", ["1 15 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_get_malicious_software", ["2 15 * * *", 59, [1, 1]] ]
+    - [ "phishing_attack_beaconing", ["10 15-23 * * *", 59, [1, 1]] ]
+    - [ "activity", ["* 8-18 * * *", 59, [1, 5]] ]
+    - [ "activity", ["* * * * *", 59, [1, 5]] ]
+...

@@ -1,0 +1,50 @@
+QUERY 1:
+
+with edges as 
+(
+  select root_id, edge_direction, edge_id, edge_label, edge_properties, oth_id             
+  from nodes_master nm, 
+  (
+    select node_id as root_id, value_id as edge_id, 'outgoing' as edge_direction, value_label as edge_label, value_properties as edge_properties,map_id as oth_id 
+        from nodes_with_edges_all
+    union all
+    select node_id as oth_id, value_id as edge_id, 'incoming' as edge_direction, value_label as edge_label, value_properties as edge_properties, map_id as root_id 
+        from nodes_with_edges_all 
+  ) ne 
+  where nm.node_id = ne.oth_id
+), 
+recursive as 
+(
+  select root_id,oth_id, 1 as lvl 
+    from edges 
+    inner join nodes_master nm on nm.node_id = edges.root_id 
+    where nm.properties:ip = '192.168.0.101' 
+  union all
+  select base.root_id, base.oth_id, recursive.lvl + 1 as lvl 
+    from edges base                 
+    join recursive on base.root_id = recursive.oth_id and lvl < 2
+)
+select distinct pr.root_id, pr.lvl, pr.oth_id from recursive pr inner join edges p on p.root_id = pr.root_id and p.oth_id = pr.oth_id;
+
+QUERY 2:
+
+with parent as
+(
+select NODE_ID as ID_REF, MAP_ID as OTHER, 'out' as direction from nodes_with_edges_all where direction = 'outEdges'
+union all
+select MAP_ID as ID_REF, NODE_ID as OTHER, 'in' as direction from nodes_with_edges_all where direction = 'outEdges'
+),
+parent_rcte as
+(
+  -- Anchor Clause
+  select id_ref,other, 1 as lvl
+    from parent
+    where id_ref = 101
+  union all
+  -- Recursive Clause
+  select base.id_ref, base.other, parent_rcte.lvl + 1 as lvl
+    from parent base
+    join parent_rcte
+    on base.id_ref = parent_rcte.other and lvl < 2
+)
+select distinct pr.id_ref, pr.lvl, pr.other, p.direction from parent_rcte pr inner join parent p on p.id_ref = pr.id_ref and p.other = pr.other;

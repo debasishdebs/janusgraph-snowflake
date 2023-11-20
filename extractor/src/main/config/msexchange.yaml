@@ -1,0 +1,37 @@
+---
+timeformat: "%Y-%m-%d %H:%M:%S"
+linebreak: "\n"
+templates:
+  - { type: 'file', samples: 'msexchange/msexchange.sample', period: 60, min: 1, max: 5 }
+replaces:
+  - [ '%SENDER%', 'common/emails.txt' ]
+  - [ '%RCPT%', 'common/emails.txt' ]
+  - [ '%CHOST%', 'common/hosts.txt' ]
+  - [ '%SHOST%', 'common/hosts.txt' ]
+  - [ '%SUBJECT%', ['Cars','Technology','Apple','Android','News','Finance','Big Data','Startup'] ]
+  - [ '%EVENT%', ['SEND', 'RECEIVE', 'BADMAIL', 'DELIVER', 'DSN', 'EXPAND', 'FAIL', 'POISONMESSAGE', 'REDIRECT', 'RESOLVE', 'SUBMIT', 'TRANSFER'] ]
+  -
+    - '%NUM%'
+    - !!python/name:random.randint
+    - [1, 100]
+  -
+    - '%CNT%'
+    - !!python/name:random.randint
+    - [1, 100000]
+  -
+    - '%MSGID%'
+    - !!python/name:random.randint
+    - [1000000, 5000000]
+  -
+    - '%CIP%'
+    - !!python/name:common.utils.get_random_ip
+    - ['0.0.0.0/0']
+  -
+    - '%SIP%'
+    - !!python/name:common.utils.get_random_ip
+    - ['0.0.0.0/0']
+  -
+    - '%IPADDR%'
+    - !!python/name:common.utils.get_random_ip
+    - ['0.0.0.0/0']
+...

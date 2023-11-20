@@ -1,0 +1,22 @@
+version: '3'
+services:
+  graphtransformer:
+    image: graphtransformer
+    build:
+      dockerfile: Dockerfile
+      context: ./graphtransformer
+    volumes:
+      - /root/.m2/repository
+      - .databricks-connect:/root/.databricks-connect
+    healthcheck:
+      test: ["CMD", "bash", "-c", "healthcheck.sh"]
+      interval: 3m
+      timeout: 1m
+      retries: 3
+    ports:
+      - 1020:1020
+    networks:
+      - snowgraph_net
+networks:
+  snowgraph_net:
+    driver: bridge

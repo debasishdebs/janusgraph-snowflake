@@ -1,0 +1,550 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/any.proto";
+import "google/protobuf/struct.proto";
+
+option java_multiple_files = true;
+option java_package = "com.sstech.graphdb.grpc";
+option java_outer_classname = "GraphDBProto";
+
+message GeoLocation {
+    string city = 1;
+    string country = 2;
+    string state = 3;
+    string zip = 4;
+    float lat = 5;
+    float lon = 6;
+}
+
+message Node {
+    map<string, StructureValue> properties = 1;
+}
+
+message Edge {
+    map<string, StructureValue> properties = 1;
+}
+
+message Time {
+    int64 id = 1;
+    int32 year = 2;
+    int32 month = 3;
+    int32 day = 4;
+    int32 hour = 5;
+    int32 minutes = 6;
+    int32 seconds = 7;
+}
+
+message GraphFormat {
+    string caseId = 1;
+    repeated Node nodes = 2;
+    repeated Edge edges = 3;
+}
+
+message WindowsRecord {
+    int64 id = 1;
+    Time EventTime = 2;
+    string Hostname = 3;
+    int64 Keywords = 4;
+    string EventType = 5;
+    int64 SeverityValue = 6;
+    string Severity = 7;
+    int64 EventID = 8;
+    string SourceName = 9;
+    string ProviderGuid = 10;
+    int64 Version = 11;
+    int64 Task = 12;
+    int64 OpcodeValue = 13;
+    int64 RecordNumber = 14;
+    int64 ProcessID = 15;
+    int64 ThreadID = 16;
+    string Channel = 17;
+    string Message = 18;
+    string Category = 19;
+    string Opcode = 20;
+    string SubjectUserSid = 21;
+    string SubjectUserName = 22;
+    string SubjectDomainName = 23;
+    string SubjectLogonId = 24;
+    string TargetUserSid = 25;
+    string TargetUserName = 26;
+    string TargetDomainName = 27;
+    string TargetLogonId = 28;
+    string LogonType = 29;
+    string LogonProcessName = 30;
+    string AuthenticationPackageName = 31;
+    string WorkstationName = 32;
+    string LogonGuid = 33;
+    string TransmittedServices = 34;
+    string LmPackageName = 35;
+    string KeyLength = 36;
+    string ProcessName = 37;
+    string IpAddress = 38;
+    string IpPort = 39;
+    Time EventReceivedTime = 40;
+    string SourceModuleName = 41;
+    string SourceModuleType = 42;
+    string ObjectServer = 43;
+    string ObjectType = 44;
+    string ObjectName = 45;
+    string HandleId = 46;
+    string AccessMask = 47;
+    string PrivilegeList = 48;
+    string ActivityID = 49;
+    string ImpersonationLevel = 50;
+    string RestrictedAdminMode = 51;
+    string TargetOutboundUserName = 52;
+    string TargetOutboundDomainName = 53;
+    string VirtualAccount = 54;
+    string TargetLinkedLogonId = 55;
+    string ElevatedToken = 56;
+    string TargetSid = 57;
+    string MemberName = 58;
+    string MemberSid = 59;
+    string SamAccountName = 60;
+    string DisplayName = 61;
+    string UserPrincipalName = 62;
+    string HomeDirectory = 63;
+    string HomePath = 64;
+    string ScriptPath = 65;
+    string ProfilePath = 66;
+    string UserWorkstations = 67;
+    string PasswordLastSet = 68;
+    string AccountExpires = 69;
+    string PrimaryGroupId = 70;
+    string AllowedToDelegateTo = 71;
+    string OldUacValue = 72;
+    string NewUacValue = 73;
+    string UserAccountControl = 74;
+    string UserParameters = 75;
+    string SidHistory = 76;
+    string LogonHours = 77;
+}
+
+message MsExchangeRecord {
+    int64 id = 1;
+    Time datetime = 2;
+    string client_ip = 3;
+    string client_hostname = 4;
+    string server_ip = 5;
+    string server_hostname = 6;
+    string source_context = 7;
+    string connector_id = 8;
+    string source = 9;
+    string event_id = 10;
+    string internal_message_id = 11;
+    string message_id = 12;
+    string recipient_address = 13;
+    string recipient_status = 14;
+    string total_bytes = 15;
+    string recipient_count = 16;
+    string related_recipient_address = 17;
+    string reference = 18;
+    string message_subject = 19;
+    string sender_address = 20;
+    string return_path = 21;
+    string message_info = 22;
+    string directionality = 23;
+    string tenant_id = 24;
+    string original_client_ip = 25;
+    string original_server_ip = 26;
+    string custom_data = 27;
+}
+
+message SysmonRecord {
+    int64 id = 1;
+    Time EventTime = 2;
+    string Hostname = 3;
+    int64 Keywords = 4;
+    string EventType = 5;
+    int64 SeverityValue = 6;
+    string Severity = 7;
+    int64 EventID = 8;
+    string SourceName = 9;
+    string ProviderGuid = 10;
+    int64 Version = 11;
+    int64 Task = 12;
+    int64 OpcodeValue = 13;
+    int64 RecordNumber = 14;
+    int64 ProcessID = 15;
+    int64 ThreadID = 16;
+    string Channel = 17;
+    string Domain = 18;
+    string AccountName = 19;
+    string UserID = 20;
+    string AccountType = 21;
+    string Message = 22;
+    string Category = 23;
+    string Opcode = 24;
+    Time UtcTime = 25;
+    string ProcessGuid = 26;
+    string Image = 27;
+    string User = 28;
+    string Protocol = 29;
+    string Initiated = 30;
+    string SourceIsIpv6 = 31;
+    string SourceIp = 32;
+    string SourceHostname = 33;
+    string SourcePort = 34;
+    string DestinationIsIpv6 = 35;
+    string DestinationIp = 36;
+    string DestinationHostname = 37;
+    string DestinationPort = 38;
+    Time EventReceivedTime = 39;
+    string SourceModuleName = 40;
+    string SourceModuleType = 41;
+    string FileVersion = 42;
+    string Description = 43;
+    string Product = 44;
+    string Company = 45;
+    string CommandLine = 46;
+    string CurrentDirectory = 47;
+    string LogonGuid = 48;
+    string LogonId = 49;
+    string TerminalSessionId = 50;
+    string IntegrityLevel = 51;
+    string Hashes = 52;
+    string ParentProcessGuid = 53;
+    string ParentProcessId = 54;
+    string ParentImage = 55;
+    string ParentCommandLine = 56;
+    string TargetFilename = 57;
+    Time CreationUtcTime = 58;
+    string RuleName = 59;
+    string Hash = 60;
+    string DestinationPortName = 61;
+}
+
+message SEPCRecord {
+    int64 id = 1;
+    Time EventTime = 2;
+    string Hostname = 3;
+    int64 Keywords = 4;
+    string EventType = 5;
+    int64 SeverityValue = 6;
+    string Severity = 7;
+    int64 EventID = 8;
+    string SourceName = 9;
+    int64 Task = 10;
+    int64 RecordNumber = 11;
+    int64 ProcessID = 12;
+    int64 ThreadID = 13;
+    string Channel = 14;
+    string Message = 15;
+    Time EventReceivedTime = 16;
+    string SourceModuleName = 17;
+    string SourceModuleType = 18;
+}
+
+message WatchGuardRecord {
+    int64 id = 1;
+    string sid = 2;
+    string cluster = 3;
+    string sn = 4;
+    string messageID = 5;
+    string tag_id = 6;
+    string raw_id = 7;
+    string disp = 8;
+    string direction = 9;
+    string pri = 10;
+    string policy = 11;
+    string protocol = 12;
+    string ip_src_addr = 13;
+    string ip_src_port = 14;
+    string ip_dst_addr = 15;
+    string ip_dst_port = 16;
+    string src_ip_nat = 17;
+    string src_port_nat = 18;
+    string dst_ip_nat = 19;
+    string dst_port_nat = 20;
+    string src_intf = 21;
+    string dst_intf = 22;
+    string rc = 23;
+    string pckt_len = 24;
+    string ttl = 25;
+    string pr_info = 26;
+    string proxy_act = 27;
+    string alarm_name = 28;
+    string alarm_type = 29;
+    string alarm_id = 30;
+    string rcvd_bytes = 31;
+    string sent_bytes = 32;
+    string elapsed_time = 33;
+    string dst_user = 34;
+    string dstname = 35;
+    string arg = 36;
+    string property35 = 37;
+    string property36 = 38;
+    string property37 = 39;
+    string property38 = 40;
+    string property39 = 41;
+    string property40 = 42;
+    string log_type = 43;
+    string msg = 44;
+    string geo_src = 45;
+    Time timestamp = 46;
+    string src_user = 47;
+    string op = 48;
+    string geo_dst = 49;
+    string duration = 50;
+}
+
+message GraphLoaderDataFormat {
+    string caseId = 1;
+    oneof data {
+        Node node = 2;
+        Edge edge = 3;
+    }
+}
+
+message GraphTransformerDataFormat {
+    string caseId = 1;
+    oneof data {
+        WindowsRecord windowsRecord = 2;
+        MsExchangeRecord exchangeRecord = 3;
+        SysmonRecord sysmonRecord = 4;
+        SEPCRecord sepcRecord = 5;
+        WatchGuardRecord networkRecord = 6;
+    }
+}
+
+message IncomingDataFormat {
+    string caseId = 1;
+    repeated WindowsRecord windowsRecords = 2;
+    repeated MsExchangeRecord exchangeRecords = 3;
+    repeated WatchGuardRecord networkRecords = 4;
+    repeated SysmonRecord sysmonRecords = 5;
+    repeated SEPCRecord sepcRecords = 6;
+}
+
+message GraphLoaderStatus {
+    bool status = 1;
+    int64 nodesAdded = 2;
+    int64 edgesAdded = 3;
+}
+
+message ConditionalIPs {
+    string IP = 1;
+    Time startTime = 2;
+    Time endTime = 3;
+    string dataSource = 4;
+}
+
+message ConditionalUsers {
+    string USER = 1;
+    Time startTime = 2;
+    Time endTime = 3;
+    string dataSource = 4;
+}
+
+message ConditionalHosts {
+    string HOST = 1;
+    Time startTime = 2;
+    Time endTime = 3;
+    string dataSource = 4;
+}
+
+message ConditionalURLs {
+    string URL = 1;
+    Time startTime = 2;
+    Time endTime = 3;
+    string dataSource = 4;
+}
+
+message CaseInformation {
+    repeated ConditionalIPs IPs = 1;
+    repeated ConditionalUsers users = 2;
+    repeated ConditionalHosts hosts = 3;
+    repeated ConditionalURLs urls = 4;
+}
+
+message NodesInCase {
+    repeated Node nodes = 1;
+}
+
+message CaseLoadingStatus {
+    string status = 1;
+    string caseId = 2;
+    CaseInformation query = 3;
+    NodesInCase nodes = 4;
+    map<string, string> others = 5;
+    repeated string dataSources = 6;
+    Time startTime = 7;
+    Time endTime = 8;
+    Time processingTime = 9;
+    Time queryExportTime = 10;
+}
+
+message CaseLoadingProperties {
+    string caseId = 1;
+    map<string, StructureValue> property = 2;
+    Time startTime = 3;
+    Time endTime = 4;
+    Time processingTime = 5;
+    repeated string dataSources = 6;
+    string propertyName = 7;
+}
+
+message CaseInfo {
+    string caseId = 1;
+    CaseInformation caseMetadata = 2;
+}
+
+message CaseNode {
+    string caseId = 1;
+    StructureValue node = 2;
+}
+
+message DummyMessage {
+    string message = 1;
+    string source = 2;
+    repeated string current = 3;
+}
+
+message DummyMessageStatus {
+    string message = 1;
+    string status = 2;
+    string source = 3;
+    repeated string current = 4;
+}
+
+message InnerMostByteCode {
+    repeated string inner_values = 1;
+}
+
+message MiddleMostByteCode {
+    repeated InnerMostByteCode middle_layer = 1;
+}
+
+message ByteCode {
+    repeated MiddleMostByteCode steps = 1;
+}
+
+message ListFormat {
+    repeated GenericStructure rows = 1;
+}
+
+message QueryResponse {
+    oneof response {
+        GenericStructure map_format = 1;
+        ListFormat list_format = 2;
+    }
+}
+
+message GenericStructure {
+    map<string, StructureValue> fields = 1;
+}
+
+message StructureValue {
+    oneof kind {
+        google.protobuf.NullValue null_value = 1;
+        double number_value = 2;
+        string string_value = 3;
+        bool bool_value = 4;
+        int64 int_value = 8;
+        bytes bytes_value = 7;
+        GenericStructure struct_value = 5;
+        ListValue list_value = 6;
+    }
+}
+
+message ListValue {
+    // Repeated field of dynamically typed values.
+    repeated StructureValue values = 1;
+}
+
+message EntityQuery {
+    string value = 1;
+    Time startDate = 2;
+    Time endDate = 3;
+    string dataSource = 4;
+}
+
+message EntityTypeQuery {
+    repeated EntityQuery entityQuery = 1;
+}
+
+message CaseSubmissionPayload {
+    string caseId = 2;
+    map<string, EntityTypeQuery> query = 1;
+    Time startDate = 3;
+    Time endDate = 4;
+    repeated string dataSources = 5;
+}
+
+message CaseExportStatus {
+    bool status = 1;
+}
+
+message TransformedDataTable {
+    string table = 1;
+    string caseId = 2;
+    repeated Node nodes = 3;
+}
+
+message ExportedDataInfo {
+    string table = 1;
+    string caseId = 2;
+}
+
+message ProcedureParams {
+    string procedure = 1;
+    map<string, string> parameters = 2;
+    repeated string order = 3;
+}
+
+message DataBaseIdentifier {
+    string database = 1;
+    string schema = 2;
+    string caller = 3;
+}
+
+message Credentials {
+    string account = 1;
+    string url = 2;
+    string user = 3;
+    string password = 4;
+    string warehouse = 5;
+    string database = 6;
+    string schema = 7;
+    string role = 8;
+    map<string, string> additionalParameters = 9;
+}
+
+service ServicesToGraphLoader {
+    rpc EnsureGraphInSnowFlake (GraphFormat) returns (google.protobuf.Empty);
+    rpc TestAPI (DummyMessage) returns (DummyMessageStatus);
+    rpc EnsureGraphInSnowFlakeStream (stream GraphLoaderDataFormat) returns (google.protobuf.Empty);
+    rpc EnsureGraphInSnowFromFromTable (TransformedDataTable) returns (google.protobuf.Empty);
+}
+
+service ServicesToGraphCore {
+    rpc UpdateCaseLoadingStatus (CaseLoadingStatus) returns (CaseLoadingStatus);
+    rpc UpdateCaseLoadingProperties (CaseLoadingProperties) returns (google.protobuf.Empty);
+    rpc UpdateNodesForCase (stream CaseNode) returns (google.protobuf.Empty);
+    rpc IsCaseExported(CaseSubmissionPayload) returns (CaseExportStatus);
+    rpc GetCaseLoadingStatus (CaseInfo) returns (CaseLoadingStatus);
+    rpc ExecuteByteCode (ByteCode) returns (QueryResponse);
+    rpc TestAPI (DummyMessage) returns (DummyMessageStatus);
+    rpc ExecuteStoredProcedure (ProcedureParams) returns (google.protobuf.Empty);
+    rpc GetSnowFlakeCredentials (DataBaseIdentifier) returns (Credentials);
+}
+
+service ServicesToGraphTransformer {
+    rpc TestAPI (DummyMessage) returns (DummyMessageStatus);
+    rpc TransformRawDataToGraph (IncomingDataFormat) returns (google.protobuf.Empty);
+    rpc TransformStreamRawDataToGraph (stream GraphTransformerDataFormat) returns (google.protobuf.Empty);
+    rpc TransformStreamDataOnDataBricks (stream GraphTransformerDataFormat) returns (google.protobuf.Empty);
+    rpc TransformAndLoadData (IncomingDataFormat) returns (google.protobuf.Empty);
+    rpc TransformExtractedDataFromIntermediateTable (ExportedDataInfo) returns (google.protobuf.Empty);
+}
+
+service ServicesToGraphApp {
+    rpc TestAPI (DummyMessage) returns (DummyMessageStatus);
+    rpc StartGraphETL (DummyMessage) returns (DummyMessageStatus);
+}
+
+service ServicesToGraphExtractor {
+    rpc StartGraphExtraction(CaseSubmissionPayload) returns (google.protobuf.Empty);
+    rpc TestAPI (DummyMessage) returns (DummyMessageStatus);
+}

@@ -1,0 +1,213 @@
+select a.*, bce.value:properties as b_c_outprop, bce.value:id::string as b_c_id, bce.value:label::string as b_c_label, bce.value:target:id as cID, bce.value:target:label::string as cLabel, bce.value:target as cprop
+from nodes as c,
+lateral(
+    select a.srcId as aId, a.srcLabel as aLabel, a.srcProp as aProp, a.outEdgeProp as a_b_outProp, a.outEdgeLabel::string as a_b_label, a.outEdgeId::string as a_b_Id, a.targetId as bId, a.targetLabel as bLabel, a.targetProp as bProp
+from edges as e ,
+    lateral(select n."NODE_ID" as srcId, n.LABEL as srcLabel, n.PROPERTIES as srcProp, o.value:properties as outEdgeProp, o.value:id as outEdgeId, o.value:label as outEdgeLabel, o.value:target:id as targetId, o.value:target:label::string as targetLabel, o.value:target as targetProp from nodes n, lateral flatten(n."outEdges") o where n.properties:userName='userName_0') as a
+where e.edge_id = to_binary(a_b_Id, 'hex')
+) as a,
+lateral flatten(c."outEdges") bce
+where a.bprop:id = c.node_id ;
+
+# 1 hop on out/in/both edges with IDs & Label only (no properties)
+
+select r."NODE_ID" as srcId, r."LABEL" as srcLabel, o.value:id as outEdgeId, o.value:label as outEdgeLabel, o.value:target:id as targetId, o.value:target:label as targetLabel
+	from nodes r, 
+	lateral flatten (r."outEdges") o
+	where r.properties:userName = 'userName_0';
+# Iterative approach
+select r."NODE_ID" as srcId, r."LABEL" as srcLabel, e1.value:id as outEdgeId, e1.value:label as outEdgeLabel, b."NODE_ID" as targetId, b."LABEL" as targetLabel
+	from nodes r,
+	lateral flatten (r."outEdges") e1,
+	lateral (
+		select "NODE_ID", "LABEL"
+			from nodes
+			where "NODE_ID" = e1.value:target:id
+		) as b
+	where r.properties:userName = 'userName_0';
+	
+# 2 hop using iterative approach
+
+select r."NODE_ID" as aId, r."LABEL" as aLabel, bn.bId as bId, bn.bLabel as bLabel, bn.cId as cId, bn.cLabel as cLabel
+	from nodes r,
+	lateral flatten (r."outEdges") e1,
+	lateral (
+		select b."NODE_ID" as bId, b."LABEL" as bLabel, cn."NODE_ID" as cId, cn."LABEL" as cLabel
+			from nodes b, 
+			lateral flatten (b."outEdges") e2,
+			lateral (
+				// outer most layer / periphery node
+				select "NODE_ID", "LABEL"
+					from nodes
+					where "NODE_ID" = e2.value:target:id
+				) cn
+			where 
+				b."NODE_ID" = e1.value:target:id
+		) bn
+	where r.properties:userName = 'userName_0';
+	
+
+
+select a.srcId as aId, a.srcLabel as aLabel, a.outEdgeId as a_b_Id, a.outEdgeLabel as a_b_label, a.targetId as bId, a.targetLabel as bLabel
+	from edges as e, 
+	lateral (
+		select r."NODE_ID" as srcId, r."LABEL" as srcLabel, o.value:id as outEdgeId, o.value:label as outEdgeLabel, o.value:target:id as targetId, o.value:target:label as targetLabel
+			from nodes r, 
+			lateral flatten (r."outEdges") o
+			where r.properties:userName = "userName_0"
+		)
+		
+		
+select r."NODE_ID" as aId, r."LABEL" as aLabel, bn.bId as bId, bn.bLabel as bLabel, bn.cId as cId, bn.cLabel as cLabel
+	from nodes r,
+	lateral flatten (r."outEdges") e1,
+	lateral (
+      // Middle layer & inner
+		select b."NODE_ID" as bId, b."LABEL" as bLabel, e2.value:target:id as cId, e2.value:target:label as cLabel
+			from nodes b, 
+			lateral flatten (b."outEdges") e2
+			where 
+				b."NODE_ID" = e1.value:target:id
+		) bn
+	where r.properties:userName = 'userName_0';
+
+# 3 Hop
+// Inner layer
+select r."NODE_ID" as aId, r."LABEL" as aLabel, bn.bId, bn.bLabel, bn.cId, bn.cLabel, bn.dId, bn.dLabel
+	from nodes r,
+	lateral flatten (r."outEdges") e1,
+	lateral (
+		// 1st Level
+		select b."NODE_ID" as bId, b."LABEL" as bLabel, cn.cId as cId, cn.cLabel as cLabel, cn.dId as dId, cn.dLabel as dLabel
+			from nodes b,
+			lateral flatten (b."outEdges") as e2,
+			lateral (
+				// 2nd level & 3rd level
+				select c."NODE_ID" as cId, c."LABEL" as cLabel, e3.value:target:id as dId, e3.value:target:label as dLabel
+					from nodes c,
+					lateral flatten (c."outEdges") e3
+					where
+						c."NODE_ID" = e2.value:target:id
+			) cn
+            where b."NODE_ID" in (
+              select e.value:target:id
+                from nodes n,
+                lateral flatten (n."outEdges") e
+                where n.properties:userName = 'userName_0'
+            )
+	) bn
+	where r.properties:userName = 'userName_0';
+	
+# 4 Hop
+// Inner layer
+select r."NODE_ID" as aId, r."LABEL" as aLabel, bn.bId, bn.bLabel, bn.cId, bn.cLabel, bn.dId, bn.dLabel, bn.eId, bn.eLabel
+	from nodes r,
+	lateral flatten (r."outEdges") e1,
+	lateral (
+		// 1st level
+		select b."NODE_ID" as bId, b."LABEL" as bLabel, cn.cId, cn.cLabel, cn.dId, cn.dLabel, cn.eId, cn.eLabel
+			from nodes b,
+			lateral flatten (b."outEdges") as e2,
+			lateral (
+				// 2nd level
+				select c."NODE_ID" as cId, c."LABEL" as cLabel, dn.dId, dn.dLabel, dn.eId, dn.eLabel
+				from nodes c,
+				lateral flatten (c."outEdges") e3,
+				lateral (
+					// 3rd and 4th level
+					select d."NODE_ID" as dId, d."LABEL" as dLabel, e4.value:target:id as eId, e4.value:target:label as eLabel
+					from nodes d,
+					lateral flatten (d."outEdges") e4
+					where
+						d."NODE_ID" = e3.value:target:id
+				) dn
+				where c."NODE_ID" in (
+					select e.value:target:id
+						from nodes n1,
+						lateral flatten (n1."outEdges") e
+						where n1."NODE_ID" in (
+						  select e.value:target:id
+							from nodes n2,
+							lateral flatten (n2."outEdges") e
+							where n2.properties:userName = 'userName_0'
+						)
+				)
+			) cn
+			where b."NODE_ID" in (
+              select e.value:target:id
+                from nodes n2,
+                lateral flatten (n2."outEdges") e
+                where n2.properties:userName = 'userName_0'
+            )
+	) bn
+	where r.properties:userName = 'userName_0';
+	
+// 5 Hop
+select distinct r."NODE_ID"::string as aId, r."LABEL"::string as aLabel, e1.value:id::string as a_b_id, e1.value:label::string as a_b_lab, 
+    bn.bId::string, bn.bLabel::string, bn.b_c_id::string, bn.b_c_lab::string, 
+    bn.cId::string, cLabel::string, bn.c_d_id::string, bn.c_d_lab::string, 
+    bn.dId::string, bn.dLabel::string, bn.d_e_id::string, bn.d_e_lab::string, bn.eId::string, bn.eLabel::string,
+	bn.e_f_id::string, bn.e_f_lab::string, bn.fId::string, bn.fLabel::string
+    
+	from nodes r,
+	lateral flatten (r."outEdges") e1,
+	lateral (
+		// 1st level
+		select b."NODE_ID" as bId, b."LABEL" as bLabel, e2.value:id as b_c_id, e2.value:label as b_c_lab, cn.cId, cn.cLabel, cn.c_d_id, cn.c_d_lab, cn.dId, cn.dLabel, cn.d_e_id, cn.d_e_lab, cn.eId, cn.eLabel, cn.e_f_id, cn.e_f_lab, cn.fId, cn.fLabel
+			from nodes b,
+			lateral flatten (b."outEdges") as e2,
+			lateral (
+				// 2nd level
+				select c."NODE_ID" as cId, c."LABEL" as cLabel, e3.value:id as c_d_id, e3.value:label as c_d_lab, dn.dId, dn.dLabel, dn.d_e_id, dn.d_e_lab, dn.eId, dn.eLabel, dn.e_f_id, dn.e_f_lab, dn.fId, dn.fLabel
+				from nodes c,
+				lateral flatten (c."outEdges") e3,
+				lateral (
+					// 3rd level
+					select d."NODE_ID" as dId, d."LABEL" as dLabel, e4.value:id as d_e_id, e4.value:label as d_e_lab, en.eId, en.eLabel, en.e_f_id, en.e_f_lab, en.fId, en.fLabel
+					from nodes d,
+					lateral flatten (d."outEdges") e4,
+					lateral (
+						// 4th and 5th Level
+						select e."NODE_ID" as eId, e."LABEL" as eLabel, e5.value:id as e_f_id, e5.value:label as e_f_lab, e5.value:target:id as fId, e5.value:target:label as fLabel
+						from nodes e,
+						lateral flatten (e."outEdges") e5
+						where e."NODE_ID" = e4.value:target:id
+					) en
+					where
+						d."NODE_ID" in (
+							select e.value:target:id
+								from nodes n1,
+								lateral flatten (n1."outEdges") e
+								where n1."NODE_ID" in (
+									select e.value:target:id
+										from nodes nn1,
+										lateral flatten (nn1."outEdges") e
+										where nn1."NODE_ID" in (
+											select e.value:target:id
+												from nodes nnn1,
+												lateral flatten (nnn1."outEdges") e
+												where nnn1.properties:userName = 'userName_0'
+										)
+								)
+						)
+				) dn
+				where c."NODE_ID" in (
+					select e.value:target:id
+						from nodes n2,
+						lateral flatten (n2."outEdges") e
+						where n2."NODE_ID" in (
+						  select e.value:target:id
+							from nodes nn2,
+							lateral flatten (nn2."outEdges") e
+							where nn2.properties:userName = 'userName_0'
+						)
+				)
+			) cn
+			where b."NODE_ID" in (
+              select e.value:target:id
+                from nodes n3,
+                lateral flatten (n3."outEdges") e
+                where n3.properties:userName = 'userName_0'
+            )
+	) bn
+	where r.properties:userName = 'userName_0';

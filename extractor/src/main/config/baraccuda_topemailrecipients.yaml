@@ -1,0 +1,48 @@
+---
+timeformat: "%Y-%m-%d"
+linebreak: "\n"
+templates:
+  - { type: 'list', samples: ['%TS%,%USER%@sstech.us,%DEFERRED%,0,%POLICY%,%SPAM%,%VIRUS%,%ATDFULL%,%OTHER%,%BTOTAL%,%QUARANTINED%,%ALLOWED%,%TOTAL%'], period: 300, min: 1, max: 1000 }
+replaces:
+  - [ '%USER%', 'common/users2.txt' ]
+  -
+    - '%DEFERRED%'
+    - !!python/name:random.randint
+    - [0, 60]
+  -
+    - '%POLICY%'
+    - !!python/name:random.randint
+    - [0, 1]
+  -
+    - '%SPAM%'
+    - !!python/name:random.randint
+    - [0, 150]
+  -
+    - '%VIRUS%'
+    - !!python/name:random.randint
+    - [0, 2]
+  -
+    - '%ATDFULL%'
+    - !!python/name:random.randint
+    - [0, 1]
+  -
+    - '%OTHER%'
+    - !!python/name:random.randint
+    - [0, 3]
+  -
+    - '%BTOTAL%'
+    - !!python/name:common.utils.get_barracuda_btotal_recip
+    - ['%VALS%']
+  -
+    - '%QUARANTINED%'
+    - !!python/name:random.randint
+    - [0, 2]
+  -
+    - '%ALLOWED%'
+    - !!python/name:random.randint
+    - [100, 300]
+  -
+    - '%TOTAL%'
+    - !!python/name:common.utils.get_barracuda_total_recip
+    - ['%VALS%']
+...

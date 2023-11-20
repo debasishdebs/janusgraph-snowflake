@@ -1,0 +1,89 @@
+version: '3'
+services:
+  graph_app:
+    image: graph_app
+    build:
+      dockerfile: Dockerfile
+      context: ./graph_app
+    volumes:
+      - /root/.m2/repository
+    depends_on:
+      - graphloader
+    ports:
+      - 8000:8000
+    networks:
+      - snowgraph_net
+  graph_core:
+    image: graph_core
+    build:
+      dockerfile: Dockerfile
+      context: ./graph_core
+    volumes:
+      - /root/.m2/repository
+    ports:
+      - 1000:1000
+    networks:
+      - snowgraph_net
+  graphextractor:
+    image: graphextractor
+    build:
+      dockerfile: Dockerfile
+      context: ./extractor
+    volumes:
+      - /root/.m2/repository
+#    environment:
+#      - _JAVA_OPTIONS: "-Xmx8g"
+    depends_on:
+      - graph_core
+    ports:
+      - 1010:1010
+    networks:
+      - snowgraph_net
+  graphtransformer:
+    image: graphtransformer
+    build:
+      dockerfile: Dockerfile
+      context: ./graphtransformer
+    volumes:
+      - /root/.m2/repository
+#      - .databricks-connect:/root/.databricks-connect
+#    healthcheck:
+#      test: ["CMD", "bash", "-c", "healthcheck.sh"]
+#      interval: 3m
+#      timeout: 1m
+#      retries: 3
+    depends_on:
+      - graphextractor
+    ports:
+      - 1020:1020
+    networks:
+      - snowgraph_net
+  graphloader:
+    image: graphloader
+    build:
+      dockerfile: Dockerfile
+      context: ./graphloader
+    volumes:
+      - /root/.m2/repository
+    depends_on:
+      - graphtransformer
+    ports:
+      - 1030:1030
+    networks:
+      - snowgraph_net
+  graph_ui:
+    image: graph_ui
+    build:
+      dockerfile: Dockerfile
+      context: ./graph_ui
+    volumes:
+      - /root/.m2/repository
+    depends_on:
+      - graph_app
+    ports:
+      - 3000:3000
+    networks:
+      - snowgraph_net
+networks:
+  snowgraph_net:
+    driver: bridge

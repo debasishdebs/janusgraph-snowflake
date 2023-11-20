@@ -1,0 +1,464 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/any.proto";
+import "google/protobuf/struct.proto";
+
+option java_multiple_files = true;
+option java_package = "com.sstech.graphdb.grpc";
+option java_outer_classname = "GraphDBProto";
+
+message GeoLocation {
+    string city = 1;
+    string country = 2;
+    string state = 3;
+    string zip = 4;
+    float lat = 5;
+    float lon = 6;
+}
+
+//message Node {
+//    int64 id = 1;
+//    string label = 2;
+//    string IP = 3;
+//    string host = 4;
+//    string URL = 5;
+//    string userName = 6;
+//    string emailSubject = 7;
+//    string processName = 8;
+//    string childProcessName = 9;
+//
+//    string dataSourceName = 10;
+//
+//    string sessionId = 11;
+//    string mappedUser = 12;
+//    string mappedIP = 13;
+//    string mappedHost = 14;
+//    GeoLocation geoLocation = 15;
+//}
+
+message Node {
+    map<string, StructureValue> properties = 1;
+}
+
+message Edge {
+    map<string, StructureValue> properties = 1;
+}
+
+message Time {
+    int64 id = 1;
+    int32 year = 2;
+    int32 month = 3;
+    int32 day = 4;
+    int32 hour = 5;
+    int32 minutes = 6;
+    int32 seconds = 7;
+}
+
+//message Edge {
+//    int64 id = 1;
+//    string label = 2;
+//    int64 sourceVertexId = 3;
+//    int64 destVertexId = 4;
+//    Time eventTime = 5;
+//    int64 counter = 6;
+//    int64 eventId = 7;
+//
+//    string dataSourceName = 8;
+//    GeoLocation srcLocation = 9;
+//    GeoLocation dstLocation = 10;
+//
+//    string sessionId = 11;
+//}
+
+message GraphFormat {
+    string caseId = 1;
+    repeated Node nodes = 2;
+    repeated Edge edges = 3;
+}
+
+message WindowsRecord {
+    int64 id = 1;
+    string HOSTNAME = 2;
+    string KEYWORDS = 3;
+    int64 SeverityValue = 5;
+    string Severity = 6;
+    int64 ProcessID = 7;
+    string Category = 8;
+    string Opcode = 9;
+    string SubjectUserName = 10;
+    string SubjectUserSid = 11;
+    string TargetDomainName = 12;
+    string TargetUserName = 13;
+    string TargetUserSid = 14;
+    string SubjectDomainName = 15;
+    string LogonProcessName = 16;
+    string WorkstationName = 17;
+    string LogonGuid = 18;
+    string ProcessName = 19;
+    string IpAddress = 20;
+    string IpPort = 21;
+    Time EventReceivedTime = 22;
+    string TargetOutboundUserName = 23;
+    string TargetOutboundDomainName = 24;
+    string TargetSid = 25;
+    string HomeDirectory = 26;
+    string HomePath = 27;
+    string DVC_VENDOR = 64;
+    string DVC_PRODUCT = 65;
+    string DVC_VERSION = 66;
+    string ACCESS_QRY= 67;
+    string ACCESS_RESULT = 68;
+    string ADMIN_FLAG = 69;
+    string CODE = 70;
+    string CODE_DESC= 71;
+    Time COMMIT_TIME = 72;
+    string DST_DOMAIN = 73;
+    string DST_FILE_NAME = 74;
+    string DST_HANDLE_ID = 75;
+    string DST_HOST = 76;
+    string DST_OBJECT_NAME = 77;
+    string DST_OBJECT_TYPE = 78;
+    string DST_PROC_ID = 79;
+    string DST_PROC_NAME = 80;
+    string DST_SESSION_ID = 81;
+    string DST_USER_NAME = 82 ;
+    string DST_USER_ID= 83;
+    string DVC_ID = 84;
+    string DVC_DESC = 85;
+    string DVC_TYPE = 86;
+    string EVENT_DESC = 87;
+    int64 EVENT_ID = 88;
+    Time EVENT_TIME = 89;
+    string FILE_NAME = 90;
+    string EVENT_TYPE = 4;
+    string FILE_PATH= 91;
+    string GROUP_LIST = 92;
+    string GUID = 93;
+    string LINKED_SESSION_ID = 94;
+    string LOGON_DESC = 95;
+    string LOGON_TYPE = 96;
+    string MAIL_ADDR = 97;
+    string MSG = 98;
+    string NEW_PROC_ID = 99;
+    string NEW_PROC_NAME = 100;
+    string NEW_USER_NAME = 101;
+    string OPER_TYPE = 102;
+    string ORIG_USER_NAME = 103;
+    string OUT_DOMAIN = 104;
+    string OUT_USER_NAME = 105;
+    string PARENT_PROC_NAME = 106;
+    string PARSING_TIME = 107;
+    string PRIVILEGE = 108;
+    string RISK_DESC = 109;
+    string RPT_HOST = 110;
+    string SRC_DOMAIN = 111;
+    string SRC_FILE_NAME = 112;
+    string SRC_GEO_COUNTRY = 113;
+    string SRC_GEO_CITY = 114;
+    string SRC_GEO_LAT = 115;
+    string SRC_GEO_LONG = 116;
+    string SRC_HANDLE_ID = 117;
+    string SRC_HOST = 118;
+    string SRC_IP = 119;
+    string SRC_PORT = 120;
+    string SRC_PROC_ID = 121;
+    string SRC_PROC_NAME = 122;
+    string SRC_SESSION_ID = 123;
+    string SRC_TYPE = 124;
+    string SRC_USER_NAME = 125;
+    string SRC_USER_ID = 126;
+    string STATUS = 127;
+    string FAILURE_DESC = 128;
+    string STATUS_DESC = 129;
+    string TASK_NAME = 130;
+    string TOKEN_TYPE = 131;
+    string VENDOR = 132;
+    string USER_FLAG = 133;
+}
+
+message MsExchangeRecord {
+    int64 id = 1;
+    string userId = 2;
+    string riskCount = 3;
+    string logonType = 4;
+    string dstDomain = 5;
+    string inCount = 6;
+    string cmd = 7;
+    string riskDesc = 8;
+    string parentImageName = 9;
+    string parentProcName = 10;
+    string dstGeoCountry = 11;
+    string dstHost = 12;
+    Time eventTime = 13;
+    Time parsingTime = 14;
+    string srcHost = 15;
+    string policy = 16;
+    string event_id = 17;
+    string srcDomain = 18;
+    string dstFileName = 19;
+    GeoLocation srcLocation = 20;
+    string domain = 21;
+    string srcName = 22;
+    string srcProcId = 23;
+    string srcUserName = 24;
+    string qry = 25;
+    GeoLocation dstLocation = 26;
+    string host = 27;
+    string dstUserName = 28;
+    string srcIP = 29;
+    string dstIP = 30;
+    string dvcVendor = 31;
+    string dvcProduct = 32;
+    string emailSubject = 33;
+    string dstUserCount = 34;
+    int64 emailSize = 35;
+    int64 dstEmailCount = 36;
+    string dstEmailAdder = 37;
+    string srcEmailAdder = 38;
+    Time datetime = 39;
+    string client_ip = 40;
+    string source = 41;
+    string reference = 42;
+    string directionality = 43;
+    string client_hostname = 44;
+    string server_ip = 45;
+    string server_hostname = 46;
+    string total_bytes = 47;
+    string source_context = 48;
+    string internal_message_id = 49;
+    string message_id = 50;
+    string recipient_address = 51;
+    string recipient_status = 52;
+    string recipient_count = 53;
+    string related_recipient_address = 54;
+    string message_subject = 55;
+    string sender_address = 56;
+    string return_path = 57;
+    string message_info = 58;
+    string tenant_id = 59;
+    string original_client_ip = 60;
+    string original_server_ip = 61;
+    string custom_data = 62;
+    string connector_id = 63;
+}
+
+message WatchGuardRecord {
+    int64 id = 1;
+    string DVC_PRODUCT = 39;
+    string DVC_VENDOR = 40;
+    string DVC_VERSION = 41;
+    string SRC_TYPE = 42;
+    string APP_NAME = 43;
+    string AV_ERROR = 44;
+    string BOTNET_NAME = 45;
+    string CAT_APP_NAME = 46;
+    string CAT_WEB_NAME = 47;
+    Time COMMIT_TIME = 48;
+    string DETECTED_HOST = 49;
+    string DISPOSITION = 50;
+    string DST_DOMAIN = 51;
+    string DST_GEO_CITY = 52;
+    string DST_GEO_COUNTRY = 53;
+    string DST_GEO_LATITUDE = 54;
+    string DST_GEO_LONGITUDE = 55;
+    string DST_IF = 56;
+    string DST_IP = 57;
+    string DST_NAT_IP = 58;
+    int32 DST_PORT = 59;
+    int32 DST_NAT_PORT = 60;
+    string DST_USER_NAME = 61;
+    string EVENT_ID = 62;
+    Time EVENT_TIME = 63;
+    string FILE_NAME = 64;
+    string FLAGS = 65;
+    string GUID = 66;
+    int64 IN_BYTES = 67;
+    string MALWARE_NAME = 68;
+    string MESSAGE_DESC = 69;
+    string MSG = 70;
+    string ORIG_IP = 71;
+    int64 OUT_BYTES = 72;
+    Time PARSING_TIME = 73;
+    string PATH = 74;
+    string PROTO = 75;
+    string QRY = 76;
+    string RISK_DESC = 77;
+    string RPT_HOST = 78;
+    int32 SESSION_DURATION = 79;
+    string SRC_GEO_CITY = 80;
+    string SRC_GEO_COUNTRY = 81;
+    string SRC_GEO_LAT = 82;
+    string SRC_GEO_LONG = 83;
+    string SRC_IP = 84;
+    string SRC_NAT_IP = 85;
+    int64 SRC_PORT = 86;
+    int64 SRC_NAT_PORT = 87;
+    string SRC_USER_NAME = 88;
+
+}
+
+message IncomingDataFormat {
+    string caseId = 4;
+    repeated WindowsRecord windowsRecord = 1;
+    repeated MsExchangeRecord exchangeRecords = 2;
+    repeated WatchGuardRecord networkRecords = 3;
+}
+
+message GraphLoaderStatus {
+    bool status = 1;
+    int64 nodesAdded = 2;
+    int64 edgesAdded = 3;
+}
+
+message ConditionalIPs {
+    string IP = 1;
+    Time startTime = 2;
+    Time endTime = 3;
+}
+
+message ConditionalUsers {
+    string USER = 1;
+    Time startTime = 2;
+    Time endTime = 3;
+}
+
+message ConditionalHosts {
+    string HOST = 1;
+    Time startTime = 2;
+    Time endTime = 3;
+}
+
+message ConditionalURLs {
+    string URL = 1;
+    Time startTime = 2;
+    Time endTime = 3;
+}
+
+message CaseInformation {
+    repeated ConditionalIPs IPs = 1;
+    repeated ConditionalUsers users = 2;
+    repeated ConditionalHosts hosts = 3;
+    repeated ConditionalURLs urls = 4;
+}
+
+message CaseLoadingStatus {
+    string status = 1;
+    string caseId = 4;
+    CaseInformation caseInformation = 2;
+}
+
+message CaseInfo {
+    string caseid = 1;
+    CaseInformation caseMetadata = 2;
+}
+
+message DummyMessage {
+    string message = 1;
+    string source = 2;
+    repeated string current = 3;
+}
+
+message DummyMessageStatus {
+    string message = 1;
+    string status = 2;
+    string source = 3;
+    repeated string current = 4;
+}
+
+message InnerMostByteCode {
+    repeated string inner_values = 1;
+}
+
+message MiddleMostByteCode {
+    repeated InnerMostByteCode middle_layer = 1;
+}
+
+message ByteCode {
+    repeated MiddleMostByteCode steps = 1;
+}
+
+message ListFormat {
+    repeated GenericStructure rows = 1;
+}
+
+message QueryResponse {
+    oneof response {
+        GenericStructure map_format = 1;
+        ListFormat list_format = 2;
+    }
+}
+
+message GenericStructure {
+    map<string, StructureValue> fields = 1;
+}
+
+message StructureValue {
+    oneof kind {
+        google.protobuf.NullValue null_value = 1;
+        double number_value = 2;
+        string string_value = 3;
+        bool bool_value = 4;
+        int64 int_value = 5;
+        bytes bytes_value = 6;
+        GenericStructure struct_value = 7;
+        ListValue list_value = 8;
+        Time time_value = 9;
+        GeoLocation geo_value = 10;
+    }
+}
+
+message ListValue {
+    // Repeated field of dynamically typed values.
+    repeated StructureValue values = 1;
+}
+
+message EntityQuery {
+    string value = 1;
+    Time startDate = 2;
+    Time endDate = 3;
+    string dataSource = 4;
+}
+
+message EntityTypeQuery {
+    repeated EntityQuery entityQuery = 1;
+}
+
+message CaseSubmissionPayload {
+    string caseId = 2;
+    map<string, EntityTypeQuery> query = 1;
+}
+
+service ServicesToGraphLoader {
+    rpc EnsureGraphInSnowFlake (GraphFormat) returns (google.protobuf.Empty);
+    //    rpc CheckSignalSentMono (DummyMessage) returns (DummyMessageStatus);
+    rpc TestAPI (DummyMessage) returns (DummyMessageStatus);
+}
+
+service ServicesToGraphCore {
+    rpc UpdateCaseLoadingStatus (CaseLoadingStatus) returns (CaseLoadingStatus);
+    rpc GetCaseLoadingStatus (CaseInfo) returns (CaseLoadingStatus);
+    rpc ExecuteByteCode (ByteCode) returns (QueryResponse);
+    rpc TestAPI (DummyMessage) returns (DummyMessageStatus);
+}
+
+service ServicesToGraphTransformer {
+    //    rpc CheckSignalSentStream (DummyMessage) returns (stream DummyMessageStatus);
+    //    rpc CheckSignalSentMono (DummyMessage) returns (DummyMessageStatus);
+    rpc TestAPI (DummyMessage) returns (DummyMessageStatus);
+    rpc TransformRawDataToGraph (IncomingDataFormat) returns (google.protobuf.Empty);
+    rpc TransformAndLoadData (IncomingDataFormat) returns (google.protobuf.Empty);
+}
+
+service ServicesToGraphApp {
+    rpc TestAPI (DummyMessage) returns (DummyMessageStatus);
+    rpc StartGraphETL (DummyMessage) returns (DummyMessageStatus);
+}
+
+service ServicesToGraphExtractor {
+    rpc StartGraphExtraction(CaseSubmissionPayload) returns (google.protobuf.Empty);
+    rpc TestAPI (DummyMessage) returns (DummyMessageStatus);
+    //    rpc TransformRawDataToGraph (IncomingDataFormat) returns (GraphLoaderStatus);
+    //    rpc CheckSignalReceived (DummyMessage) returns (stream DummyMessageStatus);
+    //    rpc CheckSignalSentMono (DummyMessage) returns (stream DummyMessageStatus);
+}

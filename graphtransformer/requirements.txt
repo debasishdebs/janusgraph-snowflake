@@ -1,0 +1,12 @@
+grpcio==1.29.0
+grpcio-tools==1.29.0
+protobuf==3.12.2
+pybuilder==0.12.6
+multipledispatch==0.6.0
+python-dateutil==2.8.1
+snowflake-sqlalchemy==1.2.3
+snowflake-connector-python==2.3.2
+pyarrow==1.0.1
+pandas==1.1.2
+numpy==1.19.2
+databricks-connect==6.5.1

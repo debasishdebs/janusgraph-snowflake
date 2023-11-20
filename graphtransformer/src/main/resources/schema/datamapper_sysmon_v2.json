@@ -1,0 +1,324 @@
+{
+  "nodes": {
+    "srcIP": {
+      "maps": {
+        "ip": "SourceIp",
+        "eventId": "EventID",
+        "node_label": "default=IP",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "unique": "ip"
+      }
+    },
+    "dstIP": {
+      "maps": {
+        "ip": "DestinationIp",
+        "eventId": "EventID",
+        "node_label": "default=IP",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "unique": "ip"
+      }
+    },
+    "host": {
+      "maps": {
+        "hostname": "Hostname",
+        "node_label": "default=host",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "unique": "hostname"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "createdProcess": {
+      "maps": {
+        "fileName": "analyze-generate-target-file-name-for-sysmon",
+        "fullFileName": "ParentImage",
+        "node_label": "default=process",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "unique": "fileName"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "parentProcess": {
+      "maps": {
+        "fileName": "analyze-generate-parent-file-name-for-sysmon",
+        "fullFileName": "ParentImage",
+        "node_label": "default=process",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "unique": "fileName"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "childProcess": {
+      "maps": {
+        "parentFileName": "analyze-generate-parent-file-name-for-sysmon",
+        "fileName": "analyze-generate-file-name-for-sysmon",
+        "fullFileName": "Image",
+        "node_label": "default=process",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "unique": "fileName"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "user": {
+      "maps": {
+        "userName": "analyze-generate-usernme-for-sysmon",
+        "userId": "UserID",
+        "node_label": "default=user",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "unique": "userName"
+      },
+      "repeats": {
+        "times": 1
+      }
+    }
+  },
+  "edges": {
+    "loggedIn": {
+      "maps": {
+        "eventTime": "EventTime",
+        "eventId": "EventID",
+        "edge_label": "default=loggedIn",
+        "counter": "default=1",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "left": "user.userName(analyze-generate-usernme-for-sysmon)",
+        "right": "host.hostname(Hostname)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "hasIP": {
+      "maps": {
+        "eventTime": "EventTime",
+        "processID": "ProcessID",
+        "eventId": "EventID",
+        "edge_label": "default=hasIP",
+        "counter": "default=1",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "left": "user.userName(analyze-generate-usernme-for-sysmon)",
+        "right": "IP.ip(SourceIp)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "withIP": {
+      "maps": {
+        "eventTime": "EventTime",
+        "processID": "ProcessID",
+        "category": "Category",
+        "eventId": "EventID",
+        "edge_label": "default=withIP",
+        "counter": "default=1",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "left": "host.hostname(Hostname)",
+        "right": "IP.ip(SourceIp)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "downloadedBy": {
+      "maps": {
+        "eventTime": "EventTime",
+        "counter": "default=0",
+        "edge_label": "default=downloadedBy",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "left": "process.fileName(analyze-generate-parent-file-name-for-sysmon)",
+        "right": "user.userName(analyze-generate-usernme-for-sysmon)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "createdRootProcess": {
+      "maps": {
+        "eventTime": "EventTime",
+        "counter": "default=0",
+        "commandLine": "CommandLine",
+        "edge_label": "default=createdProcess",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "left": "user.userName(analyze-generate-usernme-for-sysmon)",
+        "right": "process.fileName(analyze-generate-parent-file-name-for-sysmon)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "createdTargetProcess": {
+      "maps": {
+        "eventTime": "EventTime",
+        "counter": "default=0",
+        "commandLine": "CommandLine",
+        "edge_label": "default=createdProcess",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "left": "user.userName(analyze-generate-usernme-for-sysmon)",
+        "right": "process.fileName(analyze-generate-target-file-name-for-sysmon)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "createdChildProcess": {
+      "maps": {
+        "eventTime": "EventTime",
+        "counter": "default=0",
+        "commandLine": "CommandLine",
+        "edge_label": "default=createdChildProcess",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "left": "process.fileName(analyze-generate-parent-file-name-for-sysmon)",
+        "right": "process.fileName(analyze-generate-file-name-for-sysmon)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "childProcessOn": {
+      "maps": {
+        "eventTime": "EventTime",
+        "counter": "default=0",
+        "commandLine": "CommandLine",
+        "edge_label": "default=childProcessOn",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "left": "process.fileName(analyze-generate-file-name-for-sysmon)",
+        "right": "host.hostname(Hostname)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "downloadedOn": {
+      "maps": {
+        "eventTime": "EventTime",
+        "counter": "default=0",
+        "edge_label": "default=downloadedOn",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "left": "process.fileName(analyze-generate-parent-file-name-for-sysmon)",
+        "right": "IP.ip(SourceIp)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "runningProcess": {
+      "maps": {
+        "eventTime": "EventTime",
+        "processID": "ProcessID",
+        "category": "Category",
+        "eventId": "EventID",
+        "edge_label": "default=runningProcess",
+        "counter": "default=1",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "left": "host.hostname(Hostname)",
+        "right": "process.fileName(analyze-generate-parent-file-name-for-sysmon)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "processCommunicated": {
+      "maps": {
+        "eventTime": "EventTime",
+        "processID": "ProcessID",
+        "srcPort": "SourcePort",
+        "dstPort": "DestinationPort",
+        "edge_label": "default=processCommunicated",
+        "counter": "default=1",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "left": "process.fileName(analyze-generate-parent-file-name-for-sysmon)",
+        "right": "IP.ip(DestinationIp)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    },
+    "IPsCommunicated": {
+      "maps": {
+        "eventTime": "EventTime",
+        "processID": "ProcessID",
+        "srcPort": "SourcePort",
+        "dstPort": "DestinationPort",
+        "edge_label": "default=IPsCommunicated",
+        "counter": "default=1",
+        "dataSourceName": "default=sysmon"
+      },
+      "constraints": {
+        "left": "IP.ip(SourceIp)",
+        "right": "IP.ip(DestinationIp)"
+      },
+      "repeats": {
+        "times": 1
+      }
+    }
+  },
+  "analyze": {
+  "generate-usernme-for-sysmon": {
+    "params": "User",
+    "package": "from=utils.DataExtractionUtilities&package=generate_user_name_for_sysmon",
+    "repeat": 1
+  },
+  "generate-file-path-for-sysmon": {
+    "params": "Image",
+    "package": "from=utils.DataExtractionUtilities&package=generate_process_path_for_sysmon",
+    "repeat": 1
+  },
+    "generate-file-name-for-sysmon": {
+      "params": "Image",
+      "package": "from=utils.DataExtractionUtilities&package=generate_process_name_for_sysmon",
+      "repeat": 1
+    },
+    "generate-parent-file-name-for-sysmon": {
+      "params": "ParentImage",
+      "package": "from=utils.DataExtractionUtilities&package=generate_parent_process_name_for_sysmon",
+      "repeat": 1
+    },
+    "generate-target-file-name-for-sysmon": {
+      "params": "TargetFilename",
+      "package": "from=utils.DataExtractionUtilities&package=generate_target_process_name_for_sysmon",
+      "repeat": 1
+    }
+  }
+}

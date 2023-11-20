@@ -1,0 +1,67 @@
+{
+  "nodes": {
+    "id": "default-autoincrement",
+    "node_id": {
+      "module": "utils.dummy_data.custom_func",
+      "package": "generate_node_id"
+    },
+    "label": {
+      "module": "utils.dummy_data.custom_func",
+      "package": "generate_node_label"
+    },
+    "properties": {
+      "module": "utils.dummy_data.custom_func",
+      "package": "generate_node_property_json"
+    },
+    "outEdges": {
+      "module": "utils.dummy_data.custom_func",
+      "package": "generate_outgoing_edges_json_list"
+    },
+    "inEdges": {
+      "module": "utils.dummy_data.custom_func",
+      "package": "generate_incoming_edges_json_list"
+    },
+    "bothEdges": {
+      "module": "utils.dummy_data.custom_func",
+      "package": "generate_both_edges_json_list"
+    },
+    "outVertices": {
+      "module": "utils.dummy_data.custom_func",
+      "package": "generate_outside_vertices_json_list"
+    },
+    "inVertices": {
+      "module": "utils.dummy_data.custom_func",
+      "package": "generate_inside_vertices_json_list"
+    },
+    "otherVertices": {
+      "module": "utils.dummy_data.custom_func",
+      "package": "generate_other_vertices_json_list"
+    }
+  },
+  "edges": {
+    "id": "default-autoincrement",
+    "label": {
+      "module": "utils.dummy_data.custom_func",
+      "package": "generate_edge_label"
+    },
+    "edge_id": {
+      "module": "utils.dummy_data.custom_func",
+      "package": "generate_edge_id"
+    },
+    "sourceVertex": {
+      "module": "utils.dummy_data.custom_func",
+      "package": "generate_source_vertex_for_edge"
+    },
+    "destinationVertex": {
+      "module": "utils.dummy_data.custom_func",
+      "package": "generate_dst_vertex_for_edge"
+    },
+    "properties": {
+      "module": "utils.dummy_data.custom_func",
+      "package": "generate_edge_property_json"
+    }
+  },
+  "index": {
+
+  }
+}

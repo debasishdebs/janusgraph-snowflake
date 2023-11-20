@@ -1,0 +1,11 @@
+target/*
+.idea/*
+src/main/resources/sample/io/*
+output.logs
+*.zip
+cache/*
+/target/
+#src/main/resources/credentials.properties
+#src/main/resources/tenant5-enriched-credentials.properties
+#src/main/resources/snowflake_graph_test-graph_test-credentials.properties
+#src/main/resources/credentials_.properties

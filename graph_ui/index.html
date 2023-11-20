@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Integrate with Threat Hunt</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/loader.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" id="datepickerScript"
+        src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
+    <!-- for context menu -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+
+
+<body class="background">
+    <div class="row">
+        <div class="col-lg-10 col-md-10 col-sm-10" id="chartContainer">
+            <div class="card">
+                <!-- Navbar -->
+                <div class="navbar">
+                    <div class="row" style="padding:0px">
+                        <!-- Type of search dropdown -->
+                        <div class="col-lg-2 col-md-2 col-sm-2" style="text-align: ri;">
+                            <span><select onchange="getval(this.value)" name="sourcetype" id="typeSource"
+                                    style="padding: 6px;outline: none; margin-top:10px;border:none;background-color: white;">
+                                    <option value="" selected disabled>Select Search Type</option>
+                                    <option value="userName">User Name</option>
+                                    <option value="ip">IP</option>
+                                    <option value="hostname">Host</option>
+                                </select></span>
+                        </div>
+                        <!-- Universal Search Bar -->
+                        <div class="col-lg-5 col-md-5 col-sm-5">
+                            <input type="search" id="universalsearch" class="searchbar"
+                                placeholder="UserName, IP Address, Host" />
+                            <span class="search-label"><img src="images/assets/search_icon_1.png"
+                                    class="actionicons-search" />Search</span>
+                        </div>
+
+                        <!-- Datepicker Div -->
+                        <div class="datePickerDiv">
+                            <input type="text" id="config-demo" class="datePicker" />
+                            <img src="images/assets/calender-icon.png" class="datePickerIcon" />
+                            <img onclick="openNav()" src="images/more-icon.png" class="actionicons-more" />
+                            <button id="resetDate">Reset Date</button>
+                        </div>
+
+                        <script>
+                            // Date Range Function
+                            $(function () {
+                                console.log("SCRIPT RUNNING")
+                                var st, en;
+                                var options = {
+                                    timePicker: true,
+                                    locale: {
+                                        format: 'M/DD hh:mm A'
+                                    },
+                                    opens: 'left',
+                                    timePicker24Hour: true,
+                                    startDate: getRequiredDates('startDate'),
+                                    endDate: getRequiredDates('endDate'),
+                                    ranges: {
+                                        'Today': [moment(), moment()],
+                                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                                        'This Month': [moment().startOf('month'), moment().endOf('month')],
+                                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                                    }
+                                }
+
+                                $('.datePickerDiv .datePickerIcon').click(function () {
+                                    $(this).parent().find('input').click();
+                                });
+
+                                $('#config-demo').daterangepicker(options, function (start, end, label) {
+                                    console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+                                    datePickerValues(start, end)
+                                    dateFilter()
+                                });
+                                checkSessionForDates()
+                            });
+                            // End of date range function
+                        </script>
+
+                        <!-- Bootstrap Error Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <h4 id="errorDes"></h4>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of bootstrap modal -->
+                    </div>
+                </div>
+                <!-- End of Navbar -->
+
+                <!-- Back and forth  and zoom Buttons  -->
+                <div>
+                    <div class="backForth">
+                        <span title="Click to go back" id="backBtn">
+                            <span class="glyphicon glyphicon-arrow-left" id="leftBtn"></span></span>
+                        <span title="Click to go forward" id="forwardBtn">
+                            <span class="glyphicon glyphicon-arrow-right"></span></span>
+                    </div>
+                    <div class="zoombtns">
+                        <button class="btndesign" id="zoom_in">+</button>
+                        <button class="btndesign" id="zoom_out">-</button>
+                    </div>
+                </div>
+                <!-- End of Back and forth  and zoom Buttons -->
+
+                <!-- Main Chart Container -->
+                <div class="cichart">
+                    <div id="abc" style="margin-left:20px"></div>
+                    <div class="legends" style="position:absolute; bottom: 5px"></div>
+                </div>
+                <!-- End of Main Chart Container -->
+
+                <!-- Loader Div and context menu-->
+                <div id="cover-spin"></div>
+                <div id="contextMenuNode"></div>
+                <!-- End of Loader Div -->
+            </div>
+        </div>
+
+        <!-- Panel Container -->
+        <div class="col-lg-2 col-md-2 col-sm-2" id="panelContainer">
+            <div class="card">
+                <div class="navbar">
+                    <span class="sidebarheader">Properties</span>
+                    <img onclick="closeNav()" src="./images/assets/close-icon.png" class="actionicons-close" />
+                </div>
+
+                <script>
+                    function openNav() {
+                        document.getElementById("panelContainer").style.display = "block";
+                        document.getElementById("chartContainer").style.width = "83.33333333%"
+                        document.getElementById("chartContainer").style.transition = "width 0.2s ease"
+                    }
+                    function closeNav() {
+                        document.getElementById("panelContainer").style.display = "none";
+                        document.getElementById("chartContainer").style.width = "100%";
+                        document.getElementById("chartContainer").style.transition = "width 0.2s ease"
+                    }
+                </script>
+                <div class="properties-label">
+                    <p><b>Value : </b><span id="valueId"></span></p>
+                    <p><b>Source :</b> <span id="sourcesId"></span></p>
+                    <div class="divider"></div>
+                    <!-- Panedl Side bar -->
+                    <div class="panel-group sidebar" id="accordion">
+                        <div class="panel">
+                            <div>
+                                <h4 class="panel-title sidebartwo">
+                                    <button class="collapsibletwo sideheader" data-toggle="collapse"
+                                        data-parent="#accordion" href="#collapse1">Entity Classes</button>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p class="sidebarp"><img src="images/Emails-icon.png" class="sidebarimg" />Email
+                                        (<span id="emailCount"></span>)</p>
+                                    <p class="sidebarp"><img src="images/assets/user-cion.png" class="sidebarimg" />User
+                                        (<span id="userCount"></span>)</p>
+                                    <p class="sidebarp"><img src="images/new/ip-icon.png" class="sidebarimg" />IP
+                                        Address
+                                        (<span id="ipCount"></span>)</p>
+                                    <p class="sidebarp"><img src="images/process.png" class="sidebarimg" />Process
+                                        (<span id="processCount"></span>)</p>
+                                    <p class="sidebarp"><img src="images/new/Child_process-icon.png"
+                                            class="sidebarimg" />Child
+                                        Process
+                                        (<span id="childprocessCount"></span>)</p>
+                                    <p class="sidebarp"><img src="images/new/host-icon.png" class="sidebarimg" />Hosts
+                                        (<span id="hostCount"></span>)</p>
+                                    <p class="sidebarp"><img src="images/new/URLs-icon.png" class="sidebarimg" />URLs
+                                        (<span id="urlCount"></span>)</p>
+                                </div>
+                            </div>
+
+
+                            <div class="panel">
+                                <div>
+                                    <h4 class="panel-title sidebartwo">
+                                        <button class="collapsibletwo sideheader" data-toggle="collapse"
+                                            data-parent="#accordion" href="#collapse2">Filter Recent Data</button>
+                                    </h4>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="timefilter-div">
+                                            <div>
+                                                <input id="inputTimeFilter" type="text" value="" class="form-control"
+                                                    name="text" style="width:70px">
+                                            </div>
+                                            <div>
+                                                <select class="form-control" id="timeFiltersymbol">
+                                                    <option value="" selected disabled>Select</option>
+                                                    <option value="d">Days</option>
+                                                    <option value="h">Hour</option>
+                                                    <option value="m">Minute</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="filterdiv">
+                                            <button class="filterbtn" id="recentTimeFilter">Apply Recent Filter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel">
+                                <div>
+                                    <h4 class="panel-title sidebartwo">
+                                        <button class="collapsibletwo sideheader" data-toggle="collapse"
+                                            data-parent="#accordion" href="#collapse3">Sources</button>
+                                    </h4>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse">
+                                    <div class="filterdiv">
+                                        <button class="filterbtn" id="filterSources">Apply Filter</button>
+                                    </div>
+                                    <div class="panel-body">
+                                        <img src="images/assets/aws-icon.png" class="sidebarimg" /><input
+                                            type="checkbox" checked id="semanticSource"><label
+                                            class="sidebarinput">&nbsp; Semantic
+                                            EndPoint</label><br />
+                                        <img src="images/assets/azure-icon.png" class="sidebarimg" /><input
+                                            type="checkbox" checked id="watchgSource"><label class="sidebarinput">&nbsp;
+                                            WatchGuard</label><br />
+                                        <img src="images/assets/bluecoat-icon.png" class="sidebarimg" /><input
+                                            type="checkbox" checked id="windowsSource"><label
+                                            class="sidebarinput">&nbsp;
+                                            Windows</label><br />
+                                        <img src="images/assets/bluecoat-icon.png" class="sidebarimg" /><input
+                                            type="checkbox" checked id="sysmon"><label class="sidebarinput">&nbsp;
+                                            Sysmon</label><br />
+                                        <img src="images/assets/bluecoat-icon.png" class="sidebarimg" /><input
+                                            type="checkbox" checked id="msExchange"><label class="sidebarinput">&nbsp;
+                                            Ms Exchange</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of panel side bar -->
+                </div>
+
+            </div>
+        </div>
+        <!-- End of Panel Container -->
+
+        <script type="text/javascript" src="js/const.js"></script>
+        <script type="text/javascript" src="js/initial.js"></script>
+        <script type="text/javascript" src="js/apicalls.js"></script>
+        <script type="text/javascript" src="js/janus.js"></script>
+        <script type="text/javascript" src="js/360view.js"></script>
+</body>
+
+</html>

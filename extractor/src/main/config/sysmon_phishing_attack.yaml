@@ -1,0 +1,501 @@
+---
+USERS:
+  brucecook:   { hostname: "ACMECL-2", account_name: "Bruce.Cook", src_ip: '192.168.0.5', 'user_id': 'USER-ID-1240', process_id: '1453', thread_id: '2811' }
+  ethanclark: { hostname: 'ACMECL-15', account_name: 'Ethan.Clark', src_ip: '192.168.0.70', 'user_id': 'USER-ID-1305', process_id: '3839', thread_id: '2903'}
+  flashgordon: { hostname: 'ACMECL-16', account_name: 'Flash.Gordon', src_ip: '192.168.0.85', 'user_id': 'USER-ID-1320', process_id: '8392', thread_id: '1930'}
+  madisonclark: { hostname: 'ACMECL-17', account_name: 'Madison.Clark', src_ip: '192.168.0.103', 'user_id': 'USER-ID-1338', process_id: '1029', thread_id: '6583'}
+  camillegordon: { hostname: 'ACMECL-18', account_name: 'Camille.Gordon', src_ip: '192.168.0.19', 'user_id': 'USER-ID-1254', process_id: '9382', thread_id: '9372'}
+  camillewayne: { hostname: 'ACMECL-19', account_name: 'Camille.Wayne', src_ip: '192.168.0.25', 'user_id': 'USER-ID-1260', process_id: '2910', thread_id: '9302'}
+  clarkgordon: { hostname: 'ACMECL-20', account_name: 'Clark.Gordon', src_ip: '192.168.0.30', 'user_id': 'USER-ID-1265', process_id: '8372', thread_id: '2019'}
+  danielgordon: { hostname: 'ACMECL-21', account_name: 'Daniel.Gordon', src_ip: '192.168.0.41', 'user_id': 'USER-ID-1276', process_id: '3928', thread_id: '1923'}
+  dianaknight: { hostname: 'ACMECL-22', account_name: 'Diana.Knight', src_ip: '192.168.0.55', 'user_id': 'USER-ID-1290', process_id: '1923', thread_id: '4938'}
+  emmahunt: { hostname: 'ACMECL-23', account_name: 'Emma.Hunt', src_ip: '192.168.0.64', 'user_id': 'USER-ID-1299', process_id: '5382', thread_id: '6327'}
+
+TEMPLATES:
+  USER_CLICKS_WEBLINK: 'Jun  7 09:51:11 %HOSTNAME% Microsoft-Windows-Sysmon[5380]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9223372036854775808,"EventType":"INFO","SeverityValue":2,"Severity":"INFO","EventID":1,"SourceName":"Microsoft-Windows-Sysmon","ProviderGuid":"{%YYYYMMDD%-%PROCESS_ID%-43E0-BF4C-06F5698FFBD9}","Version":5,"Task":1,"OpcodeValue":0,"RecordNumber":%RECORD_NUMBER%,"ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Microsoft-Windows-Sysmon/Operational","Domain":"NT AUTHORITY","AccountName":"SYSTEM","UserID":"%USERID%","AccountType":"User","Message":"Process Create:\r\nRuleName: \r\nUtcTime: %TS%\r\nProcessGuid: {%YYYYMMDD%-%PROCESS_ID%-5cfa-0000-00106eb70834}\r\nProcessId: %PROCESS_ID%\r\nImage: C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\r\nFileVersion: 74.0.3729.169\r\nDescription: Google Chrome\r\nProduct: Google Chrome\r\nCompany: Google Inc.\r\nCommandLine: \"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\" -- \"%WEBLINK%\"\r\nCurrentDirectory: C:\\Program Files (x86)\\Google\\Chrome\\Application\\74.0.3729.169\\\r\nUser: ACME\\%USERNAME%\r\nLogonGuid: {%YYYYMMDD%-%PROCESS_ID%-5cf5-0000-002017db0b11}\r\nLogonId: 0x110BDB17\r\nTerminalSessionId: 3\r\nIntegrityLevel: Medium\r\nHashes: MD5=F9DFBDD2BA602AE341FE5C61FF7585B4,SHA256=36D007B405FE48FE7C27FB01085E2E322BA9EC78EAABC6DDE50632E2C30238D1,IMPHASH=0411478B43D07EA5B0C31AEF56C1AC94\r\nParentProcessGuid: {%YYYYMMDD%-%PROCESS_ID%-5cfa-0000-001060a6ee33}\r\nParentProcessId: 24096\r\nParentImage: C:\\Program Files\\Microsoft Office\\Office15\\OUTLOOK.EXE\r\nParentCommandLine: C:\\Program Files\\Microsoft Office\\Office15\\OUTLOOK.EXE","Category":"Process Create (rule: ProcessCreate)","Opcode":"Info","UtcTime":"%TS%","ProcessGuid":"{%YYYYMMDD%-%PROCESS_ID%-5cfa-0000-00106eb70834}","Image":"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe","FileVersion":"74.0.3729.169","Description":"Google Chrome","Product":"Google Chrome","Company":"Google Inc.","CommandLine":"\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\" -- \"%WEBLINK%\"","CurrentDirectory":"C:\\Program Files (x86)\\Google\\Chrome\\Application\\74.0.3729.169\\","User":"ACME\\%USERNAME%","LogonGuid":"{%YYYYMMDD%-%PROCESS_ID%-5cf5-0000-002017db0b11}","LogonId":"0x110bdb17","TerminalSessionId":"3","IntegrityLevel":"Medium","Hashes":"MD5=F9DFBDD2BA602AE341FE5C61FF7585B4,SHA256=36D007B405FE48FE7C27FB01085E2E322BA9EC78EAABC6DDE50632E2C30238D1,IMPHASH=0411478B43D07EA5B0C31AEF56C1AC94","ParentProcessGuid":"{%YYYYMMDD%-%PROCESS_ID%-5cfa-0000-001060a6ee33}","ParentProcessId":"24096","ParentImage":"C:\\Program Files\\Microsoft Office\\Office15\\OUTLOOK.EXE","ParentCommandLine":"C:\\Program Files\\Microsoft Office\\Office15\\OUTLOOK.EXE","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  FILE_CREATED: 'Jun  7 09:51:46 SSTECHLAPTOP520.sstech.internal Microsoft-Windows-Sysmon[5380]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9223372036854775808,"EventType":"INFO","SeverityValue":2,"Severity":"INFO","EventID":11,"SourceName":"Microsoft-Windows-Sysmon","ProviderGuid":"{%YYYYMMDD%-%PROCESS_ID%-43E0-BF4C-06F5698FFBD9}","Version":2,"Task":11,"OpcodeValue":0,"RecordNumber":%RECORD_NUMBER%,"ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Microsoft-Windows-Sysmon/Operational","Domain":"NT AUTHORITY","AccountName":"SYSTEM","UserID":"%USERID%","AccountType":"User","Message":"File created:\r\nRuleName: \r\nUtcTime: 2019-06-07 14:51:44.897\r\nProcessGuid: {%YYYYMMDD%-%PROCESS_ID%-5cf5-0000-00100b151b11}\r\nProcessId: %PROCESS_ID%\r\nImage: C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\r\nTargetFilename: C:\\Users\\%USERNAME%\\Downloads\\XNAGS31_setup.exe:Zone.Identifier\r\nCreationUtcTime: %TS%","Category":"File created (rule: FileCreate)","Opcode":"Info","UtcTime":"%TS%","ProcessGuid":"{%YYYYMMDD%-%PROCESS_ID%-5cf5-0000-00100b151b11}","Image":"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe","TargetFilename":"C:\\Users\\%USERNAME%\\Downloads\\XNAGS31_setup.exe:Zone.Identifier","CreationUtcTime":"%TS%","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  FILE_STREAM: 'Jun  7 09:51:44 %HOSTNAME% Microsoft-Windows-Sysmon[5380]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9223372036854775808,"EventType":"INFO","SeverityValue":2,"Severity":"INFO","EventID":15,"SourceName":"Microsoft-Windows-Sysmon","ProviderGuid":"{%YYYYMMDD%-%PROCESS_ID%-43E0-BF4C-06F5698FFBD9}","Version":2,"Task":15,"OpcodeValue":0,"RecordNumber":%RECORD_NUMBER%,"ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Microsoft-Windows-Sysmon/Operational","Domain":"NT AUTHORITY","AccountName":"SYSTEM","UserID":"%USERID%","AccountType":"User","Message":"File stream created:\r\nRuleName: MitreRef=T1096,Technique=Alternate Data Stream,Tactic=Defense Evasion,MitreURL= https://attack.mitre.org/wiki/Technique/T1096\r\nUtcTime: %TS%\r\nProcessGuid: {%YYYYMMDD%-%PROCESS_ID%-5cf5-0000-00100b151b11}\r\nProcessId: %PROCESS_ID%\r\nImage: C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\r\nTargetFilename: C:\\Users\\%USERNAME%\\Downloads\\XNAGS31_setup.exe:Zone.Identifier\r\nCreationUtcTime: %TS%\r\nHash: MD5=FBCCF14D504B7B2DBCB5A5BDA75B%HASHNUM4%,SHA256=EACD09517CE90D34BA562171D15AC40D302F0E691B439F91BE1B6406E25F%HASHNUM4%,IMPHASH=00000000000000000000000000000000","Category":"File stream created (rule: FileCreateStreamHash)","Opcode":"Info","RuleName":"MitreRef=T1096,Technique=Alternate Data Stream,Tactic=Defense Evasion,MitreURL= https://attack.mitre.org/wiki/Technique/T1096","UtcTime":"%TS%","ProcessGuid":"{%YYYYMMDD%-%PROCESS_ID%-5cf5-0000-00100b151b11}","Image":"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe","TargetFilename":"C:\\Users\\%USERNAME%\\Downloads\\XNAGS31_setup.exe:Zone.Identifier","CreationUtcTime":"%TS%","Hash":"MD5=FBCCF14D504B7B2DBCB5A5BDA75B%HASHNUM4%,SHA256=EACD09517CE90D34BA562171D15AC40D302F0E691B439F91BE1B6406E25F%HASHNUM4%,IMPHASH=00000000000000000000000000000000","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  MALWARE_EXECUTED: 'Jun  7 09:51:56 %HOSTNAME% Microsoft-Windows-Sysmon[5380]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9223372036854775808,"EventType":"INFO","SeverityValue":2,"Severity":"INFO","EventID":1,"SourceName":"Microsoft-Windows-Sysmon","ProviderGuid":"{%YYYYMMDD%-%PROCESS_ID%-43E0-BF4C-06F5698FFBD9}","Version":5,"Task":1,"OpcodeValue":0,"RecordNumber":%RECORD_NUMBER%,"ProcessID":1%PROCESS_ID%,"ThreadID":1%THREAD_ID%,"Channel":"Microsoft-Windows-Sysmon/Operational","Domain":"NT AUTHORITY","AccountName":"SYSTEM","UserID":"%USERID%","AccountType":"User","Message":"Process Create:\r\nRuleName: MitreRef=T1036,Technique=Masquerading,Tactic=Defense Evasion/Execution\r\nUtcTime: %TS%\r\nProcessGuid: {%YYYYMMDD%-%PROCESS_ID%-5cfa-0000-001046261734}\r\nProcessId: 1%PROCESS_ID%\r\nImage: C:\\Users\\%USERNAME%\\Downloads\\XNAGS31_setup.exe\r\nFileVersion: 3.1.10527.0\r\nDescription: XNA Game Studio 3.1 Setup\r\nProduct: XNA Game Studio 3.1 Setup\r\nCompany: Microsoft Corporation\r\nCommandLine: \"C:\\Users\\%USERNAME%\\Downloads\\XNAGS31_setup.exe\" \r\nCurrentDirectory: C:\\Users\\%USERNAME%\\Downloads\\\r\nUser: ACME\\%USERNAME%\r\nLogonGuid: {%YYYYMMDD%-%PROCESS_ID%-5cf5-0000-002017db0b11}\r\nLogonId: 0x110BDB17\r\nTerminalSessionId: 3\r\nIntegrityLevel: Medium\r\nHashes: MD5=5155437DE7A2B8320122E10BD271D2EF,SHA256=82C2B0783C26C672C9988FE3D2D03DE4A46804796B86AD71FBF6489BC5223A69,IMPHASH=092EB6DABA2F17CBDA102FD1A32ACD00\r\nParentProcessGuid: {%YYYYMMDD%-%PROCESS_ID%-5cf5-0000-00100b151b11}\r\nParentProcessId: 12160\r\nParentImage: C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\r\nParentCommandLine: \"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\" ","Category":"Process Create (rule: ProcessCreate)","Opcode":"Info","RuleName":"MitreRef=T1036,Technique=Masquerading,Tactic=Defense Evasion/Execution","UtcTime":"%TS%","ProcessGuid":"{%YYYYMMDD%-%PROCESS_ID%-5cfa-0000-001046261734}","Image":"C:\\Users\\%USERNAME%\\Downloads\\XNAGS31_setup.exe","FileVersion":"3.1.10527.0","Description":"XNA Game Studio 3.1 Setup","Product":"XNA Game Studio 3.1 Setup","Company":"Microsoft Corporation","CommandLine":"\"C:\\Users\\%USERNAME%\\Downloads\\XNAGS31_setup.exe\" ","CurrentDirectory":"C:\\Users\\%USERNAME%\\Downloads\\","User":"ACME\\%USERNAME%","LogonGuid":"{%YYYYMMDD%-%PROCESS_ID%-5cf5-0000-002017db0b11}","LogonId":"0x110bdb17","TerminalSessionId":"3","IntegrityLevel":"Medium","Hashes":"MD5=5155437DE7A2B8320122E10BD271D2EF,SHA256=82C2B0783C26C672C9988FE3D2D03DE4A46804796B86AD71FBF6489BC5223A69,IMPHASH=092EB6DABA2F17CBDA102FD1A32ACD00","ParentProcessGuid":"{%YYYYMMDD%-%PROCESS_ID%-5cf5-0000-00100b151b11}","ParentProcessId":"%PROCESS_ID%","ParentImage":"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe","ParentCommandLine":"\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\" ","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  EXECUTE_JAVA: 'Jun  6 04:19:57 %HOSTNAME% Microsoft-Windows-Sysmon[3720]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9223372036854775808,"EventType":"INFO","SeverityValue":2,"Severity":"INFO","EventID":1,"SourceName":"Microsoft-Windows-Sysmon","ProviderGuid":"{%YYYYMMDD%-%PROCESS_ID%-43E0-BF4C-06F5698FFBD9}","Version":5,"Task":1,"OpcodeValue":0,"RecordNumber":%RECORD_NUMBER%,"ProcessID":%PROCESSID_PREFIX%%PROCESS_ID%,"ThreadID":2%THREAD_ID%,"Channel":"Microsoft-Windows-Sysmon/Operational","Domain":"NT AUTHORITY","AccountName":"SYSTEM","UserID":"%USERID%","AccountType":"User","Message":"Process Create:\r\nRuleName: \r\nUtcTime: %TS%\r\nProcessGuid: {%YYYYMMDD%-%PROCESS_ID%-5CFA-%PROCESSID_PREFIX%000-001025D07C05}\r\nProcessId: %PROCESSID_PREFIX%%PROCESS_ID%\r\nImage: C:\\Program Files\\Java\\%JAVA_DIR%\\jre\\bin\\java.exe\r\nFileVersion: %JAVA_VERSION%\r\nDescription: Java(TM) Platform SE binary\r\nProduct: Java(TM) Platform SE 8\r\nCompany: Oracle Corporation\r\nCommandLine: \"C:\\Program Files\\Java\\%JAVA_DIR%\\jre\\bin\\java\"  -jar C:\\Windows\\surefire5768622783608034820tmp\r\nCurrentDirectory: C:\\Users\\%USERNAME%\\Downloads\\\r\nUser: ACME\\%USERNAME%\r\nLogonGuid: {%YYYYMMDD%-%PROCESS_ID%-5cf5-0000-002017db0b11}\r\nLogonId: 0x110BDB17\r\nTerminalSessionId: 1\r\nIntegrityLevel: Medium\r\nHashes: MD5=3374D41E662A467826CFFBC7DD53398E,SHA256=A1CC5F1D1D42DDD7C75CD20FED85696F57CCA0082C7ED590A6C60841556A1E0C,IMPHASH=BB9F83F2CCF071025CFCF6C07DC24B5C\r\nParentProcessGuid: {%YYYYMMDD%-%PROCESS_ID%-5CFA-0000-0010BBCA7C05}\r\nParentProcessId: 1%PROCESS_ID%\r\nParentImage: C:\\Users\\%USERNAME%\\Downloads\\XNAGS31_setup.exe\r\nParentCommandLine: \"C:\\Users\\%USERNAME%\\Downloads\\XNAGS31_setup.exe\"","Category":"Process Create (rule: ProcessCreate)","Opcode":"Info","UtcTime":"%TS%","ProcessGuid":"{%YYYYMMDD%-%PROCESS_ID%-5CFA-%PROCESSID_PREFIX%000-001025D07C05}","Image":"C:\\Program Files\\Java\\%JAVA_DIR%\\jre\\bin\\java.exe","FileVersion":"%JAVA_VERSION%","Description":"Java(TM) Platform SE binary","Product":"Java(TM) Platform SE 8","Company":"Oracle Corporation","CommandLine":"\"C:\\Program Files\\Java\\%JAVA_DIR%\\jre\\bin\\java\"  -jar C:\\Windows\\surefire5768622783608034820tmp","CurrentDirectory":"C:\\Users\\%USERNAME%\\Downloads\\","User":"ACME\\%USERNAME%","LogonGuid":"{%YYYYMMDD%-%PROCESS_ID%-5cf5-0000-002017db0b11}","LogonId": "0x110BDB17","TerminalSessionId":"1","IntegrityLevel":"Medium","Hashes":"MD5=3374D41E662A467826CFFBC7DD53398E,SHA256=A1CC5F1D1D42DDD7C75CD20FED85696F57CCA0082C7ED590A6C60841556A1E0C,IMPHASH=BB9F83F2CCF071025CFCF6C07DC24B5C","ParentProcessGuid":"{%YYYYMMDD%-%PROCESS_ID%-5CFA-0000-0010BBCA7C05}","ParentProcessId":"1%PROCESS_ID%","ParentImage":"C:\\Users\\%USERNAME%\\Downloads\\XNAGS31_setup.exe","ParentCommandLine":"\"C:\\Users\\%USERNAME%\\Downloads\\XNAGS31_setup.exe\"","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  BEACONING: 'Jun  7 14:25:44 %HOSTNAME% Microsoft-Windows-Sysmon[4412]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9223372036854775808,"EventType":"INFO","SeverityValue":2,"Severity":"INFO","EventID":3,"SourceName":"Microsoft-Windows-Sysmon","ProviderGuid":"{%YYYYMMDD%-%PROCESS_ID%-43E0-BF4C-06F5698FFBD9}","Version":5,"Task":3,"OpcodeValue":0,"RecordNumber":%RECORD_NUMBER%,"ProcessID":4%PROCESS_ID%,"ThreadID":3%THREAD_ID%,"Channel":"Microsoft-Windows-Sysmon/Operational","Domain":"NT AUTHORITY","AccountName":"SYSTEM","UserID":"%USERID%","AccountType":"User","Message":"Network connection detected:\r\nRuleName: \r\nUtcTime: %TS%\r\nProcessGuid: {%YYYYMMDD%-%PROCESS_ID%-5CFA-4000-001025D07C05}\r\nProcessId: 4%PROCESS_ID%\r\nImage: C:\\Program Files\\Java\\%JAVA_DIR%\\jre\\bin\\java.exe\r\nUser: ACME\\%USERNAME%\r\nProtocol: tcp\r\nInitiated: true\r\nSourceIsIpv6: false\r\nSourceIp: %SRC_IP%\r\nSourceHostname: %HOSTNAME%\r\nSourcePort: %SRC_PORT%\r\nSourcePortName: \r\nDestinationIsIpv6: false\r\nDestinationIp: %DST_IP%\r\nDestinationHostname: \r\nDestinationPort: 443\r\nDestinationPortName: https","Category":"Network connection detected (rule: NetworkConnect)","Opcode":"Info","UtcTime":"%TS%","ProcessGuid":"{%YYYYMMDD%-%PROCESS_ID%-5CFA-4000-001025D07C05}","Image":"C:\\Program Files\\Java\\%JAVA_DIR%\\jre\\bin\\java.exe","User":"ACME\\%USERNAME%","Protocol":"tcp","Initiated":"true","SourceIsIpv6":"false","SourceIp":"%SRC_IP%","SourceHostname":"%HOSTNAME%","SourcePort":"%SRC_PORT%","DestinationIsIpv6":"false","DestinationIp":"%DST_IP%","DestinationPort":"443","DestinationPortName":"https","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  SCANNING_PORT: 'Jun  7 14:25:44 %HOSTNAME% Microsoft-Windows-Sysmon[4412]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9223372036854775808,"EventType":"INFO","SeverityValue":2,"Severity":"INFO","EventID":3,"SourceName":"Microsoft-Windows-Sysmon","ProviderGuid":"{%YYYYMMDD%-%PROCESS_ID%-43E0-BF4C-06F5698FFBD9}","Version":5,"Task":3,"OpcodeValue":0,"RecordNumber":%RECORD_NUMBER%,"ProcessID":4%PROCESS_ID%,"ThreadID":4%THREAD_ID%,"Channel":"Microsoft-Windows-Sysmon/Operational","Domain":"NT AUTHORITY","AccountName":"SYSTEM","UserID":"%USERID%","AccountType":"User","Message":"Network connection detected:\r\nRuleName: \r\nUtcTime: %TS%\r\nProcessGuid: {%YYYYMMDD%-%PROCESS_ID%-5CFA-4000-001025D07C05}\r\nProcessId: 4%PROCESS_ID%\r\nImage: C:\\Program Files\\Java\\%JAVA_DIR%\\jre\\bin\\java.exe\r\nUser: ACME\\%USERNAME%\r\nProtocol: tcp\r\nInitiated: true\r\nSourceIsIpv6: false\r\nSourceIp: %SRC_IP%\r\nSourceHostname: %HOSTNAME%\r\nSourcePort: %SRC_PORT%\r\nSourcePortName: \r\nDestinationIsIpv6: false\r\nDestinationIp: %DST_IP%\r\nDestinationHostname: \r\nDestinationPort: %DST_PORT%\r\nDestinationPortName: ","Category":"Network connection detected (rule: NetworkConnect)","Opcode":"Info","UtcTime":"%TS%","ProcessGuid":"{%YYYYMMDD%-%PROCESS_ID%-5CFA-4000-001025D07C05}","Image":"C:\\Program Files\\Java\\%JAVA_DIR%\\jre\\bin\\java.exe","User":"ACME\\%USERNAME%","Protocol":"tcp","Initiated":"true","SourceIsIpv6":"false","SourceIp":"%SRC_IP%","SourceHostname":"%HOSTNAME%","SourcePort":"%SRC_PORT%","DestinationIsIpv6":"false","DestinationIp":"%DST_IP%","DestinationPort":"%DST_PORT%","DestinationPortName":"","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+  NETWORK_ACTIVITY: 'Jun 18 10:33:05 %HOSTNAME% Microsoft-Windows-Sysmon[4372]: {"EventTime":"%TS%","Hostname":"%HOSTNAME%","Keywords":-9223372036854775808,"EventType":"INFO","SeverityValue":2,"Severity":"INFO","EventID":3,"SourceName":"Microsoft-Windows-Sysmon","ProviderGuid":"{%PROVIDER_GUID%}","Version":5,"Task":3,"OpcodeValue":0,"RecordNumber":%RECORD_NUMBER%,"ProcessID":%PROCESS_ID%,"ThreadID":%THREAD_ID%,"Channel":"Microsoft-Windows-Sysmon/Operational","Domain":"NT AUTHORITY","AccountName":"SYSTEM","UserID":"%USERID%","AccountType":"User","Message":"Network connection detected:\r\nRuleName: \r\nUtcTime: %TS%\r\nProcessGuid: {%PROCESS_GUID%}\r\nProcessId: %PROCESS_ID%\r\nImage: C:\\Windows\\System32\\svchost.exe\r\nUser: NT AUTHORITY\\NETWORK SERVICE\r\nProtocol: tcp\r\nInitiated: true\r\nSourceIsIpv6: false\r\nSourceIp: %SRC_IP%\r\nSourceHostname: %HOSTNAME%\r\nSourcePort: %SRC_PORT%\r\nSourcePortName: \r\nDestinationIsIpv6: false\r\nDestinationIp: %DST_IP%\r\nDestinationHostname: \r\nDestinationPort: %DST_PORT%\r\nDestinationPortName: ","Category":"Network connection detected (rule: NetworkConnect)","Opcode":"Info","UtcTime":"%TS%","ProcessGuid":"{%PROCESS_GUID%}","Image":"C:\\Windows\\System32\\svchost.exe","User":"ACME\\%USERNAME%","Protocol":"tcp","Initiated":"true","SourceIsIpv6":"false","SourceIp":"%SRC_IP%","SourceHostname":"%HOSTNAME%","SourcePort":"%SRC_PORT%","DestinationIsIpv6":"false","DestinationIp":"%DST_IP%","DestinationHostname":"","DestinationPort":"%DST_PORT%","EventReceivedTime":"%TS%","SourceModuleName":"in-windowsevents","SourceModuleType":"im_msvistalog"}'
+
+SCENARIOS:
+  user_clicks_weblink:
+  -
+    templateid: "USER_CLICKS_WEBLINK"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%RECORD_NUMBER%":
+        - "py"
+        - !!python/name:common.utils.get_id_num
+        - []
+      "%PROCESS_ID%":
+        - "user"
+        - "process_id"
+      "%THREAD_ID%":
+        - "user"
+        - "thread_id"
+      "%USERID%":
+        - "user"
+        - "user_id"
+      "%WEBLINK%":
+        - "set"
+        - ["www.baidu1.com/downloads.php/content.xml.xz"]
+      "%USERNAME%":
+        - "user"
+        - "account_name"
+      "%YYYYMMDD%":
+        - "py"
+        - !!python/name:common.utils.getYMD
+        - ['%VALS%']
+        - 1
+  user_downloads_malware:
+  -
+    templateid: "FILE_CREATED"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%RECORD_NUMBER%":
+        - "py"
+        - !!python/name:common.utils.get_id_num
+        - []
+      "%PROCESS_ID%":
+        - "user"
+        - "process_id"
+      "%THREAD_ID%":
+        - "user"
+        - "thread_id"
+      "%USERID%":
+        - "user"
+        - "user_id"
+      "%USERNAME%":
+        - "user"
+        - "account_name"
+      "%YYYYMMDD%":
+        - "py"
+        - !!python/name:common.utils.getYMD
+        - ['%VALS%']
+        - 1
+  file_stream:
+  -
+    templateid: "FILE_STREAM"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%RECORD_NUMBER%":
+        - "py"
+        - !!python/name:common.utils.get_id_num
+        - []
+      "%PROCESS_ID%":
+        - "user"
+        - "process_id"
+      "%THREAD_ID%":
+        - "user"
+        - "thread_id"
+      "%USERID%":
+        - "user"
+        - "user_id"
+      "%USERNAME%":
+        - "user"
+        - "account_name"
+      "%YYYYMMDD%":
+        - "py"
+        - !!python/name:common.utils.getYMD
+        - ['%VALS%']
+        - 1
+      "%HASHNUM4%":
+        - "py"
+        - !!python/name:random.randint
+        - [1000, 9999]
+  malware_executed:
+  -
+    templateid: "MALWARE_EXECUTED"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%RECORD_NUMBER%":
+        - "py"
+        - !!python/name:common.utils.get_id_num
+        - []
+      "%PROCESS_ID%":
+        - "user"
+        - "process_id"
+      "%THREAD_ID%":
+        - "user"
+        - "thread_id"
+      "%USERID%":
+        - "user"
+        - "user_id"
+      "%USERNAME%":
+        - "user"
+        - "account_name"
+      "%YYYYMMDD%":
+        - "py"
+        - !!python/name:common.utils.getYMD
+        - ['%VALS%']
+        - 1
+  java_1_6:
+  -
+    templateid: "EXECUTE_JAVA"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%RECORD_NUMBER%":
+        - "py"
+        - !!python/name:common.utils.get_id_num
+        - []
+      "%PROCESS_ID%":
+        - "user"
+        - "process_id"
+      "%THREAD_ID%":
+        - "user"
+        - "thread_id"
+      "%USERID%":
+        - "user"
+        - "user_id"
+      "%USERNAME%":
+        - "user"
+        - "account_name"
+      "%JAVA_VERSION%":
+        - "set"
+        - ["6.0.1910.1"]
+      "JAVA_DIR":
+        - "set"
+        - ["jre1.6.0_191"]
+      "%YYYYMMDD%":
+        - "py"
+        - !!python/name:common.utils.getYMD
+        - ['%VALS%']
+        - 1
+      "%PROCESSID_PREFIX%":
+        - "set"
+        - ["2"]
+  java_1_7:
+  -
+    templateid: "EXECUTE_JAVA"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%RECORD_NUMBER%":
+        - "py"
+        - !!python/name:common.utils.get_id_num
+        - []
+      "%PROCESS_ID%":
+        - "user"
+        - "process_id"
+      "%THREAD_ID%":
+        - "user"
+        - "thread_id"
+      "%USERID%":
+        - "user"
+        - "user_id"
+      "%USERNAME%":
+        - "user"
+        - "account_name"
+      "%JAVA_VERSION%":
+        - "set"
+        - ["7.0.1810.4"]
+      "JAVA_DIR":
+        - "set"
+        - ["jre1.7.0_181"]
+      "%YYYYMMDD%":
+        - "py"
+        - !!python/name:common.utils.getYMD
+        - ['%VALS%']
+        - 1
+      "%PROCESSID_PREFIX%":
+        - "set"
+        - ["3"]
+  java_1_8:
+  -
+    templateid: "EXECUTE_JAVA"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%RECORD_NUMBER%":
+        - "py"
+        - !!python/name:common.utils.get_id_num
+        - []
+      "%PROCESS_ID%":
+        - "user"
+        - "process_id"
+      "%THREAD_ID%":
+        - "user"
+        - "thread_id"
+      "%USERID%":
+        - "user"
+        - "user_id"
+      "%USERNAME%":
+        - "user"
+        - "account_name"
+      "%JAVA_VERSION%":
+        - "set"
+        - ["8.0.1710.11"]
+      "%JAVA_DIR%":
+        - "set"
+        - ["jre1.8.0_171"]
+      "%YYYYMMDD%":
+        - "py"
+        - !!python/name:common.utils.getYMD
+        - ['%VALS%']
+        - 1
+      "%PROCESSID_PREFIX%":
+        - "set"
+        - ["4"]
+  beaconing:
+  -
+    templateid: "BEACONING"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%RECORD_NUMBER%":
+        - "py"
+        - !!python/name:common.utils.get_id_num
+        - []
+      "%PROCESS_ID%":
+        - "user"
+        - "process_id"
+      "%THREAD_ID%":
+        - "user"
+        - "thread_id"
+      "%USERID%":
+        - "user"
+        - "user_id"
+      "%USERNAME%":
+        - "user"
+        - "account_name"
+      "%YYYYMMDD%":
+        - "py"
+        - !!python/name:common.utils.getYMD
+        - ['%VALS%']
+        - 1
+      "%SRC_IP%":
+        - "user"
+        - "src_ip"
+      "%DST_IP%":
+        - "set"
+        - ["103.235.46.39"]
+      "%JAVA_DIR%":
+        - "set"
+        - ["jre1.8.0_171"]
+      "%SRC_PORT%":
+        - "py"
+        - !!python/name:random.randint
+        - [10000, 99999]
+  scan_port:
+  -
+    templateid: "SCANNING_PORT"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%RECORD_NUMBER%":
+        - "py"
+        - !!python/name:common.utils.get_id_num
+        - []
+      "%PROCESS_ID%":
+        - "user"
+        - "process_id"
+      "%THREAD_ID%":
+        - "user"
+        - "thread_id"
+      "%USERID%":
+        - "user"
+        - "user_id"
+      "%USERNAME%":
+        - "user"
+        - "account_name"
+      "%YYYYMMDD%":
+        - "py"
+        - !!python/name:common.utils.getYMD
+        - ['%VALS%']
+        - 1
+      "%SRC_IP%":
+        - "user"
+        - "src_ip"
+      "%DST_IP%":
+        - "set"
+        - ["192.168.0.1"]
+      "%DST_PORT%":
+        - "py"
+        - !!python/name:random.randint
+        - [1, 1000]
+      "%JAVA_DIR%":
+        - "set"
+        - ["jre1.8.0_171"]
+      "%SRC_PORT%":
+        - "py"
+        - !!python/name:random.randint
+        - [10000, 99999]
+  network_activity:
+  -
+    templateid: "NETWORK_ACTIVITY"
+    timeformat: "%Y-%m-%d %H:%M:%S"
+    replaces:
+      "%HOSTNAME%":
+        - "user"
+        - "hostname"
+      "%RECORD_NUMBER%":
+        - "py"
+        - !!python/name:common.utils.get_id_num
+        - []
+      "%PROCESS_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [100, 10000]
+      "%THREAD_ID%":
+        - "py"
+        - !!python/name:random.randint
+        - [100, 10000]
+      "%USERID%":
+        - "user"
+        - "user_id"
+      "%USERNAME%":
+        - "user"
+        - "account_name"
+      "%SRC_IP%":
+        - "user"
+        - "src_ip"
+      "%DST_IP%":
+        - "py"
+        - !!python/name:common.utils.get_random_ip
+        - ["192.168.0.0/24"]
+      "%DST_PORT%":
+        - "py"
+        - !!python/name:random.randint
+        - [1, 1000]
+      "%SRC_PORT%":
+        - "py"
+        - !!python/name:random.randint
+        - [10000, 99999]
+      "%PROVIDER_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+      "%PROCESS_GUID%":
+        - "py"
+        - !!python/name:common.utils.get_uuid
+        - []
+
+ACTIVITY:
+  ethanclark:
+    - [ "user_clicks_weblink", ["0 11 * * *", 59, [1, 1]] ]
+    - [ "user_downloads_malware", ["1 11 * * *", 59, [1, 1]] ]
+    - [ "file_stream", ["2-3 11 * * *", 59, [1, 1]] ]
+    - [ "malware_executed", ["4 11 * * *", 59, [1, 1]] ]
+    - [ "java_1_6", ["5 11 * * *", 59, [1, 1]] ]
+    - [ "java_1_7", ["6 11 * * *", 59, [1, 1]] ]
+    - [ "java_1_8", ["7 11 * * *", 59, [1, 1]] ]
+    - [ "beaconing", ["30 11-23 * * *", 59, [1, 1]] ]
+    - [ "scan_port", ["* 13 * * *", 59, [10, 15]] ]
+    - [ "network_activity", ["* 8-18 * * *", 59, [1, 3]]]
+  flashgordon:
+    - [ "user_clicks_weblink", ["10 10 * * *", 59, [1, 1]] ]
+    - [ "user_downloads_malware", ["11 10 * * *", 59, [1, 1]] ]
+    - [ "file_stream", ["12-14 10 * * *", 59, [1, 1]] ]
+    - [ "malware_executed", ["15 10 * * *", 59, [1, 1]] ]
+    - [ "java_1_6", ["16 10 * * *", 59, [1, 1]] ]
+    - [ "java_1_7", ["17 10 * * *", 59, [1, 1]] ]
+    - [ "java_1_8", ["18 10 * * *", 59, [1, 1]] ]
+    - [ "beaconing", ["50 10-23 * * *", 59, [1, 1]] ]
+    - [ "network_activity", ["* 8-18 * * *", 59, [1, 3]]]
+  madisonclark:
+    - [ "user_clicks_weblink", ["20 10 * * *", 59, [1, 1]] ]
+    - [ "user_downloads_malware", ["21 10 * * *", 59, [1, 1]] ]
+    - [ "file_stream", ["22-24 10 * * *", 59, [1, 1]] ]
+    - [ "malware_executed", ["25 10 * * *", 59, [1, 1]] ]
+    - [ "java_1_6", ["26 10 * * *", 59, [1, 1]] ]
+    - [ "java_1_7", ["27 10 * * *", 59, [1, 1]] ]
+    - [ "java_1_8", ["28 10 * * *", 59, [1, 1]] ]
+    - [ "beaconing", ["35 10-23 * * *", 59, [1, 1]] ]
+    - [ "network_activity", ["* 8-18 * * *", 59, [1, 3]]]
+  brucecook:
+    - [ "user_clicks_weblink", ["40 9 * * *", 59, [1, 1]] ]
+    - [ "user_downloads_malware", ["41 9 * * *", 59, [1, 1]] ]
+    - [ "file_stream", ["42-44 9 * * *", 59, [1, 1]] ]
+    - [ "malware_executed", ["45 9 * * *", 59, [1, 1]] ]
+    - [ "java_1_6", ["46 9 * * *", 59, [1, 1]] ]
+    - [ "java_1_7", ["47 9 * * *", 59, [1, 1]] ]
+    - [ "java_1_8", ["48 9 * * *", 59, [1, 1]] ]
+    - [ "beaconing", ["55 9-23 * * *", 59, [1, 1]] ]
+    - [ "network_activity", ["* 8-18 * * *", 59, [1, 3]]]
+  camillegordon:
+    - [ "user_clicks_weblink", ["15 12 * * *", 59, [1, 1]] ]
+    - [ "user_downloads_malware", ["16 12 * * *", 59, [1, 1]] ]
+    - [ "file_stream", ["17-18 12 * * *", 59, [1, 1]] ]
+    - [ "malware_executed", ["19 12 * * *", 59, [1, 1]] ]
+    - [ "java_1_6", ["20 12 * * *", 59, [1, 1]] ]
+    - [ "java_1_7", ["21 12 * * *", 59, [1, 1]] ]
+    - [ "java_1_8", ["22 12 * * *", 59, [1, 1]] ]
+    - [ "beaconing", ["25 12-23 * * *", 59, [1, 1]] ]
+    - [ "network_activity", ["* 8-18 * * *", 59, [1, 3]]]
+  camillewayne:
+    - [ "user_clicks_weblink", ["17 13 * * *", 59, [1, 1]] ]
+    - [ "user_downloads_malware", ["18 13 * * *", 59, [1, 1]] ]
+    - [ "malware_executed", ["19 13 * * *", 59, [1, 1]] ]
+    - [ "java_1_6", ["20 13 * * *", 59, [1, 1]] ]
+    - [ "java_1_7", ["21 13 * * *", 59, [1, 1]] ]
+    - [ "java_1_8", ["22 13 * * *", 59, [1, 1]] ]
+    - [ "beaconing", ["23 13-23 * * *", 59, [1, 1]] ]
+    - [ "network_activity", ["* 8-18 * * *", 59, [1, 3]]]
+  clarkgordon:
+    - [ "user_clicks_weblink", ["33 10 * * *", 59, [1, 1]] ]
+    - [ "user_downloads_malware", ["34 10 * * *", 59, [1, 1]] ]
+    - [ "file_stream", ["34-37 10 * * *", 59, [1, 1]] ]
+    - [ "malware_executed", ["38 10 * * *", 59, [1, 1]] ]
+    - [ "java_1_6", ["39 10 * * *", 59, [1, 1]] ]
+    - [ "java_1_7", ["40 10 * * *", 59, [1, 1]] ]
+    - [ "java_1_8", ["40 10 * * *", 59, [1, 1]] ]
+    - [ "beaconing", ["40 10-23 * * *", 59, [1, 1]] ]
+    - [ "network_activity", ["* 8-18 * * *", 59, [1, 3]]]
+  danielgordon:
+    - [ "user_clicks_weblink", ["10 11 * * *", 59, [1, 1]] ]
+    - [ "user_downloads_malware", ["11 11 * * *", 59, [1, 1]] ]
+    - [ "file_stream", ["12-13 11 * * *", 59, [1, 1]] ]
+    - [ "malware_executed", ["14 11 * * *", 59, [1, 1]] ]
+    - [ "java_1_6", ["15 11 * * *", 59, [1, 1]] ]
+    - [ "java_1_7", ["16 11 * * *", 59, [1, 1]] ]
+    - [ "java_1_8", ["17 11 * * *", 59, [1, 1]] ]
+    - [ "beaconing", ["25 11-23 * * *", 59, [1, 1]] ]
+    - [ "network_activity", ["* 8-18 * * *", 59, [1, 3]]]
+  dianaknight:
+    - [ "user_clicks_weblink", ["0 14 * * *", 59, [1, 1]] ]
+    - [ "user_downloads_malware", ["1 14 * * *", 59, [1, 1]] ]
+    - [ "file_stream", ["2-3 14 * * *", 59, [1, 1]] ]
+    - [ "malware_executed", ["4 14 * * *", 59, [1, 1]] ]
+    - [ "java_1_6", ["5 14 * * *", 59, [1, 1]] ]
+    - [ "java_1_7", ["6 14 * * *", 59, [1, 1]] ]
+    - [ "java_1_8", ["7 14 * * *", 59, [1, 1]] ]
+    - [ "beaconing", ["15 14-23 * * *", 59, [1, 1]] ]
+    - [ "network_activity", ["* 8-18 * * *", 59, [1, 3]]]
+  emmahunt:
+    - [ "user_clicks_weblink", ["1 15 * * *", 59, [1, 1]] ]
+    - [ "user_downloads_malware", ["2 15 * * *", 59, [1, 1]] ]
+    - [ "file_stream", ["3-4 15 * * *", 59, [1, 1]] ]
+    - [ "malware_executed", ["5 15 * * *", 59, [1, 1]] ]
+    - [ "java_1_6", ["6 15 * * *", 59, [1, 1]] ]
+    - [ "java_1_7", ["7 15 * * *", 59, [1, 1]] ]
+    - [ "java_1_8", ["8 15 * * *", 59, [1, 1]] ]
+    - [ "beaconing", ["10 15-23 * * *", 59, [1, 1]] ]
+    - [ "network_activity", ["* 8-18 * * *", 59, [1, 3]]]
+...

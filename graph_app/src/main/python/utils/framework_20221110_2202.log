@@ -1,0 +1,419 @@
+20221110 22:02:34: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:34: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val nan
+20221110 22:02:34: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:34: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:34: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 12.212.122.210
+20221110 22:02:34: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 22.12.111.102
+20221110 22:02:34: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 121.210.122.121
+20221110 22:02:34: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:34: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:34: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 12.212.122.210
+20221110 22:02:34: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 22.12.111.102
+20221110 22:02:34: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 121.210.122.121
+20221110 22:02:34: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:34: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 1.2
+20221110 22:02:34: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:34: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:34: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 111.11.111.11
+20221110 22:02:34: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 22.222.21.100
+20221110 22:02:34: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:34: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:34: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:34: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 111.11.111.11
+20221110 22:02:34: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 22.222.21.100
+20221110 22:02:34: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:34: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:34: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 1.2.2
+20221110 22:02:34: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:34: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:34: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:34: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 211.21.02.211
+20221110 22:02:35: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 111.12.110.120
+20221110 22:02:35: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:35: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:35: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:35: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 211.21.02.211
+20221110 22:02:35: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 111.12.110.120
+20221110 22:02:35: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:35: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 2.11
+20221110 22:02:35: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:35: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val 121.212.111.11
+20221110 22:02:35: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 211.11.102.120
+20221110 22:02:35: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 11.201.11.12
+20221110 22:02:35: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 211.221.22.21
+20221110 22:02:35: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:35: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val 121.212.111.11
+20221110 22:02:35: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 211.11.102.120
+20221110 22:02:35: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 11.201.11.12
+20221110 22:02:35: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 211.221.22.21
+20221110 22:02:35: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:35: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val nan
+20221110 22:02:35: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:35: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:35: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 121.121.20.102
+20221110 22:02:35: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 221.01.21.111
+20221110 22:02:35: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 11.121.122.12
+20221110 22:02:35: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:35: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:35: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 121.121.20.102
+20221110 22:02:35: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 221.01.21.111
+20221110 22:02:35: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 11.121.122.12
+20221110 22:02:35: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:35: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val nan
+20221110 22:02:35: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:35: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:35: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 112.211.122.112
+20221110 22:02:35: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 201.112.101.101
+20221110 22:02:35: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:35: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:35: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:35: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 112.211.122.112
+20221110 22:02:35: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 201.112.101.101
+20221110 22:02:35: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:35: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:35: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 1.11
+20221110 22:02:36: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:36: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:36: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 221.11.111.12
+20221110 22:02:36: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 121.01.222.01
+20221110 22:02:36: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 12.2.221.122
+20221110 22:02:36: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:36: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:36: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 221.11.111.12
+20221110 22:02:36: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 121.01.222.01
+20221110 22:02:36: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 12.2.221.122
+20221110 22:02:36: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:36: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 2
+20221110 22:02:36: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:36: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:36: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 11.11.210.111
+20221110 22:02:36: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 12.112.11.121
+20221110 22:02:36: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 212.211.22.20
+20221110 22:02:36: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:36: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:36: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 11.11.210.111
+20221110 22:02:36: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 12.112.11.121
+20221110 22:02:36: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 212.211.22.20
+20221110 22:02:36: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:36: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val nan
+20221110 22:02:36: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:36: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:36: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 112.112.21.21
+20221110 22:02:36: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 102.211.111.112
+20221110 22:02:36: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 22.11.11.22
+20221110 22:02:36: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:36: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:36: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 112.112.21.21
+20221110 22:02:36: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 102.211.111.112
+20221110 22:02:36: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 22.11.11.22
+20221110 22:02:36: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:36: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 2.0.1
+20221110 22:02:36: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:36: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val 210.121.112.20
+20221110 22:02:36: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 200.22.122.222
+20221110 22:02:36: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 222.121.202.122
+20221110 22:02:36: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 111.101.1.111
+20221110 22:02:36: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:36: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val 210.121.112.20
+20221110 22:02:37: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 200.22.122.222
+20221110 22:02:37: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 222.121.202.122
+20221110 22:02:37: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 111.101.1.111
+20221110 22:02:37: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:37: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val nan
+20221110 22:02:37: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:37: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:37: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 221.12.2.110
+20221110 22:02:37: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 111.21.22.111
+20221110 22:02:37: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 121.11.201.12
+20221110 22:02:37: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:37: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:37: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 221.12.2.110
+20221110 22:02:37: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 111.21.22.111
+20221110 22:02:37: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 121.11.201.12
+20221110 22:02:37: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:37: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val nan
+20221110 22:02:37: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:37: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:37: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 122.12.101.112
+20221110 22:02:37: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 1.21.121.11
+20221110 22:02:37: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:37: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:37: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:37: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 122.12.101.112
+20221110 22:02:37: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 1.21.121.11
+20221110 22:02:37: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:37: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:37: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 0.2.2
+20221110 22:02:37: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:37: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:37: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 121.111.11.121
+20221110 22:02:37: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 1.222.21.20
+20221110 22:02:37: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:37: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:37: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:37: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 121.111.11.121
+20221110 22:02:37: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 1.222.21.20
+20221110 22:02:37: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:38: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:38: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 0.11
+20221110 22:02:38: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:38: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:38: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:38: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 111.221.102.11
+20221110 22:02:38: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:38: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:38: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:38: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:38: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 111.221.102.11
+20221110 22:02:38: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:38: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:38: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val nan
+20221110 22:02:38: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:38: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:38: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:38: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 01.11.222.112
+20221110 22:02:38: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 12.122.221.122
+20221110 22:02:38: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:38: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:38: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:38: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 01.11.222.112
+20221110 22:02:38: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 12.122.221.122
+20221110 22:02:38: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:38: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 1.2
+20221110 22:02:38: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:38: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:38: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:38: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 101.112.21.12
+20221110 22:02:38: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 21.10.111.211
+20221110 22:02:38: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:38: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:38: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:39: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 101.112.21.12
+20221110 22:02:39: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 21.10.111.211
+20221110 22:02:39: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:39: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 1.1.1
+20221110 22:02:39: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:39: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:39: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 2.22.220.211
+20221110 22:02:39: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 202.22.221.201
+20221110 22:02:39: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 122.21.220.12
+20221110 22:02:39: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:39: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:39: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 2.22.220.211
+20221110 22:02:39: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 202.22.221.201
+20221110 22:02:39: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 122.21.220.12
+20221110 22:02:39: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:39: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 0.21
+20221110 22:02:39: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:39: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:39: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 111.112.111.112
+20221110 22:02:39: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 221.212.122.120
+20221110 22:02:39: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 2.22.12.21
+20221110 22:02:39: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:39: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:39: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 111.112.111.112
+20221110 22:02:39: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 221.212.122.120
+20221110 22:02:39: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 2.22.12.21
+20221110 22:02:39: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:39: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val nan
+20221110 22:02:39: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:40: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:40: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 122.111.220.12
+20221110 22:02:40: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 121.121.21.110
+20221110 22:02:40: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:40: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:40: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:40: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 122.111.220.12
+20221110 22:02:40: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 121.121.21.110
+20221110 22:02:40: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:40: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:40: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 2.2
+20221110 22:02:40: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:40: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:40: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:40: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 121.101.11.111
+20221110 22:02:40: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:40: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:40: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:40: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:40: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 121.101.11.111
+20221110 22:02:40: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:40: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:40: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val nan
+20221110 22:02:40: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:40: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:40: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:40: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 101.12.11.122
+20221110 22:02:40: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 111.21.12.201
+20221110 22:02:40: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:40: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:40: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:40: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 101.12.11.122
+20221110 22:02:40: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 111.21.12.201
+20221110 22:02:41: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:41: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 1.1.1
+20221110 22:02:41: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:41: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:41: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 121.200.121.112
+20221110 22:02:41: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 122.22.11.10
+20221110 22:02:41: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:41: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:41: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:41: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 121.200.121.112
+20221110 22:02:41: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 122.22.11.10
+20221110 22:02:41: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:41: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:41: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val nan
+20221110 22:02:41: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:41: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:41: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 21.20.12.111
+20221110 22:02:41: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 11.122.12.11
+20221110 22:02:41: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:41: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:41: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:41: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 21.20.12.111
+20221110 22:02:41: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 11.122.12.11
+20221110 22:02:41: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:41: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:41: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val nan
+20221110 22:02:41: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:41: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:41: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 12.122.12.122
+20221110 22:02:41: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 211.11.11.12
+20221110 22:02:41: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 201.10.210.12
+20221110 22:02:41: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:41: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:41: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 12.122.12.122
+20221110 22:02:41: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 211.11.11.12
+20221110 22:02:41: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 201.10.210.12
+20221110 22:02:41: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:42: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 2.21
+20221110 22:02:42: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:42: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:42: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 12.1.111.212
+20221110 22:02:42: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 122.21.21.12
+20221110 22:02:42: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 111.221.21.121
+20221110 22:02:42: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:42: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:42: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 12.1.111.212
+20221110 22:02:42: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 122.21.21.12
+20221110 22:02:42: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 111.221.21.121
+20221110 22:02:42: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:42: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 1.11
+20221110 22:02:42: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:42: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:42: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 222.200.111.111
+20221110 22:02:42: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 01.121.112.222
+20221110 22:02:42: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 21.121.122.11
+20221110 22:02:42: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:42: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:42: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 222.200.111.111
+20221110 22:02:42: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 01.121.112.222
+20221110 22:02:42: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 21.121.122.11
+20221110 22:02:42: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:42: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 1.2.1
+20221110 22:02:42: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:42: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:42: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 111.122.221.22
+20221110 22:02:42: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 112.112.111.10
+20221110 22:02:42: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 211.112.121.11
+20221110 22:02:42: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:42: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:42: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 111.122.221.22
+20221110 22:02:42: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 112.112.111.10
+20221110 22:02:42: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 211.112.121.11
+20221110 22:02:42: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:42: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 0.2.2
+20221110 22:02:43: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:43: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:43: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 221.121.211.11
+20221110 22:02:43: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 111.21.112.10
+20221110 22:02:43: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 110.221.220.12
+20221110 22:02:43: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:43: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:43: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 221.121.211.11
+20221110 22:02:43: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 111.21.112.10
+20221110 22:02:43: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 110.221.220.12
+20221110 22:02:43: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:43: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val nan
+20221110 22:02:43: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:43: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:43: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 112.110.12.111
+20221110 22:02:43: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 112.201.11.211
+20221110 22:02:43: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 22.122.211.112
+20221110 22:02:43: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:43: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:43: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 112.110.12.111
+20221110 22:02:43: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 112.201.11.211
+20221110 22:02:43: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 22.122.211.112
+20221110 22:02:43: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:43: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 2.1.1
+20221110 22:02:43: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:43: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:43: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 121.212.212.211
+20221110 22:02:43: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 101.12.121.22
+20221110 22:02:43: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 102.112.121.101
+20221110 22:02:43: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:43: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:43: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 121.212.212.211
+20221110 22:02:43: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 101.12.121.22
+20221110 22:02:43: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 102.112.121.101
+20221110 22:02:43: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:43: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 0.21
+20221110 22:02:43: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:43: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:43: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:44: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 101.11.22.10
+20221110 22:02:44: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 101.11.12.122
+20221110 22:02:44: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:44: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:44: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:44: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 101.11.22.10
+20221110 22:02:44: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 101.11.12.122
+20221110 22:02:44: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:44: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 2.2.1
+20221110 22:02:44: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:44: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val 11.211.12.210
+20221110 22:02:44: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:44: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 12.111.11.111
+20221110 22:02:44: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:44: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:44: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val 11.211.12.210
+20221110 22:02:44: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:44: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 12.111.11.111
+20221110 22:02:44: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:44: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:44: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 2.1
+20221110 22:02:44: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:44: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:44: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 111.11.102.212
+20221110 22:02:44: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 22.11.121.21
+20221110 22:02:44: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 2.21.122.101
+20221110 22:02:44: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:44: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:44: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 111.11.102.212
+20221110 22:02:44: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 22.11.121.21
+20221110 22:02:44: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 2.21.122.101
+20221110 22:02:44: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:44: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 0.12
+20221110 22:02:44: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:44: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:44: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val 111.21.201.112
+20221110 22:02:45: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 222.12.12.12
+20221110 22:02:45: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 121.121.11.12
+20221110 22:02:45: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:45: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:45: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val 111.21.201.112
+20221110 22:02:45: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 222.12.12.12
+20221110 22:02:45: [MainThread]: For family col ip_address_2, curr val (Using c) 21.122.11.22 and row_val 121.121.11.12
+20221110 22:02:45: [MainThread]: Family cols for Ec2 are ['Ec2']
+20221110 22:02:45: [MainThread]: For family col Ec2, curr val (Using c) 0.1.2 and row_val 2.2
+20221110 22:02:45: [MainThread]: Family cols for ip_address_1 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:45: [MainThread]: For family col ip_address_4, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:45: [MainThread]: For family col ip_address_3, curr val (Using c) 211.112.122.02 and row_val nan
+20221110 22:02:45: [MainThread]: For family col ip_address_1, curr val (Using c) 211.112.122.02 and row_val 12.1.22.100
+20221110 22:02:45: [MainThread]: For family col ip_address_2, curr val (Using c) 211.112.122.02 and row_val 212.111.112.221
+20221110 22:02:45: [MainThread]: Family cols for ip_address_3 are ['ip_address_4', 'ip_address_3', 'ip_address_1', 'ip_address_2']
+20221110 22:02:45: [MainThread]: For family col ip_address_4, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:45: [MainThread]: For family col ip_address_3, curr val (Using c) 21.122.11.22 and row_val nan
+20221110 22:02:45: [MainThread]: For family col ip_address_1, curr val (Using c) 21.122.11.22 and row_val 12.1.22.100

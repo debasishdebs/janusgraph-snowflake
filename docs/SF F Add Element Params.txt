@@ -1,0 +1,116 @@
+Add Element step:
+
+Add Vertex:
+[SINGLE]
+{
+	"label": "IP",
+	"id": "NA",
+	"properties": {
+			"ip": "127.0.0.1",
+			"ipFormat": "ipv4",
+			"location": "local"
+		}
+}
+
+[BULK]
+[
+	{
+	"label": "IP",
+	"id": "NA",
+	"properties": {
+			"ip": "127.0.0.1",
+			"ipFormat": "ipv4",
+			"location": "local"
+		}
+	},
+	{
+	"label": "user",
+	"id": "NA",
+	"properties": {
+			"userName": "debasish",
+			"userId": "uid-sstech-014",
+			"location": "India"
+		}
+	}
+]
+
+Add Edge:
+[SINGLE]
+{
+	"label": "workTogether",
+	"from": {
+			"id": "NA",
+			"property": "userName",
+			"value": "debasish",
+			"value_operator": "equals",
+			"label": "NA"
+		},
+	"to": {
+		"id": "NA",
+		"property": "userName",
+		"value": "aravind",
+		"value_operator": "equals",
+		"label": "NA"
+	}
+	"properties": {
+			"for": "sstech",
+			"lastWorked": "2020-14-07",
+			"location": "India",
+			"counter": 10
+		}
+}
+
+Update Property: (We can only update properties of neighbors of an anchor element)
+{
+	"element": "vertex" OR "edge",
+	"anchor": {
+			"id": "NA",
+			"property": "userName",
+			"value": "debasish",
+			"value_operator": "equals",
+			"label": "NA"
+		},
+	"to_update": "self"
+}
+OR 
+{
+	"element": "vertex" OR "edge",
+	"anchor": {
+			"id": "NA",
+			"property": "userName",
+			"value": "debasish",
+			"value_operator": "equals",
+			"label": "NA"
+		},
+	"to_update": "outE"
+	"to_update_filter": {
+							"label": "hasIP",
+							"id": "NA",
+							"property": "eventTime",
+							"value": "2020-07-13 00:01:59, 2020-07-14 00:01:59"
+							"value_operator": "between"
+						}
+	"update_prop": "counter",
+	"update_value": 10
+}
+OR
+{
+	"element": "vertex" OR "edge",
+	"anchor": {
+			"id": "NA",
+			"property": "userName",
+			"value": "debasish",
+			"value_operator": "equals",
+			"label": "NA"
+		},
+	"to_update": "outV"
+	"to_update_filter": {
+							"label": "NA",
+							"id": "NA",
+							"property": "userName",
+							"value": "Arav"
+							"value_operator": "%LIKE%"
+						}
+	"update_prop": "place",
+	"update_value": "Orissa"
+}
